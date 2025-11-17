@@ -1,0 +1,651 @@
+@import 'bootstrap';
+
+:root {
+    --primary-color: #2c2c2c;
+    --secondary-color: #d4af37;
+    --text-color: #666;
+    --bg-light: #f8f8f8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 300;
+    color: var(--primary-color);
+    letter-spacing: 1px;
+}
+
+.navbar {
+    padding: 1.5rem 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    color: var(--primary-color) !important;
+}
+
+.nav-link {
+    color: var(--text-color) !important;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+    margin: 0 0.5rem;
+}
+
+.nav-link:hover {
+    color: var(--primary-color) !important;
+}
+
+.hero-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section h1 {
+    font-weight: 200;
+    line-height: 1.2;
+}
+
+.service-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 4px;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.form-control {
+    border: 1px solid #ddd;
+    border-radius: 0;
+    padding: 0.75rem;
+    font-size: 0.95rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(44, 44, 44, 0.1);
+}
+
+.form-label {
+    font-weight: 300;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+.btn-dark {
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 0;
+    padding: 0.75rem 2rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-dark:hover {
+    background-color: #1a1a1a;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    background-color: var(--primary-color) !important;
+}
+
+footer h5 {
+    color: #fff;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+section {
+    padding: 5rem 0;
+}
+
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    
+    section {
+        padding: 3rem 0;
+    }
+}
+
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Elegant animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Polaroid Styles */
+.polaroid-gallery {
+    margin: 2rem 0;
+    padding: 1rem 0;
+}
+
+.polaroid {
+    background: white;
+    padding: 15px 15px 50px 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.15);
+    transform: rotate(-2deg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 250px;
+    margin: 10px;
+    position: relative;
+}
+
+.polaroid:nth-child(even) {
+    transform: rotate(2deg);
+}
+
+.polaroid:nth-child(3n) {
+    transform: rotate(-1deg);
+}
+
+.polaroid:hover {
+    transform: rotate(0deg) scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 12px 30px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.polaroid img {
+    width: 100%;
+    height: auto;
+    display: block;
+    background: #f0f0f0;
+}
+
+.polaroid-caption {
+    font-family: 'Georgia', serif;
+    font-size: 0.9rem;
+    color: #333;
+    text-align: center;
+    margin-top: 10px;
+    font-style: italic;
+    letter-spacing: 0.5px;
+}
+
+/* Photo Collage - Mural de Fotos com Sobreposição */
+.hero-section-with-collage {
+    position: relative;
+}
+
+.photo-collage-wrapper {
+    position: relative;
+    width: 100%;
+    margin: 3rem 0;
+    min-height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo-collage {
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.collage-photo {
+    position: absolute;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease, z-index 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+.collage-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.collage-photo:hover {
+    transform: scale(1.1) !important;
+    z-index: 100 !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* Posicionamento das fotos na colagem - sobreposição */
+.photo-1 {
+    width: 220px;
+    height: 280px;
+    top: 10%;
+    left: 5%;
+    transform: rotate(-8deg);
+    z-index: 1;
+}
+
+.photo-2 {
+    width: 200px;
+    height: 250px;
+    top: 15%;
+    left: 18%;
+    transform: rotate(5deg);
+    z-index: 2;
+}
+
+.photo-3 {
+    width: 240px;
+    height: 300px;
+    top: 5%;
+    left: 32%;
+    transform: rotate(-5deg);
+    z-index: 3;
+}
+
+.photo-4 {
+    width: 210px;
+    height: 270px;
+    top: 20%;
+    left: 48%;
+    transform: rotate(8deg);
+    z-index: 4;
+}
+
+.photo-5 {
+    width: 230px;
+    height: 290px;
+    top: 8%;
+    left: 62%;
+    transform: rotate(-6deg);
+    z-index: 5;
+}
+
+.photo-6 {
+    width: 200px;
+    height: 260px;
+    top: 25%;
+    left: 75%;
+    transform: rotate(7deg);
+    z-index: 6;
+}
+
+.photo-7 {
+    width: 220px;
+    height: 280px;
+    top: 45%;
+    left: 8%;
+    transform: rotate(-7deg);
+    z-index: 7;
+}
+
+.photo-8 {
+    width: 210px;
+    height: 270px;
+    top: 50%;
+    left: 25%;
+    transform: rotate(6deg);
+    z-index: 8;
+}
+
+.photo-9 {
+    width: 240px;
+    height: 300px;
+    top: 42%;
+    left: 42%;
+    transform: rotate(-4deg);
+    z-index: 9;
+}
+
+.photo-10 {
+    width: 200px;
+    height: 250px;
+    top: 55%;
+    left: 58%;
+    transform: rotate(9deg);
+    z-index: 10;
+}
+
+.photo-11 {
+    width: 230px;
+    height: 290px;
+    top: 48%;
+    left: 70%;
+    transform: rotate(-5deg);
+    z-index: 11;
+}
+
+.photo-12 {
+    width: 210px;
+    height: 270px;
+    top: 60%;
+    left: 82%;
+    transform: rotate(6deg);
+    z-index: 12;
+}
+
+/* Team Section Styles */
+.team-member {
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+}
+
+.team-photo {
+    display: flex;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover .team-photo {
+    transform: scale(1.05);
+}
+
+.team-photo img {
+    transition: all 0.3s ease;
+}
+
+.team-member:hover .team-photo img {
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+}
+
+/* Responsive Design - Mobile First */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2rem !important;
+    }
+    
+    .hero-section .lead {
+        font-size: 1rem !important;
+    }
+    
+    section {
+        padding: 2.5rem 0 !important;
+    }
+    
+    .navbar {
+        padding: 1rem 0;
+    }
+    
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+    
+    .nav-link {
+        margin: 0.25rem 0;
+        padding: 0.5rem 0;
+    }
+    
+    /* Polaroids Mobile */
+    .polaroid-gallery {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+    
+    .polaroid {
+        width: 200px;
+        margin: 0;
+        transform: rotate(0deg) !important;
+    }
+    
+    .polaroid:hover {
+        transform: scale(1.05) !important;
+    }
+    
+    /* Photo Collage Mobile */
+    .photo-collage-wrapper {
+        min-height: 500px;
+        margin: 2rem 0;
+    }
+    
+    .photo-collage {
+        height: 500px;
+        padding: 20px;
+    }
+    
+    /* Team Mobile */
+    .team-photo img {
+        width: 150px !important;
+        height: 150px !important;
+    }
+    
+    .team-member {
+        padding: 1rem;
+    }
+    
+    .collage-photo {
+        width: 120px !important;
+        height: 150px !important;
+    }
+    
+    .photo-1 {
+        top: 5% !important;
+        left: 5% !important;
+        transform: rotate(-5deg) !important;
+    }
+    
+    .photo-2 {
+        top: 8% !important;
+        left: 35% !important;
+        transform: rotate(4deg) !important;
+    }
+    
+    .photo-3 {
+        top: 3% !important;
+        left: 60% !important;
+        transform: rotate(-3deg) !important;
+    }
+    
+    .photo-4 {
+        top: 12% !important;
+        left: 80% !important;
+        transform: rotate(5deg) !important;
+    }
+    
+    .photo-5 {
+        top: 30% !important;
+        left: 10% !important;
+        transform: rotate(-4deg) !important;
+    }
+    
+    .photo-6 {
+        top: 35% !important;
+        left: 40% !important;
+        transform: rotate(6deg) !important;
+    }
+    
+    .photo-7 {
+        top: 32% !important;
+        left: 65% !important;
+        transform: rotate(-5deg) !important;
+    }
+    
+    .photo-8 {
+        top: 38% !important;
+        left: 85% !important;
+        transform: rotate(4deg) !important;
+    }
+    
+    .photo-9 {
+        top: 55% !important;
+        left: 15% !important;
+        transform: rotate(-6deg) !important;
+    }
+    
+    .photo-10 {
+        top: 60% !important;
+        left: 45% !important;
+        transform: rotate(5deg) !important;
+    }
+    
+    .photo-11 {
+        top: 58% !important;
+        left: 70% !important;
+        transform: rotate(-4deg) !important;
+    }
+    
+    .photo-12 {
+        top: 63% !important;
+        left: 88% !important;
+        transform: rotate(6deg) !important;
+    }
+    
+    .collage-photo:hover {
+        transform: scale(1.15) !important;
+    }
+    
+    /* Service Cards Mobile */
+    .service-card {
+        margin-bottom: 1.5rem;
+    }
+    
+    /* Forms Mobile */
+    .form-control {
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+    
+    .btn-dark {
+        padding: 0.875rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    /* Footer Mobile */
+    footer {
+        text-align: center;
+    }
+    
+    footer .col-md-6 {
+        margin-bottom: 1.5rem;
+    }
+    
+    footer .text-md-end {
+        text-align: center !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        min-height: 70vh;
+        padding-top: 100px;
+    }
+    
+    .hero-section h1 {
+        font-size: 1.75rem !important;
+        letter-spacing: 1px;
+    }
+    
+    .hero-section .lead {
+        font-size: 0.95rem !important;
+    }
+    
+    .photo-collage-wrapper {
+        min-height: 400px;
+        margin: 1.5rem 0;
+    }
+    
+    .photo-collage {
+        height: 400px;
+    }
+    
+    .collage-photo {
+        width: 100px !important;
+        height: 130px !important;
+    }
+    
+    .team-photo img {
+        width: 120px !important;
+        height: 120px !important;
+    }
+    
+    .hero-section-with-collage {
+        padding-top: 80px !important;
+        padding-bottom: 40px !important;
+    }
+    
+    .hero-section-with-collage h1 {
+        font-size: 2rem !important;
+    }
+    
+    .hero-section-with-collage .lead {
+        font-size: 1rem !important;
+    }
+    
+    .polaroid {
+        width: 180px;
+    }
+    
+    h2, h3 {
+        font-size: 1.5rem;
+    }
+    
+    .service-card {
+        padding: 1.5rem !important;
+    }
+}
+
+/* Tablet Styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .photo-wall {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .polaroid {
+        width: 220px;
+    }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .collage-photo {
+        transform: rotate(0deg) !important;
+    }
+    
+    .collage-photo:active {
+        transform: scale(1.1) !important;
+    }
+    
+    .polaroid {
+        transform: rotate(0deg) !important;
+    }
+    
+    .polaroid:active {
+        transform: scale(1.05) !important;
+    }
+}
+

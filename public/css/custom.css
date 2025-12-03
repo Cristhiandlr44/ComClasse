@@ -1,0 +1,1199 @@
+:root {
+    --primary-color: #2c2c2c;
+    --secondary-color: #d4af37;
+    --text-color: #666;
+    --bg-light: #f8f8f8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 300;
+    color: var(--primary-color);
+    letter-spacing: 1px;
+}
+
+.navbar {
+    padding: 1.5rem 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    color: var(--primary-color) !important;
+}
+
+.nav-link {
+    color: var(--text-color) !important;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+    margin: 0 0.5rem;
+}
+
+.nav-link:hover {
+    color: var(--primary-color) !important;
+}
+
+.hero-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section h1 {
+    font-weight: 200;
+    line-height: 1.2;
+}
+
+.service-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 4px;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.form-control {
+    border: 1px solid #ddd;
+    border-radius: 0;
+    padding: 0.75rem;
+    font-size: 0.95rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(44, 44, 44, 0.1);
+}
+
+.form-label {
+    font-weight: 300;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+.btn-dark {
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 0;
+    padding: 0.75rem 2rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-dark:hover {
+    background-color: #1a1a1a;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    background-color: var(--primary-color) !important;
+}
+
+footer h5 {
+    color: #fff;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+section {
+    padding: 5rem 0;
+}
+
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    section {
+        padding: 3rem 0;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.polaroid-gallery {
+    margin: 2rem 0;
+    padding: 1rem 0;
+}
+
+.polaroid {
+    background: white;
+    padding: 15px 15px 50px 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.15);
+    transform: rotate(-2deg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 250px;
+    margin: 10px;
+    position: relative;
+}
+
+.polaroid:nth-child(even) {
+    transform: rotate(2deg);
+}
+
+.polaroid:nth-child(3n) {
+    transform: rotate(-1deg);
+}
+
+.polaroid:hover {
+    transform: rotate(0deg) scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 12px 30px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.polaroid img {
+    width: 100%;
+    height: auto;
+    display: block;
+    background: #f0f0f0;
+    object-fit: cover;
+}
+
+.polaroid-caption {
+    font-family: 'Georgia', serif;
+    font-size: 0.9rem;
+    color: #333;
+    text-align: center;
+    margin-top: 10px;
+    font-style: italic;
+    letter-spacing: 0.5px;
+}
+
+.hero-section-with-collage {
+    position: relative;
+}
+
+.photo-collage-wrapper {
+    position: relative;
+    width: 100%;
+    margin: 3rem 0;
+    min-height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo-collage {
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.collage-photo {
+    position: absolute;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease, z-index 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+.collage-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.collage-photo:hover {
+    transform: scale(1.1) !important;
+    z-index: 100 !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.photo-1 {
+    width: 220px;
+    height: 280px;
+    top: 10%;
+    left: 5%;
+    transform: rotate(-8deg);
+    z-index: 1;
+}
+
+.photo-2 {
+    width: 200px;
+    height: 250px;
+    top: 15%;
+    left: 18%;
+    transform: rotate(5deg);
+    z-index: 2;
+}
+
+.photo-3 {
+    width: 240px;
+    height: 300px;
+    top: 5%;
+    left: 32%;
+    transform: rotate(-5deg);
+    z-index: 3;
+}
+
+.photo-4 {
+    width: 210px;
+    height: 270px;
+    top: 20%;
+    left: 48%;
+    transform: rotate(8deg);
+    z-index: 4;
+}
+
+.photo-5 {
+    width: 230px;
+    height: 290px;
+    top: 8%;
+    left: 62%;
+    transform: rotate(-6deg);
+    z-index: 5;
+}
+
+.photo-6 {
+    width: 200px;
+    height: 260px;
+    top: 25%;
+    left: 75%;
+    transform: rotate(7deg);
+    z-index: 6;
+}
+
+.photo-7 {
+    width: 220px;
+    height: 280px;
+    top: 45%;
+    left: 8%;
+    transform: rotate(-7deg);
+    z-index: 7;
+}
+
+.photo-8 {
+    width: 210px;
+    height: 270px;
+    top: 50%;
+    left: 25%;
+    transform: rotate(6deg);
+    z-index: 8;
+}
+
+.photo-9 {
+    width: 240px;
+    height: 300px;
+    top: 42%;
+    left: 42%;
+    transform: rotate(-4deg);
+    z-index: 9;
+}
+
+.photo-10 {
+    width: 200px;
+    height: 250px;
+    top: 55%;
+    left: 58%;
+    transform: rotate(9deg);
+    z-index: 10;
+}
+
+.photo-11 {
+    width: 230px;
+    height: 290px;
+    top: 48%;
+    left: 70%;
+    transform: rotate(-5deg);
+    z-index: 11;
+}
+
+.photo-12 {
+    width: 210px;
+    height: 270px;
+    top: 60%;
+    left: 82%;
+    transform: rotate(6deg);
+    z-index: 12;
+}
+
+.team-member {
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+}
+
+.team-photo {
+    display: flex;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover .team-photo {
+    transform: scale(1.05);
+}
+
+.team-photo img {
+    transition: all 0.3s ease;
+}
+
+.team-member:hover .team-photo img {
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+}
+
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2rem !important;
+    }
+
+    .hero-section .lead {
+        font-size: 1rem !important;
+    }
+
+    section {
+        padding: 2.5rem 0 !important;
+    }
+
+    .navbar {
+        padding: 1rem 0;
+    }
+
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+
+    .nav-link {
+        margin: 0.25rem 0;
+        padding: 0.5rem 0;
+    }
+
+    .polaroid-gallery {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .polaroid {
+        width: 200px;
+        margin: 0;
+        transform: rotate(0deg) !important;
+    }
+
+    .polaroid:hover {
+        transform: scale(1.05) !important;
+    }
+
+    .photo-collage-wrapper {
+        min-height: 500px;
+        margin: 2rem 0;
+    }
+
+    .photo-collage {
+        height: 500px;
+        padding: 20px;
+    }
+
+    .team-photo img {
+        width: 150px !important;
+        height: 150px !important;
+    }
+
+    .team-member {
+        padding: 1rem;
+    }
+
+    .collage-photo {
+        width: 120px !important;
+        height: 150px !important;
+    }
+
+    .photo-1 {
+        top: 5% !important;
+        left: 5% !important;
+        transform: rotate(-5deg) !important;
+    }
+
+    .photo-2 {
+        top: 8% !important;
+        left: 35% !important;
+        transform: rotate(4deg) !important;
+    }
+
+    .photo-3 {
+        top: 3% !important;
+        left: 60% !important;
+        transform: rotate(-3deg) !important;
+    }
+
+    .photo-4 {
+        top: 12% !important;
+        left: 80% !important;
+        transform: rotate(5deg) !important;
+    }
+
+    .photo-5 {
+        top: 30% !important;
+        left: 10% !important;
+        transform: rotate(-4deg) !important;
+    }
+
+    .photo-6 {
+        top: 35% !important;
+        left: 40% !important;
+        transform: rotate(6deg) !important;
+    }
+
+    .photo-7 {
+        top: 32% !important;
+        left: 65% !important;
+        transform: rotate(-5deg) !important;
+    }
+
+    .photo-8 {
+        top: 38% !important;
+        left: 85% !important;
+        transform: rotate(4deg) !important;
+    }
+
+    .photo-9 {
+        top: 55% !important;
+        left: 15% !important;
+        transform: rotate(-6deg) !important;
+    }
+
+    .photo-10 {
+        top: 60% !important;
+        left: 45% !important;
+        transform: rotate(5deg) !important;
+    }
+
+    .photo-11 {
+        top: 58% !important;
+        left: 70% !important;
+        transform: rotate(-4deg) !important;
+    }
+
+    .photo-12 {
+        top: 63% !important;
+        left: 88% !important;
+        transform: rotate(6deg) !important;
+    }
+
+    .collage-photo:hover {
+        transform: scale(1.15) !important;
+    }
+
+    .service-card {
+        margin-bottom: 1.5rem;
+    }
+
+    .form-control {
+        font-size: 16px;
+    }
+
+    .btn-dark {
+        padding: 0.875rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    footer .col-md-6 {
+        margin-bottom: 1.5rem;
+    }
+
+    footer .text-md-end {
+        text-align: center !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        min-height: 70vh;
+        padding-top: 100px;
+    }
+
+    .hero-section h1 {
+        font-size: 1.75rem !important;
+        letter-spacing: 1px;
+    }
+
+    .hero-section .lead {
+        font-size: 0.95rem !important;
+    }
+
+    .photo-collage-wrapper {
+        min-height: 400px;
+        margin: 1.5rem 0;
+    }
+
+    .photo-collage {
+        height: 400px;
+    }
+
+    .collage-photo {
+        width: 100px !important;
+        height: 130px !important;
+    }
+
+    .team-photo img {
+        width: 120px !important;
+        height: 120px !important;
+    }
+
+    .hero-section-with-collage {
+        padding-top: 80px !important;
+        padding-bottom: 40px !important;
+    }
+
+    .hero-section-with-collage h1 {
+        font-size: 2rem !important;
+    }
+
+    .hero-section-with-collage .lead {
+        font-size: 1rem !important;
+    }
+
+    .polaroid {
+        width: 180px;
+    }
+
+    h2,
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    .service-card {
+        padding: 1.5rem !important;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .photo-wall {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .polaroid {
+        width: 220px;
+    }
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .collage-photo {
+        transform: rotate(0deg) !important;
+    }
+
+    .collage-photo:active {
+        transform: scale(1.1) !important;
+    }
+
+    .polaroid {
+        transform: rotate(0deg) !important;
+    }
+
+    .polaroid:active {
+        transform: scale(1.05) !important;
+    }
+}
+
+/* Biografia Section */
+.biography-image-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.biography-image-wrapper img {
+    transition: transform 0.3s ease;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.biography-image-wrapper:hover img {
+    transform: scale(1.02);
+}
+
+.biography-text {
+    font-size: 1.05rem;
+}
+
+.biography-text strong {
+    color: var(--primary-color);
+    font-weight: 400;
+}
+
+/* Galeria Carrossel */
+.gallery-carousel-wrapper {
+    padding: 2rem 0;
+}
+
+.gallery-carousel-wrapper .carousel-control-prev,
+.gallery-carousel-wrapper .carousel-control-next {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(44, 44, 44, 0.7);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.7;
+    transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+
+.gallery-carousel-wrapper .carousel-control-prev:hover,
+.gallery-carousel-wrapper .carousel-control-next:hover {
+    opacity: 1;
+    background-color: rgba(44, 44, 44, 0.9);
+}
+
+.gallery-carousel-wrapper .carousel-control-prev {
+    left: -25px;
+}
+
+.gallery-carousel-wrapper .carousel-control-next {
+    right: -25px;
+}
+
+.gallery-carousel-wrapper .carousel-item {
+    padding: 1rem 0;
+}
+
+.gallery-carousel-wrapper .polaroid {
+    height: auto;
+}
+
+.gallery-carousel-wrapper .polaroid img {
+    height: 350px;
+    object-fit: cover;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .gallery-carousel-wrapper .polaroid img {
+        height: 250px;
+    }
+}
+
+/* Responsividade específica para celular (390x844) */
+@media (max-width: 390px) {
+    .hero-section-with-collage {
+        padding-top: 90px !important;
+        padding-bottom: 15px !important;
+    }
+
+    .hero-logo-wrapper {
+        margin-bottom: 1rem !important;
+    }
+
+    .hero-section-with-collage .lead {
+        font-size: 0.9rem !important;
+        line-height: 1.5;
+    }
+
+    .photo-collage-wrapper {
+        min-height: 500px !important;
+        margin: 1rem 0 0.5rem 0 !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .desde-2009-text {
+        margin-top: 0 !important;
+    }
+
+    .photo-collage {
+        height: 500px !important;
+        padding: 10px !important;
+        position: relative !important;
+        width: 100% !important;
+        max-width: 360px !important;
+        margin: 0 auto !important;
+    }
+
+    /* Layout mais misturado para celular - similar ao desktop, centralizado */
+    .photo-1 {
+        top: 8% !important;
+        left: 5% !important;
+        width: 85px !important;
+        height: 110px !important;
+        transform: rotate(-10deg) !important;
+        z-index: 1 !important;
+    }
+
+    .photo-2 {
+        top: 12% !important;
+        left: 20% !important;
+        width: 75px !important;
+        height: 95px !important;
+        transform: rotate(8deg) !important;
+        z-index: 2 !important;
+    }
+
+    .photo-3 {
+        top: 5% !important;
+        left: 35% !important;
+        width: 95px !important;
+        height: 120px !important;
+        transform: rotate(-7deg) !important;
+        z-index: 3 !important;
+    }
+
+    .photo-4 {
+        top: 15% !important;
+        left: 50% !important;
+        width: 80px !important;
+        height: 100px !important;
+        transform: rotate(9deg) !important;
+        z-index: 4 !important;
+    }
+
+    .photo-5 {
+        top: 6% !important;
+        left: 63% !important;
+        width: 90px !important;
+        height: 115px !important;
+        transform: rotate(-8deg) !important;
+        z-index: 5 !important;
+    }
+
+    .photo-6 {
+        top: 22% !important;
+        left: 75% !important;
+        width: 75px !important;
+        height: 95px !important;
+        transform: rotate(10deg) !important;
+        z-index: 6 !important;
+    }
+
+    .photo-7 {
+        top: 42% !important;
+        left: 8% !important;
+        width: 85px !important;
+        height: 110px !important;
+        transform: rotate(-9deg) !important;
+        z-index: 7 !important;
+    }
+
+    .photo-8 {
+        top: 47% !important;
+        left: 23% !important;
+        width: 80px !important;
+        height: 100px !important;
+        transform: rotate(7deg) !important;
+        z-index: 8 !important;
+    }
+
+    .photo-9 {
+        top: 40% !important;
+        left: 40% !important;
+        width: 95px !important;
+        height: 120px !important;
+        transform: rotate(-6deg) !important;
+        z-index: 9 !important;
+    }
+
+    .photo-10 {
+        top: 52% !important;
+        left: 55% !important;
+        width: 75px !important;
+        height: 95px !important;
+        transform: rotate(11deg) !important;
+        z-index: 10 !important;
+    }
+
+    .photo-11 {
+        top: 45% !important;
+        left: 68% !important;
+        width: 90px !important;
+        height: 115px !important;
+        transform: rotate(-7deg) !important;
+        z-index: 11 !important;
+    }
+
+    .photo-12 {
+        top: 57% !important;
+        left: 80% !important;
+        width: 80px !important;
+        height: 100px !important;
+        transform: rotate(8deg) !important;
+        z-index: 12 !important;
+    }
+
+    .biography-image-wrapper img {
+        margin-bottom: 2rem;
+    }
+
+    .navbar-logo {
+        height: 40px;
+    }
+
+    .hero-logo {
+        max-width: 250px;
+    }
+
+    .polaroid-large {
+        width: 220px !important;
+    }
+
+    .polaroid-large img {
+        height: 280px;
+    }
+
+    /* Polaroids menores para carrosséis mobile (seções 2 e 3) */
+    .polaroid-mobile {
+        width: 240px !important;
+        margin: 0 auto;
+    }
+
+    .polaroid-mobile img {
+        height: 300px;
+        object-fit: cover;
+    }
+
+    /* Botões de carrossel mais destacados */
+    .mobile-carousel-wrapper .carousel-control-prev,
+    .mobile-carousel-wrapper .carousel-control-next {
+        width: 55px !important;
+        height: 55px !important;
+        background-color: #d4af37 !important;
+        border-radius: 50% !important;
+        opacity: 1 !important;
+        box-shadow: 0 6px 15px rgba(212, 175, 55, 0.5) !important;
+        border: 2px solid #ffffff !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        transition: all 0.3s ease !important;
+    }
+
+    .mobile-carousel-wrapper .carousel-control-prev:hover,
+    .mobile-carousel-wrapper .carousel-control-next:hover {
+        background-color: #c19d2e !important;
+        transform: translateY(-50%) scale(1.15) !important;
+        box-shadow: 0 8px 20px rgba(212, 175, 55, 0.7) !important;
+    }
+
+    .mobile-carousel-wrapper .carousel-control-prev-icon,
+    .mobile-carousel-wrapper .carousel-control-next-icon {
+        width: 25px !important;
+        height: 25px !important;
+        filter: brightness(0) invert(1);
+    }
+
+    .mobile-carousel-wrapper .carousel-control-prev {
+        left: 5px !important;
+    }
+
+    .mobile-carousel-wrapper .carousel-control-next {
+        right: 5px !important;
+    }
+
+    /* Footer mobile - informações lado a lado */
+    .footer-elegant .row.g-5 {
+        --bs-gutter-y: 1rem !important;
+        --bs-gutter-x: 0.5rem !important;
+        flex-wrap: nowrap !important;
+    }
+
+    .footer-elegant .col-lg-4 {
+        margin-bottom: 0.5rem !important;
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem !important;
+        flex: 1 1 0 !important;
+        max-width: 33.333% !important;
+    }
+
+    .footer-elegant .col-lg-4:not(:last-child) {
+        border-right: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .footer-elegant .col-lg-4 h5,
+    .footer-elegant .col-lg-4 h6 {
+        font-size: 0.9rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+
+    .footer-elegant .col-lg-4 p {
+        font-size: 0.75rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+
+    .footer-elegant .col-lg-4 ul {
+        font-size: 0.75rem !important;
+        line-height: 1.8 !important;
+    }
+
+    .footer-elegant .col-lg-4 .btn-sm {
+        font-size: 0.75rem !important;
+        padding: 0.3rem 1rem !important;
+    }
+}
+
+/* Estilos adicionais para rodapé elegante */
+.footer-elegant a {
+    transition: color 0.3s ease;
+}
+
+.footer-elegant a:hover {
+    color: #d4af37 !important;
+}
+
+/* Botão Entre em Contato */
+.btn-light {
+    background-color: #ffffff;
+    color: #2c2c2c;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-light:hover {
+    background-color: #d4af37;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+}
+
+/* Logo no Navbar */
+.navbar-logo {
+    height: 60px;
+    width: auto;
+    max-width: 200px;
+}
+
+/* Botão de Login no Navbar */
+.btn-login-nav {
+    background: linear-gradient(135deg, #d4af37 0%, #c19d2e 100%);
+    color: #ffffff !important;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 1.25rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(212, 175, 55, 0.3);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.btn-login-nav:hover {
+    background: linear-gradient(135deg, #c19d2e 0%, #b08d26 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+    color: #ffffff !important;
+}
+
+@media (max-width: 768px) {
+    .btn-login-nav {
+        font-size: 0.85rem;
+        padding: 0.45rem 1rem;
+        margin-top: 0.5rem;
+    }
+
+    .navbar-nav {
+        padding-top: 1rem;
+    }
+}
+
+/* Logo Grande no Hero */
+.hero-logo-wrapper {
+    margin-top: 2rem;
+}
+
+.hero-logo {
+    max-width: 320px;
+    width: 100%;
+    height: auto;
+}
+
+/* Divisores entre seções */
+.section-divider {
+    height: 6px;
+    background: linear-gradient(90deg, transparent 0%, #d4af37 15%, #d4af37 85%, transparent 100%);
+    margin: 0;
+    opacity: 0.4;
+}
+
+/* Polaroids maiores nas seções 2 e 3 */
+.polaroid-large {
+    width: 320px !important;
+}
+
+.polaroid-large img {
+    height: 400px;
+    object-fit: cover;
+}
+
+/* Carrosséis para mobile */
+.mobile-carousel-wrapper {
+    display: none;
+}
+
+.desktop-gallery {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .mobile-carousel-wrapper {
+        display: block;
+    }
+
+    .desktop-gallery {
+        display: none;
+    }
+
+    .navbar-logo {
+        height: 45px;
+    }
+
+    .hero-logo {
+        max-width: 280px;
+    }
+
+    .hero-section-with-collage {
+        padding-top: 90px !important;
+        padding-bottom: 20px !important;
+    }
+
+    .hero-logo-wrapper {
+        margin-bottom: 1.5rem !important;
+    }
+
+    .desde-2009-text {
+        margin-top: 0 !important;
+    }
+
+    /* Footer mobile */
+    .footer-elegant {
+        padding: 3rem 0 1.5rem !important;
+    }
+
+    .footer-elegant .row.g-5 {
+        --bs-gutter-y: 1rem !important;
+        --bs-gutter-x: 0.5rem !important;
+        flex-wrap: nowrap !important;
+    }
+
+    .footer-elegant .col-lg-4 {
+        margin-bottom: 0.5rem !important;
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem !important;
+        flex: 1 1 0 !important;
+        max-width: 33.333% !important;
+        text-align: center !important;
+    }
+
+    .footer-elegant .col-lg-4:not(:last-child) {
+        border-right: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .footer-elegant h5,
+    .footer-elegant h6 {
+        font-size: 0.9rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+
+    .footer-elegant p {
+        font-size: 0.75rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+
+    .footer-elegant ul {
+        font-size: 0.75rem !important;
+        line-height: 1.8 !important;
+    }
+
+    .footer-elegant .btn-sm {
+        font-size: 0.75rem !important;
+        padding: 0.3rem 1rem !important;
+    }
+
+    /* Galeria uma linha no mobile */
+    .gallery-carousel-wrapper .desktop-gallery-row {
+        display: none !important;
+    }
+
+    .gallery-carousel-wrapper .mobile-gallery-row {
+        display: flex !important;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        margin: 0 -15px;
+        padding: 0 15px;
+    }
+
+    .gallery-carousel-wrapper .mobile-gallery-row::-webkit-scrollbar {
+        display: none;
+    }
+
+    .gallery-carousel-wrapper .mobile-gallery-row .col-6 {
+        flex: 0 0 70% !important;
+        max-width: 70% !important;
+        scroll-snap-align: start;
+        padding: 0 5px;
+    }
+
+    .gallery-carousel-wrapper .carousel-control-prev,
+    .gallery-carousel-wrapper .carousel-control-next {
+        display: none !important;
+    }
+
+    .gallery-carousel-wrapper .carousel-item {
+        padding: 0;
+    }
+}
+
+@media (min-width: 769px) {
+    .gallery-carousel-wrapper .mobile-gallery-row {
+        display: none !important;
+    }
+
+    .gallery-carousel-wrapper .desktop-gallery-row {
+        display: flex !important;
+    }
+}

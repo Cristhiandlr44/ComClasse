@@ -6,21 +6,30 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title', 'Com Classe Assessoria e Cerimonial')</title>
     <meta name="description" content="@yield('description', 'Comemore seus Sonhos, Celebre Com Classe! Assessoria e Cerimonial de casamentos elegantes e inesquecíveis.')">
+    <link rel="icon" type="image/x-icon" href="{{ asset('favico.ico') }}">
     
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    {{-- Verifica se o Vite está disponível (assets compilados) --}}
+    @if(file_exists(public_path('build/manifest.json')))
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @else
+        {{-- Fallback: usa Bootstrap CDN e assets estáticos --}}
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+        <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
+    @endif
     @stack('styles')
 </head>
 <body class="bg-white">
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
         <div class="container">
-            <a class="navbar-brand fw-bold text-dark" href="{{ route('home') }}">
-                Com Classe
+            <a class="navbar-brand" href="{{ route('home') }}">
+                <img src="{{ asset('logo.png') }}" alt="Com Classe" class="navbar-logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item">
                         <a class="nav-link" href="#sobre">Sobre</a>
                     </li>
@@ -31,7 +40,15 @@
                         <a class="nav-link" href="#equipe">Equipe</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="#galeria">Galeria</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="{{ route('contact.index') }}">Contato</a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <a class="btn btn-login-nav" href="{{ route('login') }}">
+                            <i class="bi bi-box-arrow-in-right me-2"></i>Acesso ao Sistema
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -42,28 +59,72 @@
         @yield('content')
     </main>
 
-    <footer class="bg-dark text-white py-5 mt-5">
+    <footer class="footer-elegant" style="background: linear-gradient(180deg, #2c2c2c 0%, #1a1a1a 100%); color: #ffffff; padding: 4rem 0 2rem;">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6 mb-4">
-                    <h5 class="mb-3">Com Classe Assessoria e Cerimonial</h5>
-                    <p class="mb-2">Comemore seus Sonhos, Celebre Com Classe!</p>
-                </div>
-                <div class="col-md-6 text-md-end">
-                    <p class="mb-2">
-                        <strong>Contato:</strong><br>
-                        contato@comclasse.com.br<br>
-                        (11) 4327-0919
+            <div class="row g-5 mb-5">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="mb-4 fw-light" style="color: #d4af37; letter-spacing: 1px; font-size: 1.3rem;">
+                        Com Classe<br>
+                        <span style="font-size: 0.9rem; color: #ffffff;">Assessoria e Cerimonial</span>
+                    </h5>
+                    <p style="color: #cccccc; line-height: 1.8; font-size: 0.95rem;">
+                        Comemore seus Sonhos,<br>
+                        Celebre Com Classe!
+                    </p>
+                    <p style="color: #888; font-size: 0.85rem; margin-top: 1rem;">
+                        Desde 2009 criando eventos inesquecíveis
                     </p>
                 </div>
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h6 class="mb-4 fw-light" style="color: #d4af37; letter-spacing: 1px;">Navegação</h6>
+                    <ul class="list-unstyled" style="line-height: 2.5;">
+                        <li><a href="#sobre" style="color: #cccccc; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#d4af37'" onmouseout="this.style.color='#cccccc'">Sobre Nós</a></li>
+                        <li><a href="#servicos" style="color: #cccccc; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#d4af37'" onmouseout="this.style.color='#cccccc'">Serviços</a></li>
+                        <li><a href="#equipe" style="color: #cccccc; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#d4af37'" onmouseout="this.style.color='#cccccc'">Equipe</a></li>
+                        <li><a href="#galeria" style="color: #cccccc; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#d4af37'" onmouseout="this.style.color='#cccccc'">Galeria</a></li>
+                        <li><a href="{{ route('contact.index') }}" style="color: #cccccc; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#d4af37'" onmouseout="this.style.color='#cccccc'">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h6 class="mb-4 fw-light" style="color: #d4af37; letter-spacing: 1px;">Contato</h6>
+                    <div style="line-height: 2; color: #cccccc;">
+                        <p class="mb-3">
+                            <i class="bi bi-envelope me-2" style="color: #d4af37;"></i>
+                            <a href="mailto:contato@comclasse.com.br" style="color: #cccccc; text-decoration: none;">contato@comclasse.com.br</a>
+                        </p>
+                        <p class="mb-3">
+                            <i class="bi bi-telephone me-2" style="color: #d4af37;"></i>
+                            <a href="tel:+551143270919" style="color: #cccccc; text-decoration: none;">(11) 4327-0919</a>
+                        </p>
+                        <p class="mb-0">
+                            <a href="https://wa.me/551143270919" target="_blank" class="btn btn-sm" style="background-color: #25D366; color: white; border: none; border-radius: 0; padding: 0.5rem 1.5rem; margin-top: 0.5rem;">
+                                <i class="bi bi-whatsapp me-2"></i>WhatsApp
+                            </a>
+                        </p>
+                    </div>
+                </div>
             </div>
-            <hr class="my-4">
-            <div class="text-center">
-                <p class="mb-0">&copy; {{ date('Y') }} Com Classe. Todos os direitos reservados.</p>
+            <hr style="border-color: rgba(255,255,255,0.1); margin: 2rem 0;">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <p class="mb-0" style="color: #888; font-size: 0.9rem;">
+                        &copy; {{ date('Y') }} Com Classe Assessoria e Cerimonial. Todos os direitos reservados.
+                    </p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0" style="color: #888; font-size: 0.85rem; letter-spacing: 1px;">
+                        Feito com <span style="color: #d4af37;">&hearts;</span> para eventos especiais
+                    </p>
+                </div>
             </div>
         </div>
     </footer>
 
+    @if(!file_exists(public_path('build/manifest.json')))
+        {{-- Fallback: scripts quando Vite não está disponível --}}
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="{{ asset('js/custom.js') }}"></script>
+    @endif
     @stack('scripts')
 </body>
 </html>

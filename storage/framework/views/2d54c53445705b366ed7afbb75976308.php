@@ -9,14 +9,12 @@
     <link rel="icon" type="image/x-icon" href="<?php echo e(asset('favico.ico')); ?>">
     
     
-    <?php if(file_exists(public_path('build/manifest.json'))): ?>
-        <?php echo app('Illuminate\Foundation\Vite')(['resources/css/app.css', 'resources/js/app.js']); ?>
-    <?php else: ?>
-        
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
-        <link href="<?php echo e(asset('css/custom.css')); ?>" rel="stylesheet">
-    <?php endif; ?>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    
+    
+    <link href="<?php echo e(asset('css/custom.css')); ?>" rel="stylesheet">
+    
     <?php echo $__env->yieldPushContent('styles'); ?>
 </head>
 <body class="bg-white">
@@ -120,11 +118,14 @@
         </div>
     </footer>
 
-    <?php if(!file_exists(public_path('build/manifest.json'))): ?>
-        
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    
+    
+    <?php if(file_exists(public_path('js/custom.js'))): ?>
         <script src="<?php echo e(asset('js/custom.js')); ?>"></script>
     <?php endif; ?>
+    
     <?php echo $__env->yieldPushContent('scripts'); ?>
 </body>
 </html>

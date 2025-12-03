@@ -30,7 +30,7 @@ h6 {
 }
 
 .navbar {
-    padding: 1.5rem 0;
+    padding: 0.75rem 0;
     transition: all 0.3s ease;
 }
 
@@ -586,7 +586,7 @@ html {
     }
 
     .hero-section-with-collage {
-        padding-top: 80px !important;
+        padding-top: 75px !important;
         padding-bottom: 40px !important;
     }
 
@@ -720,7 +720,7 @@ html {
 /* Responsividade específica para celular (390x844) */
 @media (max-width: 390px) {
     .hero-section-with-collage {
-        padding-top: 90px !important;
+        padding-top: 80px !important;
         padding-bottom: 15px !important;
     }
 
@@ -998,9 +998,9 @@ html {
 
 /* Logo no Navbar */
 .navbar-logo {
-    height: 60px;
+    height: 50px;
     width: auto;
-    max-width: 200px;
+    max-width: 180px;
 }
 
 /* Botão de Login no Navbar */
@@ -1057,6 +1057,15 @@ html {
     opacity: 0.4;
 }
 
+/* Backgrounds alternados para seções */
+.section-bg-white {
+    background: #ffffff;
+}
+
+.section-bg-light {
+    background: linear-gradient(135deg, #e8e5dd 0%, #ddd9d0 100%);
+}
+
 /* Polaroids maiores nas seções 2 e 3 */
 .polaroid-large {
     width: 320px !important;
@@ -1094,7 +1103,7 @@ html {
     }
 
     .hero-section-with-collage {
-        padding-top: 90px !important;
+        padding-top: 80px !important;
         padding-bottom: 20px !important;
     }
 

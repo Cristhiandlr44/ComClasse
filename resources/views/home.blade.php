@@ -4,8 +4,8 @@
 
 @section('content')
 <!-- Hero Section com Colagem de Fotos -->
-<section class="hero-section-with-collage"
-    style="background: #ffffff; overflow: hidden; padding-top: 100px; padding-bottom: 80px;">
+<section class="hero-section-with-collage section-bg-light"
+    style="overflow: hidden; padding-top: 85px; padding-bottom: 80px;">
     <div class="container">
         <!-- Logo Grande -->
         <div class="text-center mb-5 hero-logo-wrapper">
@@ -71,7 +71,7 @@
 <div class="section-divider"></div>
 
 <!-- Sobre Section -->
-<section id="sobre" class="py-5" style="background: #ffffff;">
+<section id="sobre" class="py-5 section-bg-white">
     <div class="container">
         <div class="row justify-content-center mb-5">
             <div class="col-lg-8 text-center">
@@ -177,7 +177,7 @@
 <div class="section-divider"></div>
 
 <!-- Serviços Section -->
-<section id="servicos" class="py-5" style="background: #f8f8f8;">
+<section id="servicos" class="py-5 section-bg-light">
     <div class="container">
         <div class="row justify-content-center mb-5">
             <div class="col-lg-8 text-center">
@@ -286,7 +286,7 @@
 <div class="section-divider"></div>
 
 <!-- Equipe Section -->
-<section id="equipe" class="py-5" style="background: #ffffff;">
+<section id="equipe" class="py-5 section-bg-white">
     <div class="container">
         <div class="row justify-content-center mb-5">
             <div class="col-lg-8 text-center">
@@ -420,7 +420,7 @@
 <div class="section-divider"></div>
 
 <!-- Biografia Section -->
-<section id="biografia" class="py-5" style="background: #f8f8f8;">
+<section id="biografia" class="py-5 section-bg-light">
     <div class="container">
         <div class="row align-items-center g-5">
             <div class="col-lg-6 order-lg-2">
@@ -461,7 +461,7 @@
 <div class="section-divider"></div>
 
 <!-- Galeria Section -->
-<section id="galeria" class="py-5" style="background: #ffffff;">
+<section id="galeria" class="py-5 section-bg-white">
     <div class="container">
         <div class="row justify-content-center mb-5">
             <div class="col-lg-8 text-center">

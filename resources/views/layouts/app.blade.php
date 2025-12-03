@@ -8,15 +8,13 @@
     <meta name="description" content="@yield('description', 'Comemore seus Sonhos, Celebre Com Classe! Assessoria e Cerimonial de casamentos elegantes e inesquecíveis.')">
     <link rel="icon" type="image/x-icon" href="{{ asset('favico.ico') }}">
     
-    {{-- Verifica se o Vite está disponível (assets compilados) --}}
-    @if(file_exists(public_path('build/manifest.json')))
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
-    @else
-        {{-- Fallback: usa Bootstrap CDN e assets estáticos --}}
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
-        <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
-    @endif
+    {{-- Sempre carrega Bootstrap e Bootstrap Icons --}}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    
+    {{-- CSS Customizado - sempre carrega --}}
+    <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
+    
     @stack('styles')
 </head>
 <body class="bg-white">
@@ -120,11 +118,14 @@
         </div>
     </footer>
 
-    @if(!file_exists(public_path('build/manifest.json')))
-        {{-- Fallback: scripts quando Vite não está disponível --}}
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    {{-- Sempre carrega Bootstrap JS --}}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    
+    {{-- JS Customizado - sempre carrega se existir --}}
+    @if(file_exists(public_path('js/custom.js')))
         <script src="{{ asset('js/custom.js') }}"></script>
     @endif
+    
     @stack('scripts')
 </body>
 </html>

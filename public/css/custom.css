@@ -675,18 +675,27 @@ html {
 .gallery-carousel-wrapper .carousel-control-next {
     width: 50px;
     height: 50px;
-    background-color: rgba(44, 44, 44, 0.7);
+    background-color: #d4af37 !important;
     border-radius: 50%;
     top: 50%;
     transform: translateY(-50%);
-    opacity: 0.7;
-    transition: opacity 0.3s ease, background-color 0.3s ease;
+    opacity: 1 !important;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+    transition: all 0.3s ease;
 }
 
 .gallery-carousel-wrapper .carousel-control-prev:hover,
 .gallery-carousel-wrapper .carousel-control-next:hover {
-    opacity: 1;
-    background-color: rgba(44, 44, 44, 0.9);
+    background-color: #c19d2e !important;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.6);
+}
+
+.gallery-carousel-wrapper .carousel-control-prev-icon,
+.gallery-carousel-wrapper .carousel-control-next-icon {
+    filter: brightness(0) invert(1);
+    width: 25px;
+    height: 25px;
 }
 
 .gallery-carousel-wrapper .carousel-control-prev {
@@ -718,10 +727,15 @@ html {
 }
 
 /* Responsividade específica para celular (390x844) */
-@media (max-width: 390px) {
+@media (max-width: 450px) {
     .hero-section-with-collage {
         padding-top: 80px !important;
         padding-bottom: 15px !important;
+    }
+
+    .hero-section-with-collage .container {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
     }
 
     .hero-logo-wrapper {
@@ -734,11 +748,15 @@ html {
     }
 
     .photo-collage-wrapper {
-        min-height: 500px !important;
-        margin: 1rem 0 0.5rem 0 !important;
+        min-height: 600px !important;
+        margin: 1rem -15px 0.5rem -15px !important;
         display: flex !important;
         justify-content: center !important;
         align-items: center !important;
+        width: calc(100% + 30px) !important;
+        overflow: hidden !important;
+        padding: 0 !important;
+        position: relative !important;
     }
 
     .desde-2009-text {
@@ -746,119 +764,125 @@ html {
     }
 
     .photo-collage {
-        height: 500px !important;
-        padding: 10px !important;
+        height: 600px !important;
+        padding: 5px !important;
         position: relative !important;
-        width: 100% !important;
-        max-width: 360px !important;
+        width: 98% !important;
+        max-width: 98% !important;
         margin: 0 auto !important;
+        transform: none !important;
+        transform-origin: center center;
+    }
+    
+    .collage-photo {
+        position: absolute !important;
     }
 
-    /* Layout mais misturado para celular - similar ao desktop, centralizado */
+    /* Layout mais misturado para celular - imagens maiores e quase sem margem */
     .photo-1 {
         top: 8% !important;
-        left: 5% !important;
-        width: 85px !important;
-        height: 110px !important;
+        left: 3% !important;
+        width: 130px !important;
+        height: 170px !important;
         transform: rotate(-10deg) !important;
         z-index: 1 !important;
     }
 
     .photo-2 {
         top: 12% !important;
-        left: 20% !important;
-        width: 75px !important;
-        height: 95px !important;
+        left: 18% !important;
+        width: 115px !important;
+        height: 145px !important;
         transform: rotate(8deg) !important;
         z-index: 2 !important;
     }
 
     .photo-3 {
         top: 5% !important;
-        left: 35% !important;
-        width: 95px !important;
-        height: 120px !important;
+        left: 32% !important;
+        width: 145px !important;
+        height: 185px !important;
         transform: rotate(-7deg) !important;
         z-index: 3 !important;
     }
 
     .photo-4 {
         top: 15% !important;
-        left: 50% !important;
-        width: 80px !important;
-        height: 100px !important;
+        left: 48% !important;
+        width: 120px !important;
+        height: 155px !important;
         transform: rotate(9deg) !important;
         z-index: 4 !important;
     }
 
     .photo-5 {
         top: 6% !important;
-        left: 63% !important;
-        width: 90px !important;
-        height: 115px !important;
+        left: 61% !important;
+        width: 135px !important;
+        height: 175px !important;
         transform: rotate(-8deg) !important;
         z-index: 5 !important;
     }
 
     .photo-6 {
         top: 22% !important;
-        left: 75% !important;
-        width: 75px !important;
-        height: 95px !important;
+        left: 73% !important;
+        width: 115px !important;
+        height: 145px !important;
         transform: rotate(10deg) !important;
         z-index: 6 !important;
     }
 
     .photo-7 {
         top: 42% !important;
-        left: 8% !important;
-        width: 85px !important;
-        height: 110px !important;
+        left: 6% !important;
+        width: 130px !important;
+        height: 170px !important;
         transform: rotate(-9deg) !important;
         z-index: 7 !important;
     }
 
     .photo-8 {
         top: 47% !important;
-        left: 23% !important;
-        width: 80px !important;
-        height: 100px !important;
+        left: 21% !important;
+        width: 120px !important;
+        height: 155px !important;
         transform: rotate(7deg) !important;
         z-index: 8 !important;
     }
 
     .photo-9 {
         top: 40% !important;
-        left: 40% !important;
-        width: 95px !important;
-        height: 120px !important;
+        left: 38% !important;
+        width: 145px !important;
+        height: 185px !important;
         transform: rotate(-6deg) !important;
         z-index: 9 !important;
     }
 
     .photo-10 {
         top: 52% !important;
-        left: 55% !important;
-        width: 75px !important;
-        height: 95px !important;
+        left: 53% !important;
+        width: 115px !important;
+        height: 145px !important;
         transform: rotate(11deg) !important;
         z-index: 10 !important;
     }
 
     .photo-11 {
         top: 45% !important;
-        left: 68% !important;
-        width: 90px !important;
-        height: 115px !important;
+        left: 66% !important;
+        width: 135px !important;
+        height: 175px !important;
         transform: rotate(-7deg) !important;
         z-index: 11 !important;
     }
 
     .photo-12 {
         top: 57% !important;
-        left: 80% !important;
-        width: 80px !important;
-        height: 100px !important;
+        left: 78% !important;
+        width: 120px !important;
+        height: 155px !important;
         transform: rotate(8deg) !important;
         z-index: 12 !important;
     }
@@ -1066,6 +1090,51 @@ html {
     background: linear-gradient(135deg, #e8e5dd 0%, #ddd9d0 100%);
 }
 
+/* Cards destacados na seção Sobre */
+.sobre-item-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 248, 248, 0.95) 100%);
+    border-radius: 12px;
+    padding: 2.5rem 2rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(212, 175, 55, 0.15);
+    height: 100%;
+}
+
+.sobre-item-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(212, 175, 55, 0.2);
+    border-color: rgba(212, 175, 55, 0.3);
+}
+
+/* Setas douradas para todos os carrosséis */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 50px;
+    height: 50px;
+    background-color: #d4af37 !important;
+    border-radius: 50%;
+    opacity: 1 !important;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: #c19d2e !important;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.6);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: brightness(0) invert(1);
+    width: 25px;
+    height: 25px;
+}
+
 /* Polaroids maiores nas seções 2 e 3 */
 .polaroid-large {
     width: 320px !important;
@@ -1160,9 +1229,17 @@ html {
         padding: 0.3rem 1rem !important;
     }
 
-    /* Galeria uma linha no mobile */
+    /* Galeria uma linha no mobile - corrigido para não desaparecer */
     .gallery-carousel-wrapper .desktop-gallery-row {
         display: none !important;
+    }
+
+    .gallery-carousel-wrapper .carousel {
+        position: relative;
+    }
+
+    .gallery-carousel-wrapper .carousel-inner {
+        overflow: visible !important;
     }
 
     .gallery-carousel-wrapper .mobile-gallery-row {
@@ -1174,6 +1251,7 @@ html {
         scrollbar-width: none;
         margin: 0 -15px;
         padding: 0 15px;
+        min-height: 320px;
     }
 
     .gallery-carousel-wrapper .mobile-gallery-row::-webkit-scrollbar {
@@ -1187,6 +1265,12 @@ html {
         padding: 0 5px;
     }
 
+    .gallery-carousel-wrapper .mobile-gallery-row .polaroid {
+        opacity: 1 !important;
+        visibility: visible !important;
+        display: block !important;
+    }
+
     .gallery-carousel-wrapper .carousel-control-prev,
     .gallery-carousel-wrapper .carousel-control-next {
         display: none !important;
@@ -1194,6 +1278,13 @@ html {
 
     .gallery-carousel-wrapper .carousel-item {
         padding: 0;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+    .gallery-carousel-wrapper .carousel-item.active {
+        opacity: 1 !important;
+        visibility: visible !important;
     }
 }
 

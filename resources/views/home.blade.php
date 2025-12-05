@@ -82,24 +82,30 @@
             <div class="col-lg-10">
                 <div class="row g-5">
                     <div class="col-md-4 text-center">
-                        <h3 class="h4 mb-4 fw-light" style="color: #2c2c2c;">O que fazemos:</h3>
-                        <p style="color: #666; line-height: 1.8;">
-                            Criamos eventos que acolhem e comunicam a essência e valores dos anfitriões.
-                        </p>
+                        <div class="sobre-item-card">
+                            <h3 class="h4 mb-4 fw-light" style="color: #2c2c2c;">O que fazemos:</h3>
+                            <p style="color: #666; line-height: 1.8;">
+                                Criamos eventos que acolhem e comunicam a essência e valores dos anfitriões.
+                            </p>
+                        </div>
                     </div>
                     <div class="col-md-4 text-center">
-                        <h3 class="h4 mb-4 fw-light" style="color: #2c2c2c;">Como fazemos:</h3>
-                        <p style="color: #666; line-height: 1.8;">
-                            Com rigor técnico, criatividade e leveza, respeitando e valorizando todas as pessoas
-                            envolvidas no processo.
-                        </p>
+                        <div class="sobre-item-card">
+                            <h3 class="h4 mb-4 fw-light" style="color: #2c2c2c;">Como fazemos:</h3>
+                            <p style="color: #666; line-height: 1.8;">
+                                Com rigor técnico, criatividade e leveza, respeitando e valorizando todas as pessoas
+                                envolvidas no processo.
+                            </p>
+                        </div>
                     </div>
                     <div class="col-md-4 text-center">
-                        <h3 class="h4 mb-4 fw-light" style="color: #2c2c2c;">Por quê fazemos:</h3>
-                        <p style="color: #666; line-height: 1.8;">
-                            Porque acreditamos que festas são experiências que fazem com que as pessoas se sintam
-                            validadas, amadas e fortalecidas.
-                        </p>
+                        <div class="sobre-item-card">
+                            <h3 class="h4 mb-4 fw-light" style="color: #2c2c2c;">Por quê fazemos:</h3>
+                            <p style="color: #666; line-height: 1.8;">
+                                Porque acreditamos que festas são experiências que fazem com que as pessoas se sintam
+                                validadas, amadas e fortalecidas.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -473,32 +479,28 @@
         </div>
 
         <div class="gallery-carousel-wrapper">
-            <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div id="galleryCarousel" class="carousel slide" data-bs-ride="false">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="row g-4 justify-content-center desktop-gallery-row">
                             <div class="col-6 col-md-4 col-lg-3">
                                 <div class="polaroid">
                                     <img src="{{ asset('imagens_hero/1.jpg') }}" alt="Galeria 1" loading="lazy">
-                                    <p class="polaroid-caption">Casamento Elegante</p>
                                 </div>
                             </div>
                             <div class="col-6 col-md-4 col-lg-3">
                                 <div class="polaroid">
                                     <img src="{{ asset('imagens_hero/2.jpg') }}" alt="Galeria 2" loading="lazy">
-                                    <p class="polaroid-caption">Momentos Únicos</p>
                                 </div>
                             </div>
                             <div class="col-6 col-md-4 col-lg-3">
                                 <div class="polaroid">
                                     <img src="{{ asset('imagens_hero/3.jpg') }}" alt="Galeria 3" loading="lazy">
-                                    <p class="polaroid-caption">Decoração Sofisticada</p>
                                 </div>
                             </div>
                             <div class="col-6 col-md-4 col-lg-3">
                                 <div class="polaroid">
                                     <img src="{{ asset('imagens_hero/4.jpg') }}" alt="Galeria 4" loading="lazy">
-                                    <p class="polaroid-caption">Celebração</p>
                                 </div>
                             </div>
                         </div>
@@ -507,49 +509,41 @@
                             <div class="col-6">
                                 <div class="polaroid" style="transform: none; width: 100%;">
                                     <img src="{{ asset('imagens_hero/1.jpg') }}" alt="Galeria 1" loading="lazy">
-                                    <p class="polaroid-caption">Casamento Elegante</p>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="polaroid" style="transform: none; width: 100%;">
                                     <img src="{{ asset('imagens_hero/2.jpg') }}" alt="Galeria 2" loading="lazy">
-                                    <p class="polaroid-caption">Momentos Únicos</p>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="polaroid" style="transform: none; width: 100%;">
                                     <img src="{{ asset('imagens_hero/3.jpg') }}" alt="Galeria 3" loading="lazy">
-                                    <p class="polaroid-caption">Decoração Sofisticada</p>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="polaroid" style="transform: none; width: 100%;">
                                     <img src="{{ asset('imagens_hero/4.jpg') }}" alt="Galeria 4" loading="lazy">
-                                    <p class="polaroid-caption">Celebração</p>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="polaroid" style="transform: none; width: 100%;">
                                     <img src="{{ asset('imagens_hero/5.jpg') }}" alt="Galeria 5" loading="lazy">
-                                    <p class="polaroid-caption">Bufê Exclusivo</p>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="polaroid" style="transform: none; width: 100%;">
                                     <img src="{{ asset('imagens_hero/6.jpg') }}" alt="Galeria 6" loading="lazy">
-                                    <p class="polaroid-caption">Cerimônia</p>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="polaroid" style="transform: none; width: 100%;">
                                     <img src="{{ asset('imagens_hero/7.jpg') }}" alt="Galeria 7" loading="lazy">
-                                    <p class="polaroid-caption">Mesa Decorada</p>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="polaroid" style="transform: none; width: 100%;">
                                     <img src="{{ asset('imagens_hero/8.jpg') }}" alt="Galeria 8" loading="lazy">
-                                    <p class="polaroid-caption">Evento Especial</p>
                                 </div>
                             </div>
                         </div>
@@ -559,25 +553,21 @@
                             <div class="col-6 col-md-4 col-lg-3">
                                 <div class="polaroid">
                                     <img src="{{ asset('imagens_hero/5.jpg') }}" alt="Galeria 5" loading="lazy">
-                                    <p class="polaroid-caption">Bufê Exclusivo</p>
                                 </div>
                             </div>
                             <div class="col-6 col-md-4 col-lg-3">
                                 <div class="polaroid">
                                     <img src="{{ asset('imagens_hero/6.jpg') }}" alt="Galeria 6" loading="lazy">
-                                    <p class="polaroid-caption">Cerimônia</p>
                                 </div>
                             </div>
                             <div class="col-6 col-md-4 col-lg-3">
                                 <div class="polaroid">
                                     <img src="{{ asset('imagens_hero/7.jpg') }}" alt="Galeria 7" loading="lazy">
-                                    <p class="polaroid-caption">Mesa Decorada</p>
                                 </div>
                             </div>
                             <div class="col-6 col-md-4 col-lg-3">
                                 <div class="polaroid">
                                     <img src="{{ asset('imagens_hero/8.jpg') }}" alt="Galeria 8" loading="lazy">
-                                    <p class="polaroid-caption">Evento Especial</p>
                                 </div>
                             </div>
                         </div>

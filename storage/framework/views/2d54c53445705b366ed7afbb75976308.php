@@ -29,16 +29,16 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item">
-                        <a class="nav-link" href="#sobre">Sobre</a>
+                        <a class="nav-link" href="<?php echo e(route('home')); ?>#sobre">Sobre</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#servicos">Serviços</a>
+                        <a class="nav-link" href="<?php echo e(route('home')); ?>#servicos">Serviços</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#equipe">Equipe</a>
+                        <a class="nav-link" href="<?php echo e(route('home')); ?>#equipe">Equipe</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#galeria">Galeria</a>
+                        <a class="nav-link" href="<?php echo e(route('home')); ?>#galeria">Galeria</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo e(route('contact.index')); ?>">Contato</a>

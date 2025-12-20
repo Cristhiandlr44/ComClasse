@@ -1,0 +1,687 @@
+================================================================================
+MAPEAMENTO COMPLETO: COMPONENTES HTML E SUAS LOCALIZAÇÕES NO CSS
+Site: Com Classe Assessoria e Cerimonial
+================================================================================
+
+================================================================================
+1. ESTRUTURA BASE E LAYOUT PRINCIPAL
+================================================================================
+
+HTML: <body class="site-body">
+CSS: .site-body (linha 55-57)
+     - Define o fundo do site usando a variável --bg (#f7f3eb)
+
+HTML: <div class="site-container">
+CSS: .site-container (linha 59-63)
+     - Container principal com largura máxima de 1320px
+     - Padding horizontal de 24px
+     - Centralizado com margin: 0 auto
+
+HTML: <main class="page-shell">
+CSS: .page-shell (linha 65-67)
+     - Previne overflow horizontal (overflow-x: hidden)
+
+HTML: <section class="section-block">
+CSS: .section-block (linha 129-131)
+     - Padding vertical de 96px para todas as seções
+
+================================================================================
+2. HEADER / CABEÇALHO
+================================================================================
+
+HTML: <header class="site-header">
+CSS: .site-header (linha 69-76)
+     - Posição sticky (fixo no topo ao rolar)
+     - Fundo semi-transparente com blur
+     - Z-index 50 para ficar acima do conteúdo
+     - Borda inferior sutil
+
+HTML: <div class="header-inner">
+CSS: .header-inner (linha 78-84)
+     - Flexbox horizontal
+     - Espaçamento entre elementos (gap: 18px)
+     - Padding vertical de 14px
+
+HTML: <a class="header-brand">
+CSS: .header-brand (linha 86-90)
+     - Flexbox inline para alinhar logo
+     - Gap de 10px entre elementos
+
+HTML: <img class="header-logo">
+CSS: .header-logo (linha 92-96)
+     - Altura fixa de 54px
+     - Largura automática
+
+HTML: <nav class="header-nav">
+CSS: .header-nav (linha 98-104)
+     - Flexbox horizontal para links
+     - Tamanho de fonte 0.98rem
+     - Letter-spacing de 0.3px
+
+HTML: <a class="header-cta">
+CSS: .header-cta (linha 110-122)
+     - Botão de acesso ao sistema
+     - Borda arredondada (border-radius: 999px)
+     - Texto em maiúsculas
+     - Efeito hover com elevação e sombra
+
+================================================================================
+3. SEÇÃO HERO / INÍCIO
+================================================================================
+
+HTML: <section id="inicio" class="section-block header-hero">
+CSS: .header-hero (linha 182-186)
+     - Padding top de 110px
+     - Padding bottom de 72px
+     - Fundo usando variável --bg
+
+HTML: <div class="logo-band">
+CSS: .logo-band (linha 188-192)
+     - Flexbox centralizado
+     - Margin bottom de 36px
+
+HTML: <img class="logo-main">
+CSS: .logo-main (linha 194-197)
+     - Largura responsiva: clamp(180px, 20vw, 240px)
+     - Altura automática
+
+HTML: <div class="hero-collage">
+CSS: .hero-collage (linha 199-203)
+     - Grid de 2 colunas (1.15fr 0.85fr)
+     - Gap de 14px entre elementos
+
+HTML: <div class="left-column">
+CSS: .left-column (linha 205-209)
+     - Grid com 2 linhas automáticas
+     - Gap de 14px
+
+HTML: <div class="left-stack">
+CSS: .left-stack (linha 211-216)
+     - Grid de 2 colunas iguais
+     - Altura responsiva: clamp(340px, 32vw, 420px)
+
+HTML: <div class="photo-vertical">
+CSS: .photo-vertical (linha 218-224)
+     - Border-radius de 10px
+     - Sombra suave
+     - Fundo #e8e2d5
+
+HTML: <div class="hero-text">
+CSS: .hero-text (linha 273-275)
+     - Texto centralizado
+
+HTML: <p class="impact-line font-antic-didone">Comemore seus sonhos.</p>
+CSS: .impact-line.font-antic-didone (linha 292-298)
+     - Tamanho: clamp(1.5rem, 2.5vw, 2.2rem)
+     - Letter-spacing: -2px (espaçamento negativo)
+     - Font-weight: 300 (fino)
+     - Suavização de fonte ativada
+
+HTML: <p class="impact-line font-abramo">Celebre Com Classe.</p>
+CSS: .impact-line.font-abramo (linha 300-303)
+     - Tamanho: clamp(3.8rem, 6.5vw, 6.5rem)
+     - Cor: var(--accent-dark) (#9a7c43)
+
+HTML: <div class="right-stack">
+CSS: .right-stack (linha 245-251)
+     - Grid com 2 linhas (45% e 55%)
+     - Altura calculada: 1.5x da altura do left-stack
+
+HTML: <div class="right-top">
+CSS: .right-top (linha 253-258)
+     - Border-radius de 12px
+     - Sombra suave
+     - Fundo #e8e2d5
+
+HTML: <div class="right-bottom">
+CSS: .right-bottom (linha 267-271)
+     - Grid de 2 colunas iguais
+     - Gap de 14px
+
+================================================================================
+4. SEÇÃO QUEM SOMOS
+================================================================================
+
+HTML: <section id="quem-somos" class="section-block who-values-section">
+CSS: .who-values-section (linha 306-309)
+     - Fundo branco (var(--surface))
+     - Padding bottom de 32px
+
+HTML: <div class="who-block">
+CSS: .who-block (linha 311-314)
+     - Grid com gap de 40px
+
+HTML: <div class="who-row first">
+CSS: .who-row (linha 316-321)
+     - Grid de 2 colunas iguais
+     - Gap de 32px
+     - Alinhamento stretch
+
+HTML: <div class="who-media">
+CSS: .who-media (linha 333-344)
+     - Border-radius de 12px
+     - Aspect-ratio 3:4
+     - Altura mínima 460px, máxima 560px
+     - Largura 90%
+     - Alinhado à direita (justify-self: end)
+
+CSS: .who-row.first .who-media (linha 346-349)
+     - Alinhado à esquerda (justify-self: start)
+     - Largura 95%
+
+CSS: .who-media.outlined (linha 358-363)
+     - Borda preta de 1px
+     - Altura mínima 420px, máxima 520px
+
+HTML: <div class="who-text">
+CSS: .who-text (linha 365-373)
+     - Flexbox vertical
+     - Gap de 12px entre elementos
+     - Tamanho de fonte 1.02rem
+     - Cor: var(--muted)
+
+CSS: .who-text .eyebrow (linha 375-377)
+     - Margin bottom negativo de -50px (aproxima do título)
+
+CSS: .who-text h2, .who-text h3 (linha 379-383)
+     - Margin top 0
+     - Margin bottom 4px
+
+CSS: .who-text p (linha 385-388)
+     - Margin 0
+     - Line-height 1.7
+
+HTML: <p class="eyebrow font-abramo">Quem somos</p>
+CSS: .eyebrow (linha 169-173)
+     - Letter-spacing: 4px
+     - Font-size: 5.78rem (muito grande)
+     - Cor: var(--ink) (#2d2a28)
+
+HTML: <h2 class="font-antic-didone">A base de tudo</h2>
+CSS: .font-antic-didone (linha 149-156)
+     - Fonte: AnticDidone
+     - Text-transform: uppercase
+     - Text-align: left
+     - Font-weight: 300
+     - Suavização de fonte
+
+HTML: <h3 class="font-antic-didone">A estrutura</h3>
+     - Usa as mesmas classes acima
+
+================================================================================
+5. SEÇÃO VALORES
+================================================================================
+
+HTML: <div class="values-layout">
+CSS: .values-layout (linha 391-398)
+     - Grid de 1 coluna
+     - Gap de 18px
+     - Margin top negativo de -32px
+
+HTML: <div class="values-header">
+CSS: .values-header (linha 409-414)
+     - Flexbox horizontal
+     - Gap de 14px
+     - Padding left de 12px
+
+HTML: <h2 class="values-title font-abramo">Nossos valores</h2>
+CSS: .values-title (linha 416-423)
+     - Font-size: clamp(6rem, 7.5vw, 6.9rem) (muito grande)
+     - Font-weight: 400
+     - Line-height: 1.02
+     - Transform: translateY(-40px) (move para cima)
+
+HTML: <div class="values-line-long">
+CSS: .values-line-long (linha 425-430)
+     - Linha decorativa preta
+     - Altura 2px
+     - Flex: 1 (ocupa espaço restante)
+     - Margin top negativo de -18px
+
+HTML: <div class="values-grid flat inline">
+CSS: .values-grid (linha 432-437)
+     - Grid de 4 colunas
+     - Gap de 8px vertical e 18px horizontal
+
+HTML: <div class="value-card">
+CSS: .value-card (linha 439-444)
+     - Sem fundo, padding ou sombra
+     - Padding de 6px 10px
+
+CSS: .value-card h3 (linha 446-452)
+     - Font-size: 0.95rem
+     - Margin bottom: 6px
+     - Text-transform: uppercase
+     - Text-align: center
+
+CSS: .value-card p (linha 454-458)
+     - Margin: 0
+     - Line-height: 1.6
+     - Text-align: center
+
+HTML: <div class="impact-full">
+CSS: .impact-full (linha 460-467)
+     - Largura 100vw (largura total da viewport)
+     - Margin top 24px, bottom 8px
+     - Centralizado horizontalmente com transform
+
+CSS: .impact-full img (linha 469-475)
+     - Altura responsiva: clamp(280px, 32vw, 340px)
+     - Object-fit: cover
+     - Object-position: center 75%
+
+================================================================================
+6. SEÇÃO ATUAÇÃO
+================================================================================
+
+HTML: <section id="atuacao" class="section-block atuacao-section">
+CSS: .atuacao-section (linha 478-481)
+     - Fundo branco
+     - Padding top de 36px
+
+HTML: <div class="atuacao-header">
+CSS: .atuacao-header (linha 483-489)
+     - Flexbox horizontal
+     - Alinhamento flex-end
+     - Gap de 12px
+     - Padding left de 6px
+
+HTML: <h2 class="atuacao-title font-abramo">Nossa atuação</h2>
+CSS: .atuacao-title (linha 491-497)
+     - Font-size: clamp(4.2rem, 5vw, 4.8rem)
+     - Font-weight: 400
+     - Line-height: 1
+     - Transform: translateY(-6px)
+
+HTML: <p class="atuacao-subtitle">
+CSS: .atuacao-subtitle (linha 499-504)
+     - Margin: 0 0 18px
+     - Cor: var(--muted)
+     - Font-size: 1.05rem
+     - Padding left de 6px
+
+HTML: <div class="atuacao-thumbs">
+CSS: .atuacao-thumbs (linha 506-511)
+     - Grid de 3 colunas
+     - Gap de 18px
+     - Margin vertical de 12px 0 22px
+
+HTML: <div class="atuacao-item">
+CSS: .atuacao-item (linha 513-515)
+     - Text-align: center
+
+CSS: .atuacao-item img (linha 517-524)
+     - Largura 100%
+     - Altura fixa de 180px
+     - Border-radius de 10px
+     - Sombra suave
+
+CSS: .atuacao-item p (linha 526-531)
+     - Margin: 10px 0 0
+     - Cor: var(--ink)
+     - Font-weight: 500
+     - Line-height: 1.4
+
+HTML: <div class="atuacao-cta">
+CSS: .atuacao-cta (linha 533-536)
+     - Flexbox centralizado
+
+HTML: <a class="atuacao-btn">
+CSS: .atuacao-btn (linha 538-551)
+     - Largura máxima de 960px
+     - Fundo transparente
+     - Borda de 2px sólida
+     - Padding de 14px 28px
+     - Text-transform: uppercase
+     - Border-radius de 10px
+     - Sombra suave
+     - Efeito hover com elevação e mudança de cor
+
+================================================================================
+7. SEÇÃO DEPOIMENTOS
+================================================================================
+
+HTML: <section id="depoimentos" class="section-block testimonials-section">
+CSS: .testimonials-section (linha 561-565)
+     - Fundo: var(--bg)
+     - Padding top 58px, bottom 64px
+
+CSS: .testimonials-section .site-container (linha 567-569)
+     - Largura máxima aumentada: calc(var(--max-width) + 160px)
+
+HTML: <h2 class="testimonials-title font-abramo">Depoimentos</h2>
+CSS: .testimonials-title (linha 571-575)
+     - Font-size: clamp(5.1rem, 6.8vw, 6.8rem)
+     - Margin: 0 0 10px
+     - Cor: var(--ink)
+
+HTML: <div class="carousel slide testimonials-carousel">
+CSS: .testimonials-carousel (linha 577-580)
+     - Posição relativa
+     - Padding: 12px 38px 0
+
+CSS: .testimonials-carousel .carousel-inner (linha 582-586)
+     - Flexbox horizontal
+     - Gap de 14px
+     - Transição suave
+
+CSS: .testimonials-carousel .carousel-item (linha 588-594)
+     - Text-align: left
+     - Padding: 6px 6px 0
+     - Flex: 0 0 33.333% (3 itens por vez)
+     - Max-width: 33.333%
+
+HTML: <div class="testimonial-item">
+CSS: .testimonial-item (linha 596-599)
+     - Padding: 8px 6px
+     - Cor: var(--ink)
+
+CSS: .testimonial-item i.bi-quote (linha 601-606)
+     - Font-size: 1.6rem
+     - Cor: var(--accent-dark)
+     - Margin bottom: 8px
+
+HTML: <p class="quote">
+CSS: .testimonial-item .quote (linha 608-612)
+     - Margin: 0 0 10px
+     - Font-size: 1.16rem
+     - Line-height: 1.68
+
+HTML: <div class="testimonial-sep">
+CSS: .testimonial-sep (linha 614-620)
+     - Largura 60px
+     - Altura 2px
+     - Fundo: var(--ink)
+     - Opacidade 0.6
+
+HTML: <p class="author">
+CSS: .testimonial-item .author (linha 622-628)
+     - Margin: 0
+     - Font-size: 0.85rem
+     - Letter-spacing: 0.8px
+     - Text-transform: uppercase
+     - Cor: var(--accent-dark)
+
+HTML: <button class="carousel-arrow carousel-arrow-prev">
+HTML: <button class="carousel-arrow carousel-arrow-next">
+CSS: .carousel-arrow (linha 630-645)
+     - Posição absoluta
+     - Top: 45%
+     - Transform: translateY(-50%)
+     - Tamanho: 48x48px
+     - Fundo transparente
+     - Cor: var(--accent-dark)
+     - Font-size: 2.1rem
+     - Efeito hover com scale
+
+CSS: .carousel-arrow-prev (linha 651-653)
+     - Left: 0
+
+CSS: .carousel-arrow-next (linha 655-657)
+     - Right: 0
+
+================================================================================
+8. SEÇÃO CONTATO
+================================================================================
+
+HTML: <section id="contato" class="section-block contact-section">
+CSS: .contact-section (linha 660-662)
+     - Fundo branco
+
+HTML: <p class="subtitle lead-highlight contact-lead">
+CSS: .lead-highlight (linha 664-668)
+     - Font-size: 1.1rem
+     - Cor: var(--ink)
+     - Letter-spacing: 0.4px
+
+CSS: .contact-lead (linha 670-674)
+     - Text-align: left
+     - Max-width: none
+     - Margin: 0 0 10px
+
+HTML: <h2 class="contact-title font-abramo">Entre em Contato!</h2>
+CSS: .contact-title (linha 676-681)
+     - Text-align: left
+     - Font-size: clamp(4rem, 5vw, 5rem)
+     - Margin: 0 0 14px 4px
+     - Line-height: 1
+
+HTML: <div class="contact-cta left">
+CSS: .contact-cta (linha 683-687)
+     - Margin top: 28px
+     - Flexbox centralizado
+
+CSS: .contact-cta.left (linha 689-691)
+     - Justify-content: flex-start (alinhado à esquerda)
+
+HTML: <a class="btn-primary btn-wide">
+CSS: .btn-primary (linha 746-755)
+     - Fundo: var(--ink)
+     - Cor: branca
+     - Padding: 14px 36px
+     - Border-radius: 999px (totalmente arredondado)
+     - Letter-spacing: 1px
+     - Efeito hover com elevação e sombra
+
+CSS: .btn-wide (linha 693-696)
+     - Min-width: 320px
+     - Text-align: center
+
+================================================================================
+9. SEÇÃO INSTAGRAM
+================================================================================
+
+HTML: <section id="instagram" class="section-block insta-section">
+CSS: .insta-section (linha 794-796)
+     - Fundo branco
+
+HTML: <div class="insta-area center">
+CSS: .insta-area (linha 798-803)
+     - Padding: 22px 0 14px
+     - Grid com gap de 14px
+     - Text-align: center
+
+HTML: <div class="insta-header">
+CSS: .insta-header .footer-cta (linha 805-808)
+     - Text-transform: lowercase
+     - Letter-spacing: 2.4px
+
+HTML: <div class="insta-carousel">
+CSS: .insta-carousel (linha 810-813)
+     - Posição relativa
+     - Overflow hidden
+
+HTML: <div class="insta-track">
+CSS: .insta-track (linha 815-819)
+     - Flexbox horizontal
+     - Gap de 10px
+     - Transição suave
+
+HTML: <a class="insta-item">
+CSS: .insta-item (linha 821-829)
+     - Posição relativa
+     - Flex: 0 0 140px
+     - Altura: 140px
+     - Border-radius: 10px
+     - Sombra: 0 10px 24px rgba(0, 0, 0, 0.18)
+
+CSS: .insta-item img (linha 831-836)
+     - Largura e altura 100%
+     - Object-fit: cover
+
+HTML: <span class="insta-multi">
+CSS: .insta-multi (linha 838-850)
+     - Posição absoluta
+     - Top: 8px, right: 8px
+     - Fundo semi-transparente preto
+     - Border-radius: 8px
+     - Padding: 3px 6px
+
+HTML: <button class="insta-arrow insta-prev">
+HTML: <button class="insta-arrow insta-next">
+CSS: .insta-arrow (linha 852-867)
+     - Posição absoluta
+     - Top: 50%
+     - Transform: translateY(-50%)
+     - Tamanho: 42x42px
+     - Fundo semi-transparente preto
+     - Border-radius: 999px
+     - Efeito hover com mudança de fundo e scale
+
+CSS: .insta-prev (linha 874)
+     - Left: 6px
+
+CSS: .insta-next (linha 875)
+     - Right: 6px
+
+================================================================================
+10. FOOTER / RODAPÉ
+================================================================================
+
+HTML: <footer class="site-footer">
+CSS: .site-footer (linha 788-792)
+     - Fundo: #141210 (preto escuro)
+     - Cor: #dcd7cf (bege claro)
+     - Padding: 0
+
+HTML: <div class="footer-base">
+CSS: .footer-base (linha 877-883)
+     - Grid de 3 colunas
+     - Alinhamento centralizado
+     - Gap de 18px
+     - Padding: 28px 0
+
+HTML: <div class="footer-brand">
+CSS: .footer-brand (linha 885-891)
+     - Flexbox horizontal
+     - Gap de 12px
+     - Font-size: 0.95rem
+     - Cor: #f1ede6
+
+HTML: <img class="footer-logo">
+CSS: .footer-logo (linha 893-896)
+     - Altura: 46px
+     - Largura automática
+
+HTML: <p class="footer-cta">
+CSS: .footer-cta (linha 898-903)
+     - Letter-spacing: 2.2px
+     - Font-size: 0.78rem
+     - Margin: 0
+
+HTML: <p class="footer-handle">
+CSS: .footer-handle (linha 905-908)
+     - Cor: var(--accent) (#c5a16a)
+     - Margin: 6px 0 0
+
+HTML: <div class="footer-links">
+CSS: .footer-links (linha 910-915)
+     - Flexbox horizontal
+     - Justify-content: flex-end
+     - Gap de 18px
+     - Font-size: 0.95rem
+
+CSS: .footer-links a (linha 917-919)
+     - Cor: #f1ede6
+
+CSS: .footer-links .login-link (linha 921-926)
+     - Flexbox inline
+     - Gap de 6px
+     - Cor: var(--accent)
+
+================================================================================
+11. CLASSES DE FONTE E TIPOGRAFIA
+================================================================================
+
+CSS: .serif (linha 137-139)
+     - Fonte: 'Playfair Display', 'Times New Roman', serif
+
+CSS: .script (linha 141-143)
+     - Fonte: 'Allura', cursive
+
+CSS: .font-abramo (linha 145-147)
+     - Fonte: 'Abramo', 'Playfair Display', 'Times New Roman', serif
+     - Usada em: "Celebre Com Classe", "Quem somos", "Nossos valores", 
+       "Nossa atuação", "Depoimentos", "Entre em Contato!"
+
+CSS: .font-antic-didone (linha 149-156)
+     - Fonte: 'AnticDidone', 'Playfair Display', 'Times New Roman', serif
+     - Text-transform: uppercase
+     - Text-align: left
+     - Font-weight: 300 (fino)
+     - Suavização de fonte ativada
+     - Usada em: "Comemore seus sonhos", "A base de tudo", "A estrutura"
+
+CSS: h1, h2, h3 (linha 158-163)
+     - Cor: var(--ink)
+     - Font-weight: 500
+     - Letter-spacing: 0.5px
+     - Margin: 0 0 12px
+
+CSS: p (linha 165-167)
+     - Margin: 0 0 12px
+
+CSS: .subtitle (linha 175-179)
+     - Cor: var(--muted)
+     - Max-width: 720px
+     - Margin: 0 auto 32px
+
+================================================================================
+12. VARIÁVEIS CSS (CUSTOM PROPERTIES)
+================================================================================
+
+CSS: :root (linha 17-29)
+     --bg: #f7f3eb (fundo bege claro)
+     --ink: #2d2a28 (texto preto escuro)
+     --muted: #6b635a (texto cinza)
+     --accent: #c5a16a (destaque dourado)
+     --accent-dark: #9a7c43 (destaque dourado escuro)
+     --surface: #ffffff (fundo branco)
+     --max-width: 1320px (largura máxima do container)
+     --gutter: 24px (padding horizontal)
+     --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.08) (sombra suave)
+     --hero-left-h: clamp(340px, 32vw, 420px) (altura do hero esquerdo)
+     --hero-gap: 14px (espaçamento entre imagens do hero)
+
+================================================================================
+13. FONTES PERSONALIZADAS (@font-face)
+================================================================================
+
+CSS: @font-face 'Abramo' (linha 1-7)
+     - Arquivo: ../fonts/Abramo-Script.otf
+     - Formato: opentype
+     - Font-weight: normal
+     - Font-style: normal
+
+CSS: @font-face 'AnticDidone' (linha 9-15)
+     - Arquivo: ../fonts/AnticDidone-Regular.ttf
+     - Formato: truetype
+     - Font-weight: normal
+     - Font-style: normal
+
+================================================================================
+14. MEDIA QUERIES (RESPONSIVIDADE)
+================================================================================
+
+CSS: @media (max-width: 1199px) (linha 933-945)
+     - Ajustes para tablets grandes
+     - Grid de valores muda para 2 colunas
+
+CSS: @media (max-width: 991px) (linha 947-1001)
+     - Ajustes para tablets
+     - Grid de quem-somos e valores vira 1 coluna
+     - Footer vira 1 coluna
+     - Carousel de depoimentos mostra 2 itens
+     - Header nav ajustado
+
+CSS: @media (max-width: 767px) (linha 1003-1092)
+     - Ajustes para mobile
+     - Hero collage vira 1 coluna
+     - Valores vira 1 coluna
+     - Carousel mostra 1 item por vez
+     - Header reorganizado
+     - Imagens do instagram menores
+
+================================================================================
+FIM DO MAPEAMENTO
+================================================================================

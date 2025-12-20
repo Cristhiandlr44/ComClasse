@@ -1,0 +1,217 @@
+================================================================================
+PASSO A PASSO: COMO ADICIONAR NOVAS IMAGENS E LINKS DO INSTAGRAM
+Site: Com Classe Assessoria e Cerimonial
+================================================================================
+
+================================================================================
+1. PREPARAÇÃO DAS IMAGENS
+================================================================================
+
+1.1. Prepare as imagens que deseja adicionar ao carrossel do Instagram
+    - Formato recomendado: JPG ou PNG
+    - Tamanho recomendado: Quadrado (ex: 800x800px ou 1000x1000px)
+    - Nomeie as imagens de forma descritiva (ex: insta_post_01.jpg)
+
+1.2. Coloque as imagens na pasta:
+    📁 public/imagens_hero/
+    OU
+    📁 public/imagens_2_secao/
+    OU
+    📁 public/imagens_3_secao/
+    
+    (Use a pasta que fizer mais sentido para a imagem)
+
+================================================================================
+2. ADICIONAR NOVA IMAGEM NO CARROSSEL
+================================================================================
+
+2.1. Abra o arquivo:
+    📄 resources/views/home.blade.php
+
+2.2. Localize a seção do Instagram (procure por: <section id="instagram")
+
+2.3. Dentro da seção, encontre a div com classe "insta-track":
+    <div class="insta-track">
+        ... (aqui estão os itens do carrossel)
+    </div>
+
+2.4. Para adicionar uma nova imagem, copie um dos blocos existentes e cole antes do 
+    fechamento da div "insta-track". Exemplo de bloco:
+
+    <a class="insta-item" href="LINK_DO_INSTAGRAM_AQUI" target="_blank" rel="noopener">
+        <span class="insta-multi"><i class="bi bi-collection"></i></span>
+        <img src="{{ asset('PASTA/IMAGEM.jpg') }}" alt="Descrição da imagem" loading="lazy">
+    </a>
+
+2.5. Substitua os seguintes valores:
+    - LINK_DO_INSTAGRAM_AQUI: Cole o link completo do post do Instagram
+      Exemplo: https://www.instagram.com/p/ABC123XYZ/
+    
+    - PASTA/IMAGEM.jpg: Substitua pela pasta e nome da sua imagem
+      Exemplo: imagens_hero/insta_post_01.jpg
+      OU: imagens_2_secao/minha_imagem.jpg
+      OU: imagens_3_secao/nova_foto.jpg
+    
+    - Descrição da imagem: Escreva uma descrição curta (para acessibilidade)
+      Exemplo: "Post Instagram - Casamento Elegante"
+
+================================================================================
+3. EXEMPLO COMPLETO
+================================================================================
+
+Antes (exemplo existente):
+    <a class="insta-item" href="https://www.instagram.com/comclassecasamentos/" target="_blank" rel="noopener">
+        <span class="insta-multi"><i class="bi bi-collection"></i></span>
+        <img src="{{ asset('imagens_hero/1.jpg') }}" alt="Instagram 1" loading="lazy">
+    </a>
+
+Depois (novo item adicionado):
+    <a class="insta-item" href="https://www.instagram.com/p/ABC123XYZ/" target="_blank" rel="noopener">
+        <span class="insta-multi"><i class="bi bi-collection"></i></span>
+        <img src="{{ asset('imagens_hero/nova_imagem.jpg') }}" alt="Post Instagram - Novo Casamento" loading="lazy">
+    </a>
+
+================================================================================
+4. COMO OBTER O LINK DO POST DO INSTAGRAM
+================================================================================
+
+4.1. Abra o Instagram no navegador ou app
+4.2. Vá até o post que deseja linkar
+4.3. Clique nos três pontos (...) no canto superior direito do post
+4.4. Selecione "Copiar link" ou "Copy Link"
+4.5. O link será algo como: https://www.instagram.com/p/ABC123XYZ/
+4.6. Cole esse link no atributo href do elemento <a>
+
+================================================================================
+5. ESTRUTURA COMPLETA DE UM ITEM DO CARROSSEL
+================================================================================
+
+<a class="insta-item" 
+   href="https://www.instagram.com/p/CODIGO_DO_POST/" 
+   target="_blank" 
+   rel="noopener">
+    <span class="insta-multi">
+        <i class="bi bi-collection"></i>
+    </span>
+    <img src="{{ asset('pasta/nome_imagem.jpg') }}" 
+         alt="Descrição da imagem" 
+         loading="lazy">
+</a>
+
+Explicação dos atributos:
+- class="insta-item": Classe CSS que estiliza o item
+- href: Link do post do Instagram (obrigatório)
+- target="_blank": Abre o link em nova aba
+- rel="noopener": Segurança ao abrir links externos
+- src: Caminho da imagem (usar asset() do Laravel)
+- alt: Texto alternativo para acessibilidade
+- loading="lazy": Carrega a imagem apenas quando necessário (performance)
+
+================================================================================
+6. ORDEM DAS IMAGENS
+================================================================================
+
+As imagens aparecem na ordem que estão no código HTML.
+- A primeira imagem no código será a primeira no carrossel
+- Para mudar a ordem, basta mover os blocos <a class="insta-item"> no código
+
+================================================================================
+7. QUANTIDADE DE IMAGENS
+================================================================================
+
+Não há limite de imagens, mas recomenda-se:
+- Mínimo: 3-4 imagens para o carrossel funcionar bem
+- Ideal: 6-12 imagens
+- Máximo: Sem limite técnico, mas muitas imagens podem deixar o carrossel lento
+
+================================================================================
+8. DICAS IMPORTANTES
+================================================================================
+
+✅ SEMPRE teste após adicionar novas imagens
+✅ Verifique se os links do Instagram estão funcionando
+✅ Certifique-se de que as imagens existem na pasta correta
+✅ Use nomes descritivos para as imagens (facilita manutenção)
+✅ Mantenha o formato quadrado para as imagens (melhor visualização)
+✅ Otimize as imagens antes de adicionar (reduz tamanho do arquivo)
+
+❌ NÃO esqueça de fechar as tags corretamente
+❌ NÃO use espaços nos nomes dos arquivos (use underscore _ ou hífen -)
+❌ NÃO esqueça de adicionar o link do Instagram (href)
+
+================================================================================
+9. LOCALIZAÇÃO EXATA NO CÓDIGO
+================================================================================
+
+Arquivo: resources/views/home.blade.php
+Linha aproximada: 218-266 (dentro da seção <section id="instagram">)
+
+Procure por:
+    <div class="insta-track">
+        <!-- Itens do carrossel começam aqui -->
+        <a class="insta-item" ...>
+        ...
+        </a>
+        <!-- Adicione novos itens aqui -->
+    </div>
+
+================================================================================
+10. EXEMPLO DE MÚLTIPLAS IMAGENS
+================================================================================
+
+<div class="insta-track">
+    <!-- Imagem 1 -->
+    <a class="insta-item" href="https://www.instagram.com/p/ABC123/" target="_blank" rel="noopener">
+        <span class="insta-multi"><i class="bi bi-collection"></i></span>
+        <img src="{{ asset('imagens_hero/post1.jpg') }}" alt="Post 1" loading="lazy">
+    </a>
+    
+    <!-- Imagem 2 -->
+    <a class="insta-item" href="https://www.instagram.com/p/DEF456/" target="_blank" rel="noopener">
+        <span class="insta-multi"><i class="bi bi-collection"></i></span>
+        <img src="{{ asset('imagens_hero/post2.jpg') }}" alt="Post 2" loading="lazy">
+    </a>
+    
+    <!-- Imagem 3 -->
+    <a class="insta-item" href="https://www.instagram.com/p/GHI789/" target="_blank" rel="noopener">
+        <span class="insta-multi"><i class="bi bi-collection"></i></span>
+        <img src="{{ asset('imagens_hero/post3.jpg') }}" alt="Post 3" loading="lazy">
+    </a>
+    
+    <!-- Continue adicionando mais imagens seguindo o mesmo padrão -->
+</div>
+
+================================================================================
+11. TROUBLESHOOTING (SOLUÇÃO DE PROBLEMAS)
+================================================================================
+
+Problema: Imagem não aparece
+Solução: 
+    - Verifique se o caminho da imagem está correto
+    - Confirme que a imagem existe na pasta
+    - Verifique se o nome do arquivo está correto (case-sensitive)
+
+Problema: Link não funciona
+Solução:
+    - Verifique se o link do Instagram está completo
+    - Certifique-se de que o link começa com https://
+    - Teste o link diretamente no navegador
+
+Problema: Carrossel não está funcionando
+Solução:
+    - Verifique se todas as tags estão fechadas corretamente
+    - Confirme que o JavaScript está carregando (verifique console do navegador)
+    - Certifique-se de que há pelo menos 3 imagens no carrossel
+
+Problema: Imagem aparece distorcida
+Solução:
+    - Use imagens quadradas (mesma largura e altura)
+    - Redimensione as imagens antes de adicionar
+    - Mantenha proporção 1:1
+
+================================================================================
+FIM DO GUIA
+================================================================================
+
+Para dúvidas ou problemas, consulte a documentação do Laravel ou entre em 
+contato com o desenvolvedor.

@@ -3,602 +3,272 @@
 <?php $__env->startSection('title', 'Com Classe Assessoria e Cerimonial'); ?>
 
 <?php $__env->startSection('content'); ?>
-<!-- Hero Section com Colagem de Fotos -->
-<section class="hero-section-with-collage section-bg-light"
-    style="overflow: hidden; padding-top: 85px; padding-bottom: 80px;">
-    <div class="container">
-        <!-- Logo Grande -->
-        <div class="text-center mb-5 hero-logo-wrapper">
-            <img src="<?php echo e(asset('logo.png')); ?>" alt="Com Classe Assessoria e Cerimonial" class="hero-logo">
-            <p class="lead mb-0 mt-3" style="color: #666; font-size: 1.3rem; line-height: 1.8;">
-                Comemore seus Sonhos,<br>
-                Celebre Com Classe!
-            </p>
+<section id="inicio" class="section-block header-hero">
+    <div class="site-container">
+        <div class="logo-band">
+            <img src="<?php echo e(asset('logo.png')); ?>" alt="Com Classe Assessoria e Cerimonial" class="logo-main">
         </div>
 
-        <!-- Colagem de Fotos -->
-        <div class="photo-collage-wrapper">
-            <div class="photo-collage">
-                <div class="collage-photo photo-1">
-                    <img src="<?php echo e(asset('imagens_hero/1.jpg')); ?>" alt="Casamento Elegante" loading="lazy">
+        <div class="hero-collage">
+            <div class="left-column">
+                <div class="left-stack">
+                    <div class="photo-vertical">
+                        <img src="<?php echo e(asset('imagens_hero/1.jpg')); ?>" alt="Destaque 1" loading="lazy">
+                    </div>
+                    <div class="photo-vertical">
+                        <img src="<?php echo e(asset('imagens_hero/2.jpg')); ?>" alt="Destaque 2" loading="lazy">
+                    </div>
                 </div>
-                <div class="collage-photo photo-2">
-                    <img src="<?php echo e(asset('imagens_hero/2.jpg')); ?>" alt="Noivos" loading="lazy">
-                </div>
-                <div class="collage-photo photo-3">
-                    <img src="<?php echo e(asset('imagens_hero/3.jpg')); ?>" alt="Mesa Decorada" loading="lazy">
-                </div>
-                <div class="collage-photo photo-4">
-                    <img src="<?php echo e(asset('imagens_hero/4.jpg')); ?>" alt="Festa" loading="lazy">
-                </div>
-                <div class="collage-photo photo-5">
-                    <img src="<?php echo e(asset('imagens_hero/5.jpg')); ?>" alt="Bufê" loading="lazy">
-                </div>
-                <div class="collage-photo photo-6">
-                    <img src="<?php echo e(asset('imagens_hero/6.jpg')); ?>" alt="Cerimônia" loading="lazy">
-                </div>
-                <div class="collage-photo photo-7">
-                    <img src="<?php echo e(asset('imagens_hero/7.jpg')); ?>" alt="Mesa de Evento" loading="lazy">
-                </div>
-                <div class="collage-photo photo-8">
-                    <img src="<?php echo e(asset('imagens_hero/8.jpg')); ?>" alt="Evento Elegante" loading="lazy">
-                </div>
-                <div class="collage-photo photo-9">
-                    <img src="<?php echo e(asset('imagens_hero/9.jpg')); ?>" alt="Casamento" loading="lazy">
-                </div>
-                <div class="collage-photo photo-10">
-                    <img src="<?php echo e(asset('imagens_hero/10.jpg')); ?>" alt="Noivos Elegantes" loading="lazy">
-                </div>
-                <div class="collage-photo photo-11">
-                    <img src="<?php echo e(asset('imagens_hero/11.jpg')); ?>" alt="Decoração" loading="lazy">
-                </div>
-                <div class="collage-photo photo-12">
-                    <img src="<?php echo e(asset('imagens_hero/12.jpg')); ?>" alt="Celebração" loading="lazy">
+                <div class="hero-text">
+                    <p class="impact-line font-antic-didone">Comemore seus sonhos.</p>
+                    <p class="impact-line font-abramo">Celebre Com Classe.</p>
                 </div>
             </div>
-        </div>
 
-        <!-- Desde 2009 -->
-        <div class="text-center mt-5 desde-2009-text">
-            <p style="color: #888; font-size: 1.1rem; letter-spacing: 1px;">
-                Desde 2009
-            </p>
-        </div>
-    </div>
-</section>
-
-<!-- Divisor de Seção -->
-<div class="section-divider"></div>
-
-<!-- Sobre Section -->
-<section id="sobre" class="py-5 section-bg-white">
-    <div class="container">
-        <div class="row justify-content-center mb-5">
-            <div class="col-lg-8 text-center">
-                <h2 class="h3 fw-light mb-4" style="color: #2c2c2c;">Sobre Nós</h2>
-            </div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-lg-10">
-                <div class="row g-5">
-                    <div class="col-md-4 text-center">
-                        <div class="sobre-item-card">
-                            <h3 class="h4 mb-4 fw-light" style="color: #2c2c2c;">O que fazemos:</h3>
-                            <p style="color: #666; line-height: 1.8;">
-                                Criamos eventos que acolhem e comunicam a essência e valores dos anfitriões.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 text-center">
-                        <div class="sobre-item-card">
-                            <h3 class="h4 mb-4 fw-light" style="color: #2c2c2c;">Como fazemos:</h3>
-                            <p style="color: #666; line-height: 1.8;">
-                                Com rigor técnico, criatividade e leveza, respeitando e valorizando todas as pessoas
-                                envolvidas no processo.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 text-center">
-                        <div class="sobre-item-card">
-                            <h3 class="h4 mb-4 fw-light" style="color: #2c2c2c;">Por quê fazemos:</h3>
-                            <p style="color: #666; line-height: 1.8;">
-                                Porque acreditamos que festas são experiências que fazem com que as pessoas se sintam
-                                validadas, amadas e fortalecidas.
-                            </p>
-                        </div>
-                    </div>
+            <div class="right-stack">
+                <div class="right-top">
+                    <img src="<?php echo e(asset('imagens_hero/3.jpg')); ?>" alt="Destaque horizontal" loading="lazy">
                 </div>
-            </div>
-        </div>
-
-        <!-- Polaroids na Seção Sobre - Desktop -->
-        <div class="row justify-content-center mt-5 desktop-gallery">
-            <div class="col-12">
-                <div class="polaroid-gallery d-flex flex-wrap justify-content-center gap-4">
-                    <div class="polaroid polaroid-large">
-                        <img src="<?php echo e(asset('imagens_2_secao/Casamento Elegante.jpg')); ?>" alt="Casamento Elegante"
-                            loading="lazy">
-                        <p class="polaroid-caption">Casamento Elegante</p>
+                <div class="right-bottom">
+                    <div class="photo-vertical">
+                        <img src="<?php echo e(asset('imagens_hero/4.jpg')); ?>" alt="Destaque 4" loading="lazy">
                     </div>
-                    <div class="polaroid polaroid-large">
-                        <img src="<?php echo e(asset('imagens_2_secao/Decoração Sofisticada.jpg')); ?>" alt="Decoração Sofisticada"
-                            loading="lazy">
-                        <p class="polaroid-caption">Decoração Sofisticada</p>
+                    <div class="photo-vertical">
+                        <img src="<?php echo e(asset('imagens_hero/5.jpg')); ?>" alt="Destaque 5" loading="lazy">
                     </div>
-                    <div class="polaroid polaroid-large">
-                        <img src="<?php echo e(asset('imagens_2_secao/Momentos Especiais.jpg')); ?>" alt="Momentos Especiais"
-                            loading="lazy">
-                        <p class="polaroid-caption">Momentos Especiais</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Carrossel Mobile Seção Sobre -->
-        <div class="mobile-carousel-wrapper mt-5">
-            <div id="sobreCarousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="d-flex justify-content-center">
-                            <div class="polaroid polaroid-mobile" style="transform: none;">
-                                <img src="<?php echo e(asset('imagens_2_secao/Casamento Elegante.jpg')); ?>"
-                                    alt="Casamento Elegante" loading="lazy">
-                                <p class="polaroid-caption">Casamento Elegante</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="d-flex justify-content-center">
-                            <div class="polaroid polaroid-mobile" style="transform: none;">
-                                <img src="<?php echo e(asset('imagens_2_secao/Decoração Sofisticada.jpg')); ?>"
-                                    alt="Decoração Sofisticada" loading="lazy">
-                                <p class="polaroid-caption">Decoração Sofisticada</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="d-flex justify-content-center">
-                            <div class="polaroid polaroid-mobile" style="transform: none;">
-                                <img src="<?php echo e(asset('imagens_2_secao/Momentos Especiais.jpg')); ?>"
-                                    alt="Momentos Especiais" loading="lazy">
-                                <p class="polaroid-caption">Momentos Especiais</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#sobreCarousel"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#sobreCarousel"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                </button>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Divisor de Seção -->
-<div class="section-divider"></div>
-
-<!-- Serviços Section -->
-<section id="servicos" class="py-5 section-bg-light">
-    <div class="container">
-        <div class="row justify-content-center mb-5">
-            <div class="col-lg-8 text-center">
-                <h2 class="h3 fw-light mb-4" style="color: #2c2c2c;">Nossos Serviços</h2>
-                <p style="color: #666;">
-                    Oferecemos uma assessoria completa para tornar seu evento único e inesquecível.
-                </p>
-            </div>
-        </div>
-        <div class="row g-4">
-            <div class="col-md-6 col-lg-4">
-                <div class="service-card p-4 bg-white h-100" style="border-left: 3px solid #d4af37;">
-                    <h4 class="h5 mb-3 fw-light">Cerimonial Completo</h4>
-                    <p style="color: #666; line-height: 1.8;">
-                        Planejamento e execução completa do seu evento, cuidando de cada detalhe com excelência.
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="service-card p-4 bg-white h-100" style="border-left: 3px solid #d4af37;">
-                    <h4 class="h5 mb-3 fw-light">Assessoria Personalizada</h4>
-                    <p style="color: #666; line-height: 1.8;">
-                        Consultoria especializada para criar um evento que reflita sua personalidade e valores.
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="service-card p-4 bg-white h-100" style="border-left: 3px solid #d4af37;">
-                    <h4 class="h5 mb-3 fw-light">Coordenação de Eventos</h4>
-                    <p style="color: #666; line-height: 1.8;">
-                        Coordenação no dia do evento para garantir que tudo aconteça perfeitamente.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Polaroids na Seção Serviços - Desktop -->
-        <div class="row justify-content-center mt-5 desktop-gallery">
-            <div class="col-12">
-                <div class="polaroid-gallery d-flex flex-wrap justify-content-center gap-4">
-                    <div class="polaroid polaroid-large">
-                        <img src="<?php echo e(asset('imagens_3_secao/Planejamento Detalhado.jpg')); ?>"
-                            alt="Planejamento Detalhado" loading="lazy">
-                        <p class="polaroid-caption">Planejamento Detalhado</p>
-                    </div>
-                    <div class="polaroid polaroid-large">
-                        <img src="<?php echo e(asset('imagens_3_secao/Execução Perfeita.jpg')); ?>" alt="Execução Perfeita"
-                            loading="lazy">
-                        <p class="polaroid-caption">Execução Perfeita</p>
-                    </div>
-                    <div class="polaroid polaroid-large">
-                        <img src="<?php echo e(asset('imagens_3_secao/Resultados Excepcionais.jpg')); ?>"
-                            alt="Resultados Excepcionais" loading="lazy">
-                        <p class="polaroid-caption">Resultados Excepcionais</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Carrossel Mobile Seção Serviços -->
-        <div class="mobile-carousel-wrapper mt-5">
-            <div id="servicosCarousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="d-flex justify-content-center">
-                            <div class="polaroid polaroid-mobile" style="transform: none;">
-                                <img src="<?php echo e(asset('imagens_3_secao/Planejamento Detalhado.jpg')); ?>"
-                                    alt="Planejamento Detalhado" loading="lazy">
-                                <p class="polaroid-caption">Planejamento Detalhado</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="d-flex justify-content-center">
-                            <div class="polaroid polaroid-mobile" style="transform: none;">
-                                <img src="<?php echo e(asset('imagens_3_secao/Execução Perfeita.jpg')); ?>" alt="Execução Perfeita"
-                                    loading="lazy">
-                                <p class="polaroid-caption">Execução Perfeita</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="d-flex justify-content-center">
-                            <div class="polaroid polaroid-mobile" style="transform: none;">
-                                <img src="<?php echo e(asset('imagens_3_secao/Resultados Excepcionais.jpg')); ?>"
-                                    alt="Resultados Excepcionais" loading="lazy">
-                                <p class="polaroid-caption">Resultados Excepcionais</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#servicosCarousel"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#servicosCarousel"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                </button>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Divisor de Seção -->
-<div class="section-divider"></div>
-
-<!-- Equipe Section -->
-<section id="equipe" class="py-5 section-bg-white">
-    <div class="container">
-        <div class="row justify-content-center mb-5">
-            <div class="col-lg-8 text-center">
-                <h2 class="h3 fw-light mb-4" style="color: #2c2c2c;">Nossa Equipe</h2>
-                <p style="color: #666;">
-                    Profissionais dedicados e experientes para tornar seu evento inesquecível
-                </p>
-            </div>
-        </div>
-        <!-- Equipe Desktop -->
-        <div class="desktop-gallery">
-            <div class="row g-4 justify-content-center">
-                <div class="col-md-6 col-lg-4">
-                    <div class="team-member text-center">
-                        <div class="team-photo mb-4">
-                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&h=300&fit=crop"
-                                alt="Membro da Equipe 1" class="rounded-circle"
-                                style="width: 200px; height: 200px; object-fit: cover; border: 3px solid #d4af37;"
-                                loading="lazy"
-                                onerror="this.src='https://via.placeholder.com/200x200/f5f5f5/2c2c2c?text=Equipe'; this.onerror=null;">
-                        </div>
-                        <h4 class="h5 mb-2 fw-light" style="color: #2c2c2c;">Nome da Pessoa</h4>
-                        <p class="mb-2" style="color: #d4af37; font-weight: 500;">Cargo/Função</p>
-                        <p style="color: #666; font-size: 0.9rem; line-height: 1.6;">
-                            Descrição breve da pessoa e sua experiência.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="team-member text-center">
-                        <div class="team-photo mb-4">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop"
-                                alt="Membro da Equipe 2" class="rounded-circle"
-                                style="width: 200px; height: 200px; object-fit: cover; border: 3px solid #d4af37;"
-                                loading="lazy"
-                                onerror="this.src='https://via.placeholder.com/200x200/f5f5f5/2c2c2c?text=Equipe'; this.onerror=null;">
-                        </div>
-                        <h4 class="h5 mb-2 fw-light" style="color: #2c2c2c;">Nome da Pessoa</h4>
-                        <p class="mb-2" style="color: #d4af37; font-weight: 500;">Cargo/Função</p>
-                        <p style="color: #666; font-size: 0.9rem; line-height: 1.6;">
-                            Descrição breve da pessoa e sua experiência.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="team-member text-center">
-                        <div class="team-photo mb-4">
-                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop"
-                                alt="Membro da Equipe 3" class="rounded-circle"
-                                style="width: 200px; height: 200px; object-fit: cover; border: 3px solid #d4af37;"
-                                loading="lazy"
-                                onerror="this.src='https://via.placeholder.com/200x200/f5f5f5/2c2c2c?text=Equipe'; this.onerror=null;">
-                        </div>
-                        <h4 class="h5 mb-2 fw-light" style="color: #2c2c2c;">Nome da Pessoa</h4>
-                        <p class="mb-2" style="color: #d4af37; font-weight: 500;">Cargo/Função</p>
-                        <p style="color: #666; font-size: 0.9rem; line-height: 1.6;">
-                            Descrição breve da pessoa e sua experiência.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Carrossel Mobile Equipe -->
-        <div class="mobile-carousel-wrapper">
-            <div id="equipeCarousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="team-member text-center">
-                            <div class="team-photo mb-4">
-                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&h=300&fit=crop"
-                                    alt="Membro da Equipe 1" class="rounded-circle"
-                                    style="width: 180px; height: 180px; object-fit: cover; border: 3px solid #d4af37;"
-                                    loading="lazy"
-                                    onerror="this.src='https://via.placeholder.com/180x180/f5f5f5/2c2c2c?text=Equipe'; this.onerror=null;">
-                            </div>
-                            <h4 class="h5 mb-2 fw-light" style="color: #2c2c2c;">Nome da Pessoa</h4>
-                            <p class="mb-2" style="color: #d4af37; font-weight: 500;">Cargo/Função</p>
-                            <p style="color: #666; font-size: 0.9rem; line-height: 1.6;">
-                                Descrição breve da pessoa e sua experiência.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="team-member text-center">
-                            <div class="team-photo mb-4">
-                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop"
-                                    alt="Membro da Equipe 2" class="rounded-circle"
-                                    style="width: 180px; height: 180px; object-fit: cover; border: 3px solid #d4af37;"
-                                    loading="lazy"
-                                    onerror="this.src='https://via.placeholder.com/180x180/f5f5f5/2c2c2c?text=Equipe'; this.onerror=null;">
-                            </div>
-                            <h4 class="h5 mb-2 fw-light" style="color: #2c2c2c;">Nome da Pessoa</h4>
-                            <p class="mb-2" style="color: #d4af37; font-weight: 500;">Cargo/Função</p>
-                            <p style="color: #666; font-size: 0.9rem; line-height: 1.6;">
-                                Descrição breve da pessoa e sua experiência.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="team-member text-center">
-                            <div class="team-photo mb-4">
-                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop"
-                                    alt="Membro da Equipe 3" class="rounded-circle"
-                                    style="width: 180px; height: 180px; object-fit: cover; border: 3px solid #d4af37;"
-                                    loading="lazy"
-                                    onerror="this.src='https://via.placeholder.com/180x180/f5f5f5/2c2c2c?text=Equipe'; this.onerror=null;">
-                            </div>
-                            <h4 class="h5 mb-2 fw-light" style="color: #2c2c2c;">Nome da Pessoa</h4>
-                            <p class="mb-2" style="color: #d4af37; font-weight: 500;">Cargo/Função</p>
-                            <p style="color: #666; font-size: 0.9rem; line-height: 1.6;">
-                                Descrição breve da pessoa e sua experiência.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#equipeCarousel"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#equipeCarousel"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                </button>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Divisor de Seção -->
-<div class="section-divider"></div>
-
-<!-- Biografia Section -->
-<section id="biografia" class="py-5 section-bg-light">
-    <div class="container">
-        <div class="row align-items-center g-5">
-            <div class="col-lg-6 order-lg-2">
-                <div class="biography-image-wrapper">
-                    <img src="<?php echo e(asset('biografia/1.jpg')); ?>" alt="Biografia" class="img-fluid"
-                        style="border-radius: 4px; box-shadow: 0 10px 40px rgba(0,0,0,0.15);" loading="lazy">
-                </div>
-            </div>
-            <div class="col-lg-6 order-lg-1">
-                <h2 class="h3 fw-light mb-4" style="color: #2c2c2c;">Nossa História</h2>
-                <div class="biography-text" style="color: #666; line-height: 1.8;">
-                    <p class="mb-4">
-                        Desde 2009, a <strong>Com Classe Assessoria e Cerimonial</strong> transforma sonhos em
-                        realidade, criando eventos que marcam a vida das pessoas de forma única e inesquecível.
-                    </p>
-                    <p class="mb-4">
-                        Com mais de uma década de experiência no mercado, desenvolvemos uma metodologia própria que
-                        combina rigor técnico, criatividade e sensibilidade para entender cada casal e família que nos
-                        procura.
-                    </p>
-                    <p class="mb-4">
-                        Nossa missão vai além de organizar eventos. Buscamos criar experiências emocionais que reflitam
-                        a essência dos anfitriões, seus valores e sua história, sempre com elegância, sofisticação e
-                        atenção aos mínimos detalhes.
-                    </p>
-                    <p>
-                        Acreditamos que cada celebração é única e merece ser tratada com dedicação, carinho e
-                        profissionalismo, garantindo que os momentos especiais sejam vividos com tranquilidade e
-                        alegria.
-                    </p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Divisor de Seção -->
-<div class="section-divider"></div>
-
-<!-- Galeria Section -->
-<section id="galeria" class="py-5 section-bg-white">
-    <div class="container">
-        <div class="row justify-content-center mb-5">
-            <div class="col-lg-8 text-center">
-                <h2 class="h3 fw-light mb-4" style="color: #2c2c2c;">Nossa Galeria</h2>
-                <p style="color: #666;">
-                    Alguns momentos especiais dos eventos que realizamos
-                </p>
+<section id="quem-somos" class="section-block who-values-section">
+    <div class="site-container who-block">
+        <div class="who-row first">
+            <div class="who-media">
+                <img src="<?php echo e(asset('biografia/1.jpg')); ?>" alt="Fundadora Com Classe" loading="lazy">
+            </div>
+            <div class="who-text">
+                <p class="eyebrow font-abramo">Quem somos</p>
+                <h2 class="font-antic-didone">A base de tudo</h2>
+                <p>Sou Ana Cláudia, fundadora da Com Classe. <br>
+                <br>
+                    Casada desde 2013 e mãe de duas meninas, tenho na família meu maior patrimônio e inspiração. Sou movida pela fé, pelo amor ao belo e pela busca constante pela excelência.</p>
+                <p>Atuo há mais de 16 anos no mercado de casamentos, conduzindo eventos com método, sensibilidade e verdade. </p>
+                    <p>Além de planejar celebrações, já formei e ajudei diversas cerimonialistas, compartilhando o propósito de viver os próprios sonhos enquanto realizam os de outros.</p>
+                <p>E isso é só metade do que sou. Muito prazer, Ana Com Classe.</p>
             </div>
         </div>
 
-        <div class="gallery-carousel-wrapper">
-            <div id="galleryCarousel" class="carousel slide" data-bs-ride="false">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="row g-4 justify-content-center desktop-gallery-row">
-                            <div class="col-6 col-md-4 col-lg-3">
-                                <div class="polaroid">
-                                    <img src="<?php echo e(asset('imagens_hero/1.jpg')); ?>" alt="Galeria 1" loading="lazy">
-                                </div>
-                            </div>
-                            <div class="col-6 col-md-4 col-lg-3">
-                                <div class="polaroid">
-                                    <img src="<?php echo e(asset('imagens_hero/2.jpg')); ?>" alt="Galeria 2" loading="lazy">
-                                </div>
-                            </div>
-                            <div class="col-6 col-md-4 col-lg-3">
-                                <div class="polaroid">
-                                    <img src="<?php echo e(asset('imagens_hero/3.jpg')); ?>" alt="Galeria 3" loading="lazy">
-                                </div>
-                            </div>
-                            <div class="col-6 col-md-4 col-lg-3">
-                                <div class="polaroid">
-                                    <img src="<?php echo e(asset('imagens_hero/4.jpg')); ?>" alt="Galeria 4" loading="lazy">
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Linha única para mobile -->
-                        <div class="row mobile-gallery-row g-3">
-                            <div class="col-6">
-                                <div class="polaroid" style="transform: none; width: 100%;">
-                                    <img src="<?php echo e(asset('imagens_hero/1.jpg')); ?>" alt="Galeria 1" loading="lazy">
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="polaroid" style="transform: none; width: 100%;">
-                                    <img src="<?php echo e(asset('imagens_hero/2.jpg')); ?>" alt="Galeria 2" loading="lazy">
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="polaroid" style="transform: none; width: 100%;">
-                                    <img src="<?php echo e(asset('imagens_hero/3.jpg')); ?>" alt="Galeria 3" loading="lazy">
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="polaroid" style="transform: none; width: 100%;">
-                                    <img src="<?php echo e(asset('imagens_hero/4.jpg')); ?>" alt="Galeria 4" loading="lazy">
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="polaroid" style="transform: none; width: 100%;">
-                                    <img src="<?php echo e(asset('imagens_hero/5.jpg')); ?>" alt="Galeria 5" loading="lazy">
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="polaroid" style="transform: none; width: 100%;">
-                                    <img src="<?php echo e(asset('imagens_hero/6.jpg')); ?>" alt="Galeria 6" loading="lazy">
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="polaroid" style="transform: none; width: 100%;">
-                                    <img src="<?php echo e(asset('imagens_hero/7.jpg')); ?>" alt="Galeria 7" loading="lazy">
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="polaroid" style="transform: none; width: 100%;">
-                                    <img src="<?php echo e(asset('imagens_hero/8.jpg')); ?>" alt="Galeria 8" loading="lazy">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="row g-4 justify-content-center desktop-gallery-row">
-                            <div class="col-6 col-md-4 col-lg-3">
-                                <div class="polaroid">
-                                    <img src="<?php echo e(asset('imagens_hero/5.jpg')); ?>" alt="Galeria 5" loading="lazy">
-                                </div>
-                            </div>
-                            <div class="col-6 col-md-4 col-lg-3">
-                                <div class="polaroid">
-                                    <img src="<?php echo e(asset('imagens_hero/6.jpg')); ?>" alt="Galeria 6" loading="lazy">
-                                </div>
-                            </div>
-                            <div class="col-6 col-md-4 col-lg-3">
-                                <div class="polaroid">
-                                    <img src="<?php echo e(asset('imagens_hero/7.jpg')); ?>" alt="Galeria 7" loading="lazy">
-                                </div>
-                            </div>
-                            <div class="col-6 col-md-4 col-lg-3">
-                                <div class="polaroid">
-                                    <img src="<?php echo e(asset('imagens_hero/8.jpg')); ?>" alt="Galeria 8" loading="lazy">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel"
-                    data-bs-slide="prev" style="width: 50px; opacity: 0.8;">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Anterior</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel"
-                    data-bs-slide="next" style="width: 50px; opacity: 0.8;">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Próximo</span>
-                </button>
+        <div class="who-row second">
+            <div class="who-media outlined">
+                <img src="<?php echo e(asset('imagens_hero/7.jpg')); ?>" alt="Equipe Com Classe" loading="lazy">
             </div>
+            <div class="who-text second">
+                <h2 class="font-antic-didone">A estrutura</h2>
+                <p>Nosso time é a essência da Com Classe: uma equipe exclusiva, guiada por rigor técnico, sensibilidade estética e compromisso absoluto com a ética.</p>
+                <p>Nossa arquiteta integra o processo criativo desde o início, elevando o olhar técnico e o refinamento de cada detalhe. Juntos, transformamos sonhos em experiências verdadeiramente memoráveis.</p>
+            </div>
+        </div>
+
+        <div class="values-layout">
+            <div class="values-copy">
+                <div class="values-header">
+                    <h2 class="values-title font-abramo">Nossos valores</h2>
+                    <div class="values-line-long"></div>
+                </div>
+            </div>
+            <div class="values-grid flat inline">
+                <div class="value-card">
+                    <h3 class="titulo-valor">Excelência</h3>
+                    <p>Buscamos ser excelentes em cada entrega, com técnica, dedicação e compromisso.</p>
+                </div>
+                <div class="value-card">
+                    <h3 class="titulo-valor">Sensibilidade</h3>
+                    <p>Cuidamos de pessoas, não apenas de eventos. Nosso trabalho começa pela escuta.</p>
+                </div>
+                <div class="value-card">
+                    <h3 class="titulo-valor">Elegância</h3>
+                    <p>A elegância está nos detalhes. Harmonia, leveza e bom gosto em tudo o que criamos.</p>
+                </div>
+                <div class="value-card">
+                    <h3 class="titulo-valor">Ética</h3>
+                    <p>Agir com respeito, verdade e responsabilidade em todas as relações.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="impact-full">
+        <img src="<?php echo e(asset('imagens_hero/1.jpg')); ?>" alt="Celebração com classe" loading="lazy">
+    </div>
+</section>
+
+<section id="atuacao" class="section-block atuacao-section">
+    <div class="site-container">
+        <div class="atuacao-header">
+            <h2 class="atuacao-title font-abramo">Nossa atuação</h2>
+        </div>
+        <p class="atuacao-subtitle">Oferecemos uma assessoria completa para tornar seu evento único e inesquecível.</p>
+
+        <div class="atuacao-thumbs">
+            <div class="atuacao-item ">
+                <img src="<?php echo e(asset('imagens_3_secao/Planejamento Detalhado.jpg')); ?>" alt="Assessoria completa" loading="lazy">
+                <p class="font-antic-didone">Assessoria completa e<br>personalizada</p>
+            </div>
+            <div class="atuacao-item">
+                <img src="<?php echo e(asset('imagens_3_secao/Execução Perfeita.jpg')); ?>" alt="Projetos exclusivos" loading="lazy">
+                <p class="font-antic-didone">Criação de projetos<br>exclusivos</p>
+            </div>
+            <div class="atuacao-item">
+                <img src="<?php echo e(asset('imagens_3_secao/Resultados Excepcionais.jpg')); ?>" alt="Execução impecável" loading="lazy">
+                <p class="font-antic-didone">Execução impecável<br>de tudo que foi sonhado</p>
+            </div>
+        </div>
+
+        <div class="atuacao-cta">
+            <a class="atuacao-btn" href="<?php echo e(route('servicos')); ?>">Quero Saber Mais</a>
         </div>
     </div>
 </section>
 
-<!-- Botão Entre em Contato -->
-<section class="py-5" style="background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);">
-    <div class="container text-center">
-        <h2 class="h3 fw-light mb-4" style="color: #ffffff;">Pronto para Começar?</h2>
-        <p class="lead mb-4" style="color: #d4af37;">
-            Entre em contato e vamos transformar seu evento em uma celebração inesquecível
-        </p>
-        <a href="<?php echo e(route('contact.questionnaire')); ?>" class="btn btn-light px-5 py-3"
-            style="font-weight: 300; letter-spacing: 1px; border-radius: 0;">
-            Entre em Contato
-        </a>
+<section id="depoimentos" class="section-block testimonials-section">
+    <div class="site-container">
+        <h2 class="testimonials-title font-abramo">Depoimentos</h2>
+        <div id="testimonialsCarousel" class="testimonials-carousel" aria-label="Depoimentos">
+            <div class="testimonials-track">
+                <div class="testimonial-slide">
+                    <div class="testimonial-item">
+                        <i class="bi bi-quote"></i>
+                        <p class="quote">“A equipe traduziu nossa essência em cada detalhe. Foi além do que sonhamos.”</p>
+                        <div class="testimonial-sep"></div>
+                        <p class="author">Mariana &amp; Rafael</p>
+                    </div>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="testimonial-item">
+                        <i class="bi bi-quote"></i>
+                        <p class="quote">“Processo organizado, fornecedores alinhados e condução impecável no grande dia.”</p>
+                        <div class="testimonial-sep"></div>
+                        <p class="author">Ana Paula</p>
+                    </div>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="testimonial-item">
+                        <i class="bi bi-quote"></i>
+                        <p class="quote">“Elegância e acolhimento definem o trabalho. Nos sentimos cuidados do início ao fim.”</p>
+                        <div class="testimonial-sep"></div>
+                        <p class="author">Camila &amp; João</p>
+                    </div>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="testimonial-item">
+                        <i class="bi bi-quote"></i>
+                        <p class="quote">“Timeline claro e execução precisa. Ficamos tranquilos para aproveitar cada momento.”</p>
+                        <div class="testimonial-sep"></div>
+                        <p class="author">Fernanda &amp; Luiz</p>
+                    </div>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="testimonial-item">
+                        <i class="bi bi-quote"></i>
+                        <p class="quote">“Sensibilidade para entender nossos desejos e transformá-los em uma experiência única.”</p>
+                        <div class="testimonial-sep"></div>
+                        <p class="author">Beatriz &amp; Henrique</p>
+                    </div>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="testimonial-item">
+                        <i class="bi bi-quote"></i>
+                        <p class="quote">“Equipe presente e discreta, garantindo fluidez e elegância em cada momento.”</p>
+                        <div class="testimonial-sep"></div>
+                        <p class="author">Renata &amp; Felipe</p>
+                    </div>
+                </div>
+            </div>
+            <button class="testimonials-arrow testimonials-arrow-prev" type="button" aria-label="Anterior">
+                <i class="bi bi-chevron-left"></i>
+            </button>
+            <button class="testimonials-arrow testimonials-arrow-next" type="button" aria-label="Próximo">
+                <i class="bi bi-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+</section>
+
+<section id="contato" class="section-block contact-section">
+    <div class="site-container">
+        <p class="subtitle lead-highlight contact-lead font-antic-didone">Quer um casamento inesquecível?</p>
+        <h2 class="contact-title font-abramo">Entre em Contato!</h2>
+        <div class="contact-cta">
+            <a class="btn-primary btn-wide" href="https://assessoriavip.com.br/funnelFormLead/63dada70-1556-11eb-ac90-0d7b933d6c56?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGngeorDPpsaeKED35hDBrdhCgZt9kz2uzwGDUZHQmP-1zqiKRGbWVFpXrZIac_aem_ZiRNOjiv2hIKL16D8VFcfQ" target="_blank" rel="noopener">Quero falar com a Com Classe</a>
+        </div>
+    </div>
+</section>
+
+<section id="instagram" class="section-block insta-section">
+    <div class="site-container insta-area center">
+        <div class="insta-header">
+            <p class="footer-cta font-antic-didone">siga no instagram</p>
+            <a href="https://www.instagram.com/comclassecasamentos/" target="_blank" rel="noopener" class="footer-handle font-antic-didone">@comclassecasamentos</a>
+        </div>
+        <div class="insta-carousel" id="instaCarousel">
+            <button class="insta-arrow insta-prev" type="button" aria-label="Anterior">
+                <i class="bi bi-chevron-left"></i>
+            </button>
+            <div class="insta-track">
+                <a class="insta-item" href="https://www.instagram.com/comclassecasamentos/" target="_blank" rel="noopener">
+                    <span class="insta-multi"><i class="bi bi-collection"></i></span>
+                    <img src="<?php echo e(asset('imagens_hero/1.jpg')); ?>" alt="Instagram 1" loading="lazy">
+                </a>
+                <a class="insta-item" href="https://www.instagram.com/comclassecasamentos/" target="_blank" rel="noopener">
+                    <span class="insta-multi"><i class="bi bi-collection"></i></span>
+                    <img src="<?php echo e(asset('imagens_hero/3.jpg')); ?>" alt="Instagram 2" loading="lazy">
+                </a>
+                <a class="insta-item" href="https://www.instagram.com/comclassecasamentos/" target="_blank" rel="noopener">
+                    <span class="insta-multi"><i class="bi bi-collection"></i></span>
+                    <img src="<?php echo e(asset('imagens_hero/5.jpg')); ?>" alt="Instagram 3" loading="lazy">
+                </a>
+                <a class="insta-item" href="https://www.instagram.com/comclassecasamentos/" target="_blank" rel="noopener">
+                    <span class="insta-multi"><i class="bi bi-collection"></i></span>
+                    <img src="<?php echo e(asset('imagens_hero/7.jpg')); ?>" alt="Instagram 4" loading="lazy">
+                </a>
+                <a class="insta-item" href="https://www.instagram.com/comclassecasamentos/" target="_blank" rel="noopener">
+                    <span class="insta-multi"><i class="bi bi-collection"></i></span>
+                    <img src="<?php echo e(asset('imagens_hero/9.jpg')); ?>" alt="Instagram 5" loading="lazy">
+                </a>
+                <a class="insta-item" href="https://www.instagram.com/comclassecasamentos/" target="_blank" rel="noopener">
+                    <span class="insta-multi"><i class="bi bi-collection"></i></span>
+                    <img src="<?php echo e(asset('imagens_hero/11.jpg')); ?>" alt="Instagram 6" loading="lazy">
+                </a>
+                <a class="insta-item" href="https://www.instagram.com/comclassecasamentos/" target="_blank" rel="noopener">
+                    <span class="insta-multi"><i class="bi bi-collection"></i></span>
+                    <img src="<?php echo e(asset('imagens_2_secao/Casamento Elegante.jpg')); ?>" alt="Instagram 7" loading="lazy">
+                </a>
+                <a class="insta-item" href="https://www.instagram.com/comclassecasamentos/" target="_blank" rel="noopener">
+                    <span class="insta-multi"><i class="bi bi-collection"></i></span>
+                    <img src="<?php echo e(asset('imagens_2_secao/Decoração Sofisticada.jpg')); ?>" alt="Instagram 8" loading="lazy">
+                </a>
+                <a class="insta-item" href="https://www.instagram.com/comclassecasamentos/" target="_blank" rel="noopener">
+                    <span class="insta-multi"><i class="bi bi-collection"></i></span>
+                    <img src="<?php echo e(asset('imagens_2_secao/Momentos Especiais.jpg')); ?>" alt="Instagram 9" loading="lazy">
+                </a>
+                <a class="insta-item" href="https://www.instagram.com/comclassecasamentos/" target="_blank" rel="noopener">
+                    <span class="insta-multi"><i class="bi bi-collection"></i></span>
+                    <img src="<?php echo e(asset('imagens_3_secao/Planejamento Detalhado.jpg')); ?>" alt="Instagram 10" loading="lazy">
+                </a>
+                <a class="insta-item" href="https://www.instagram.com/comclassecasamentos/" target="_blank" rel="noopener">
+                    <span class="insta-multi"><i class="bi bi-collection"></i></span>
+                    <img src="<?php echo e(asset('imagens_3_secao/Execução Perfeita.jpg')); ?>" alt="Instagram 11" loading="lazy">
+                </a>
+                <a class="insta-item" href="https://www.instagram.com/comclassecasamentos/" target="_blank" rel="noopener">
+                    <span class="insta-multi"><i class="bi bi-collection"></i></span>
+                    <img src="<?php echo e(asset('imagens_3_secao/Resultados Excepcionais.jpg')); ?>" alt="Instagram 12" loading="lazy">
+                </a>
+            </div>
+            <button class="insta-arrow insta-next" type="button" aria-label="Próximo">
+                <i class="bi bi-chevron-right"></i>
+            </button>
+        </div>
     </div>
 </section>
 <?php $__env->stopSection(); ?>

@@ -18,7 +18,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
     
-    <link href="<?php echo e(asset('css/custom.css')); ?>" rel="stylesheet">
+    <link rel="stylesheet" href="<?php echo e(asset('css/custom-prod.css')); ?>">
 
     <?php echo $__env->yieldPushContent('styles'); ?>
 </head>

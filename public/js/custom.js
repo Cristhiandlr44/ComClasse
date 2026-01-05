@@ -1,32 +1,57 @@
 // Smooth scroll em âncoras internas
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            e.preventDefault();
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-    });
-});
+(function() {
+    function initSmoothScroll() {
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            if (!anchor) return;
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (!href) return;
+                const target = document.querySelector(href);
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initSmoothScroll);
+    } else {
+        initSmoothScroll();
+    }
+})();
 
 // Validação simples de campos obrigatórios
-document.querySelectorAll('form').forEach(form => {
-    form.addEventListener('submit', event => {
-        const requiredFields = form.querySelectorAll('input[required], textarea[required]');
-        let invalid = false;
+(function() {
+    function initFormValidation() {
+        document.querySelectorAll('form').forEach(form => {
+            if (!form) return;
+            form.addEventListener('submit', event => {
+                const requiredFields = form.querySelectorAll('input[required], textarea[required]');
+                let invalid = false;
 
-        requiredFields.forEach(field => {
-            if (!field.value.trim()) {
-                invalid = true;
-                field.classList.add('field-error');
-            } else {
-                field.classList.remove('field-error');
-            }
+                requiredFields.forEach(field => {
+                    if (!field) return;
+                    if (!field.value.trim()) {
+                        invalid = true;
+                        field.classList.add('field-error');
+                    } else {
+                        field.classList.remove('field-error');
+                    }
+                });
+
+                if (invalid) event.preventDefault();
+            });
         });
+    }
 
-        if (invalid) event.preventDefault();
-    });
-});
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initFormValidation);
+    } else {
+        initFormValidation();
+    }
+})();
 
 // Carrossel de depoimentos - nova abordagem baseada no container
 (function () {
@@ -36,6 +61,9 @@ document.querySelectorAll('form').forEach(form => {
     }
 
     const inner = carousel.querySelector('.testimonials-track');
+    if (!inner) {
+        return;
+    }
     const items = Array.from(inner.querySelectorAll('.testimonial-slide'));
     const prevBtn = carousel.querySelector('.testimonials-arrow-prev');
     const nextBtn = carousel.querySelector('.testimonials-arrow-next');
@@ -133,6 +161,7 @@ document.querySelectorAll('form').forEach(form => {
     const wrapper = document.getElementById('instaCarousel');
     if (!wrapper) return;
     const track = wrapper.querySelector('.insta-track');
+    if (!track) return;
     const items = Array.from(track.querySelectorAll('.insta-item'));
     const prev = wrapper.querySelector('.insta-prev');
     const next = wrapper.querySelector('.insta-next');

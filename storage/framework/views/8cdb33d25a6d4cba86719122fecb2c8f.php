@@ -13,10 +13,10 @@
             <div class="left-column">
                 <div class="left-stack">
                     <div class="photo-vertical">
-                        <img src="<?php echo e(asset('imagens_hero/1.jpg')); ?>" alt="Destaque 1" loading="lazy">
+                        <img src="<?php echo e(asset('imagens_hero/CABEÇALHO 1.jpg')); ?>" alt="Destaque 1" loading="lazy">
                     </div>
                     <div class="photo-vertical">
-                        <img src="<?php echo e(asset('imagens_hero/2.jpg')); ?>" alt="Destaque 2" loading="lazy">
+                        <img src="<?php echo e(asset('imagens_hero/CABEÇALHO 2.jpg')); ?>" alt="Destaque 2" loading="lazy">
                     </div>
                 </div>
                 <div class="hero-text">
@@ -27,14 +27,14 @@
 
             <div class="right-stack">
                 <div class="right-top">
-                    <img src="<?php echo e(asset('imagens_hero/3.jpg')); ?>" alt="Destaque horizontal" loading="lazy">
+                    <img src="<?php echo e(asset('imagens_hero/CABEÇALHO 3.png')); ?>" alt="Destaque horizontal" loading="lazy">
                 </div>
                 <div class="right-bottom">
                     <div class="photo-vertical">
-                        <img src="<?php echo e(asset('imagens_hero/4.jpg')); ?>" alt="Destaque 4" loading="lazy">
+                        <img src="<?php echo e(asset('imagens_hero/CABEÇALHO 4.jpg')); ?>" alt="Destaque 4" loading="lazy" class="img-pos-right">
                     </div>
                     <div class="photo-vertical">
-                        <img src="<?php echo e(asset('imagens_hero/5.jpg')); ?>" alt="Destaque 5" loading="lazy">
+                        <img src="<?php echo e(asset('imagens_hero/CABEÇALHO 5.jpg')); ?>" alt="Destaque 5" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -46,7 +46,7 @@
     <div class="site-container who-block">
         <div class="who-row first">
             <div class="who-media">
-                <img src="<?php echo e(asset('biografia/1.jpg')); ?>" alt="Fundadora Com Classe" loading="lazy">
+                <img src="<?php echo e(asset('biografia/1.png')); ?>" alt="Fundadora Com Classe" loading="lazy" class="img-pos-left">
             </div>
             <div class="who-text">
                 <p class="eyebrow font-abramo">Quem somos</p>
@@ -62,7 +62,7 @@
 
         <div class="who-row second">
             <div class="who-media outlined">
-                <img src="<?php echo e(asset('imagens_hero/7.jpg')); ?>" alt="Equipe Com Classe" loading="lazy">
+                <img src="<?php echo e(asset('imagens_hero/7.png')); ?>" alt="Equipe Com Classe" loading="lazy">
             </div>
             <div class="who-text second">
                 <h2 class="font-antic-didone">A estrutura</h2>
@@ -106,21 +106,21 @@
 <section id="atuacao" class="section-block atuacao-section">
     <div class="site-container">
         <div class="atuacao-header">
-            <h2 class="atuacao-title font-abramo">Nossa atuação</h2>
+            <h2 class="atuacao-title">Nossa Atuação</h2>
         </div>
         <p class="atuacao-subtitle">Oferecemos uma assessoria completa para tornar seu evento único e inesquecível.</p>
 
         <div class="atuacao-thumbs">
             <div class="atuacao-item ">
-                <img src="<?php echo e(asset('imagens_3_secao/Planejamento Detalhado.jpg')); ?>" alt="Assessoria completa" loading="lazy">
+                <img src="<?php echo e(asset('imagens_3_secao/Planejamento Detalhado.png')); ?>" alt="Assessoria completa" loading="lazy">
                 <p class="font-antic-didone">Assessoria completa e<br>personalizada</p>
             </div>
             <div class="atuacao-item">
-                <img src="<?php echo e(asset('imagens_3_secao/Execução Perfeita.jpg')); ?>" alt="Projetos exclusivos" loading="lazy">
+                <img src="<?php echo e(asset('imagens_3_secao/Execução Perfeita.png')); ?>" alt="Projetos exclusivos" loading="lazy">
                 <p class="font-antic-didone">Criação de projetos<br>exclusivos</p>
             </div>
             <div class="atuacao-item">
-                <img src="<?php echo e(asset('imagens_3_secao/Resultados Excepcionais.jpg')); ?>" alt="Execução impecável" loading="lazy">
+                <img src="<?php echo e(asset('imagens_3_secao/Resultados Excepcionais.jpg')); ?>" alt="Execução impecável" loading="lazy" class="img-pos-bottom">
                 <p class="font-antic-didone">Execução impecável<br>de tudo que foi sonhado</p>
             </div>
         </div>
@@ -131,27 +131,40 @@
     </div>
 </section>
 
+<section id="mentorias-cursos" class="section-block mentorias-section">
+    <div class="site-container">
+        <div class="mentorias-header">
+            <h2 class="mentorias-title font-abramo">Mentorias e Cursos</h2>
+        </div>
+        <p class="mentorias-subtitle font-antic-didone">Formação e acompanhamento para cerimonialistas e profissionais de eventos.</p>
+        <div class="mentorias-cta">
+            <a class="btn-primary btn-wide" href="https://wa.me/message/WBFMLONCMS3PH1" target="_blank" rel="noopener">Falar no WhatsApp</a>
+        </div>
+    </div>
+</section>
+
 <section id="depoimentos" class="section-block testimonials-section">
     <div class="site-container">
         <h2 class="testimonials-title font-abramo">Depoimentos</h2>
         <div id="testimonialsCarousel" class="testimonials-carousel" aria-label="Depoimentos">
             <div class="testimonials-track">
-                <div class="testimonial-slide">
+            <div class="testimonial-slide">
                     <div class="testimonial-item">
                         <i class="bi bi-quote"></i>
-                        <p class="quote">“A equipe traduziu nossa essência em cada detalhe. Foi além do que sonhamos.”</p>
+                        <p class="quote">“Antes mesmo de nos conhecerem, ela já estava no coração da nossa cerimônia! Nunca tivemos um atendimento tão especial, gentil e profissional. Ela tem um jeito único de entender nossos desejos e transformá-los em uma experiência única.”</p>
                         <div class="testimonial-sep"></div>
-                        <p class="author">Mariana &amp; Rafael</p>
+                        <p class="author">Lailla &amp; Cristhian</p>
                     </div>
                 </div>
                 <div class="testimonial-slide">
                     <div class="testimonial-item">
                         <i class="bi bi-quote"></i>
-                        <p class="quote">“Processo organizado, fornecedores alinhados e condução impecável no grande dia.”</p>
+                        <p class="quote">“Como podemos agradecê-la por tanto cuidado e preciosismo? Você foi IRRETOCÁVEL do início ao fim. Cada detalhe foi minuciosamente pensando e executado com perfeição! Sempre sobre da sua competência e profissionalismo, mas viver isso tudo ao seu lado foi muito melhor do que imaginei!”</p>
                         <div class="testimonial-sep"></div>
-                        <p class="author">Ana Paula</p>
+                        <p class="author">Clarissa  &amp; Luís</p>
                     </div>
                 </div>
+                
                 <div class="testimonial-slide">
                     <div class="testimonial-item">
                         <i class="bi bi-quote"></i>
@@ -216,54 +229,63 @@
                 <i class="bi bi-chevron-left"></i>
             </button>
             <div class="insta-track">
-                <a class="insta-item" href="https://www.instagram.com/comclassecasamentos/" target="_blank" rel="noopener">
+                <a class="insta-item" href="https://www.instagram.com/p/DSNUjJdjpZN/?img_index=1" target="_blank" rel="noopener">
                     <span class="insta-multi"><i class="bi bi-collection"></i></span>
-                    <img src="<?php echo e(asset('imagens_hero/1.jpg')); ?>" alt="Instagram 1" loading="lazy">
+                    <img src="<?php echo e(asset('imagens_instagram/1.jpg')); ?>" alt="Instagram 1" loading="lazy">
                 </a>
-                <a class="insta-item" href="https://www.instagram.com/comclassecasamentos/" target="_blank" rel="noopener">
+                <a class="insta-item" href="https://www.instagram.com/p/DOcAOVXD_lr/" target="_blank" rel="noopener">
                     <span class="insta-multi"><i class="bi bi-collection"></i></span>
-                    <img src="<?php echo e(asset('imagens_hero/3.jpg')); ?>" alt="Instagram 2" loading="lazy">
+                    <img src="<?php echo e(asset('imagens_instagram/2.jpg')); ?>" alt="Instagram 2" loading="lazy">
                 </a>
-                <a class="insta-item" href="https://www.instagram.com/comclassecasamentos/" target="_blank" rel="noopener">
+                <a class="insta-item" href="https://www.instagram.com/p/DQPLyG3EZa4/?img_index=1" target="_blank" rel="noopener">
                     <span class="insta-multi"><i class="bi bi-collection"></i></span>
-                    <img src="<?php echo e(asset('imagens_hero/5.jpg')); ?>" alt="Instagram 3" loading="lazy">
+                    <img src="<?php echo e(asset('imagens_instagram/3.jpg')); ?>" alt="Instagram 3" loading="lazy">
                 </a>
-                <a class="insta-item" href="https://www.instagram.com/comclassecasamentos/" target="_blank" rel="noopener">
+                <a class="insta-item" href="https://www.instagram.com/p/DQIGPYkjx08/?img_index=1" target="_blank" rel="noopener">
                     <span class="insta-multi"><i class="bi bi-collection"></i></span>
-                    <img src="<?php echo e(asset('imagens_hero/7.jpg')); ?>" alt="Instagram 4" loading="lazy">
+                    <img src="<?php echo e(asset('imagens_instagram/4.jpg')); ?>" alt="Instagram 4" loading="lazy">
                 </a>
-                <a class="insta-item" href="https://www.instagram.com/comclassecasamentos/" target="_blank" rel="noopener">
+                <a class="insta-item" href="https://www.instagram.com/p/DMAjqCSur8Y/?img_index=1" target="_blank" rel="noopener">
                     <span class="insta-multi"><i class="bi bi-collection"></i></span>
-                    <img src="<?php echo e(asset('imagens_hero/9.jpg')); ?>" alt="Instagram 5" loading="lazy">
+                    <img src="<?php echo e(asset('imagens_instagram/5.jpg')); ?>" alt="Instagram 5" loading="lazy">
                 </a>
-                <a class="insta-item" href="https://www.instagram.com/comclassecasamentos/" target="_blank" rel="noopener">
+                <a class="insta-item" href="https://www.instagram.com/p/DLkqHR5uuer/?img_index=1" target="_blank" rel="noopener">
                     <span class="insta-multi"><i class="bi bi-collection"></i></span>
-                    <img src="<?php echo e(asset('imagens_hero/11.jpg')); ?>" alt="Instagram 6" loading="lazy">
+                    <img src="<?php echo e(asset('imagens_instagram/6.jpg')); ?>" alt="Instagram 6" loading="lazy">
                 </a>
-                <a class="insta-item" href="https://www.instagram.com/comclassecasamentos/" target="_blank" rel="noopener">
+                <a class="insta-item" href="https://www.instagram.com/p/DHNLRHkOj0f/?img_index=1" target="_blank" rel="noopener">
                     <span class="insta-multi"><i class="bi bi-collection"></i></span>
-                    <img src="<?php echo e(asset('imagens_2_secao/Casamento Elegante.jpg')); ?>" alt="Instagram 7" loading="lazy">
-                </a>
-                <a class="insta-item" href="https://www.instagram.com/comclassecasamentos/" target="_blank" rel="noopener">
+                    <img src="<?php echo e(asset('imagens_instagram/7.jpg')); ?>" alt="Instagram 7" loading="lazy">
+                </a>    
+                <a class="insta-item" href="https://www.instagram.com/p/DA1a-UtyYCS/?img_index=1" target="_blank" rel="noopener">
                     <span class="insta-multi"><i class="bi bi-collection"></i></span>
-                    <img src="<?php echo e(asset('imagens_2_secao/Decoração Sofisticada.jpg')); ?>" alt="Instagram 8" loading="lazy">
+                    <img src="<?php echo e(asset('imagens_instagram/8.jpg')); ?>" alt="Instagram 8" loading="lazy">
                 </a>
-                <a class="insta-item" href="https://www.instagram.com/comclassecasamentos/" target="_blank" rel="noopener">
+                <a class="insta-item" href="https://www.instagram.com/p/DAL1tyWOFf8/" target="_blank" rel="noopener">
                     <span class="insta-multi"><i class="bi bi-collection"></i></span>
-                    <img src="<?php echo e(asset('imagens_2_secao/Momentos Especiais.jpg')); ?>" alt="Instagram 9" loading="lazy">
+                    <img src="<?php echo e(asset('imagens_instagram/9.jpg')); ?>" alt="Instagram 9" loading="lazy">
                 </a>
-                <a class="insta-item" href="https://www.instagram.com/comclassecasamentos/" target="_blank" rel="noopener">
+                <a class="insta-item" href="https://www.instagram.com/p/DAJYIchOR_0/?img_index=1" target="_blank" rel="noopener">
                     <span class="insta-multi"><i class="bi bi-collection"></i></span>
-                    <img src="<?php echo e(asset('imagens_3_secao/Planejamento Detalhado.jpg')); ?>" alt="Instagram 10" loading="lazy">
+                    <img src="<?php echo e(asset('imagens_instagram/10.jpg')); ?>" alt="Instagram 10" loading="lazy">
                 </a>
-                <a class="insta-item" href="https://www.instagram.com/comclassecasamentos/" target="_blank" rel="noopener">
+                <a class="insta-item" href="https://www.instagram.com/p/C8izL0SOqDp/?img_index=1" target="_blank" rel="noopener">
                     <span class="insta-multi"><i class="bi bi-collection"></i></span>
-                    <img src="<?php echo e(asset('imagens_3_secao/Execução Perfeita.jpg')); ?>" alt="Instagram 11" loading="lazy">
+                    <img src="<?php echo e(asset('imagens_instagram/11.jpg')); ?>" alt="Instagram 11" loading="lazy">
                 </a>
-                <a class="insta-item" href="https://www.instagram.com/comclassecasamentos/" target="_blank" rel="noopener">
+                <a class="insta-item" href="https://www.instagram.com/p/C5Mx8VRuUR1/" target="_blank" rel="noopener">
                     <span class="insta-multi"><i class="bi bi-collection"></i></span>
-                    <img src="<?php echo e(asset('imagens_3_secao/Resultados Excepcionais.jpg')); ?>" alt="Instagram 12" loading="lazy">
+                    <img src="<?php echo e(asset('imagens_instagram/12.jpg')); ?>" alt="Instagram 12" loading="lazy">
                 </a>
+                <a class="insta-item" href="https://www.instagram.com/p/C4bW_0NObJc/?img_index=1" target="_blank" rel="noopener">
+                    <span class="insta-multi"><i class="bi bi-collection"></i></span>
+                    <img src="<?php echo e(asset('imagens_instagram/13.jpg')); ?>" alt="Instagram 13" loading="lazy">
+                </a>
+                <a class="insta-item" href="https://www.instagram.com/p/C4Bt-YoOLka/?img_index=1" target="_blank" rel="noopener">
+                    <span class="insta-multi"><i class="bi bi-collection"></i></span>
+                    <img src="<?php echo e(asset('imagens_instagram/14.jpg')); ?>" alt="Instagram 14" loading="lazy">
+                </a>
+                
             </div>
             <button class="insta-arrow insta-next" type="button" aria-label="Próximo">
                 <i class="bi bi-chevron-right"></i>

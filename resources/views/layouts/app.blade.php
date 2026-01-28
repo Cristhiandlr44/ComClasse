@@ -14,7 +14,7 @@
     {{-- Tipografia e ícones --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600&family=Allura&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600&family=Allura&family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,400;0,600&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
     {{-- CSS Customizado --}}
@@ -36,6 +36,7 @@
             <nav class="header-nav" id="headerNav">
                 <a href="{{ route('home') }}#quem-somos">Quem somos</a>
                 <a href="{{ route('home') }}#atuacao">Atuação</a>
+                <a href="{{ route('home') }}#mentorias-cursos">Mentorias e Cursos</a>
                 <a href="{{ route('home') }}#depoimentos">Depoimentos</a>
                 <a href="{{ route('home') }}#contato">Contato</a>
             </nav>
@@ -61,6 +62,7 @@
                 <a href="{{ route('home') }}#inicio">Início</a>
                 <a href="{{ route('home') }}#quem-somos">Quem somos</a>
                 <a href="{{ route('home') }}#atuacao">Nossa atuação</a>
+                <a href="{{ route('home') }}#mentorias-cursos">Mentorias e Cursos</a>
                 <a href="{{ route('home') }}#contato">Contato</a>
                 <a href="{{ route('login') }}" class="login-link"><i class="bi bi-box-arrow-in-right"></i> Acesso</a>
             </div>
@@ -78,6 +80,36 @@
     @stack('scripts')
     
     <script>
+    // Corrigir problema de scroll duplo no carregamento inicial
+    (function() {
+        function fixDoubleScroll() {
+            // Força o recálculo da altura do documento
+            document.documentElement.style.height = 'auto';
+            document.body.style.height = 'auto';
+            
+            // Remove qualquer overflow-y desnecessário do html
+            if (window.innerHeight >= document.documentElement.scrollHeight) {
+                document.documentElement.style.overflowY = 'hidden';
+            } else {
+                document.documentElement.style.overflowY = '';
+            }
+        }
+        
+        // Executa após o carregamento completo
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', function() {
+                setTimeout(fixDoubleScroll, 100);
+            });
+        } else {
+            setTimeout(fixDoubleScroll, 100);
+        }
+        
+        // Também executa após todas as imagens carregarem
+        window.addEventListener('load', function() {
+            setTimeout(fixDoubleScroll, 50);
+        });
+    })();
+    
     // Menu Hambúrguer Mobile
     document.addEventListener('DOMContentLoaded', function() {
         const mobileMenuToggle = document.getElementById('mobileMenuToggle');

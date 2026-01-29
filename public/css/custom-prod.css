@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Abramo';
-    src: url('../fonts/Abramo-Script.otf') format('opentype');
+    src: url('/fonts/Abramo-Script.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
     font-family: 'AnticDidone';
-    src: url('../fonts/AnticDidone-Regular.ttf') format('truetype');
+    src: url('/fonts/AnticDidone-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -16,7 +16,7 @@
 
 @font-face {
     font-family: 'Bridal';
-    src: url('../fonts/Bridal_routine.ttf') format('truetype');
+    src: url('/fonts/Bridal_routine.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -25,7 +25,7 @@
 /* Títulos: Bridal Routine */
 @font-face {
     font-family: 'BridalRoutine';
-    src: url('../fonts/Bridal_Routine%20Demo.ttf') format('truetype');
+    src: url('/fonts/Bridal_Routine%20Demo.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -34,7 +34,7 @@
 /* Subtítulos: Peany Timer */
 @font-face {
     font-family: 'PeanyTimer';
-    src: url('../fonts/Peany%20Timer.otf') format('opentype');
+    src: url('/fonts/Peany%20Timer.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -43,7 +43,7 @@
 /* Fonte de serviço: FiraSans */
 @font-face {
     font-family: 'FiraSans';
-    src: url('../fonts/FiraSans-Regular.ttf') format('truetype');
+    src: url('/fonts/FiraSans-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -52,7 +52,7 @@
 /* Título "Nossa Atuação" – Bridal Routine fixed (com ç, ã, etc.) */
 @font-face {
     font-family: 'BridalRoutineFixed';
-    src: url('../fonts/BridalRoutine-Regular-fixed.ttf') format('truetype');
+    src: url('/fonts/BridalRoutine-Regular-fixed.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -61,7 +61,7 @@
 /* Fallback Bridal (caracteres especiais: ç, ã, etc.) */
 @font-face {
     font-family: 'Belights';
-    src: url('../fonts/Belights.ttf') format('truetype');
+    src: url('/fonts/Belights.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;

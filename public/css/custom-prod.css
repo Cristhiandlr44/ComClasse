@@ -274,6 +274,11 @@ body.login-page .header-cta {
     font-family: 'FiraSans', 'Playfair Display', sans-serif;
 }
 
+/* Força Belights para ç, ã (igual em local e produção) */
+.font-belights {
+    font-family: 'Belights', 'Playfair Display', serif;
+}
+
 h1, h2, h3 {
     color: var(--ink);
     font-weight: 500;

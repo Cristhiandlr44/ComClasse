@@ -106,7 +106,7 @@
 <section id="atuacao" class="section-block atuacao-section">
     <div class="site-container">
         <div class="atuacao-header">
-            <h2 class="atuacao-title font-abramo">Nossa Atuação</h2>
+            <h2 class="atuacao-title font-abramo">Nossa Atua<span class="font-belights">ção</span></h2>
         </div>
         <p class="atuacao-subtitle">Oferecemos uma assessoria completa para tornar seu evento único e inesquecível.</p>
 

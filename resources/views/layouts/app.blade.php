@@ -20,6 +20,9 @@
     {{-- CSS Customizado --}}
     <link rel="stylesheet" href="{{ asset('css/custom-prod.css') }}">
 
+    {{-- Preload Belights para fallback de ç, ã no título "Nossa Atuação" (evita diferença em produção) --}}
+    <link rel="preload" href="{{ asset('fonts/Belights.ttf') }}" as="font" type="font/ttf" crossorigin>
+
     @stack('styles')
 </head>
 <body class="site-body @if(request()->routeIs('login')) login-page @endif">

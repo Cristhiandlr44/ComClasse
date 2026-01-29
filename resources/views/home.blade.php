@@ -106,7 +106,7 @@
 <section id="atuacao" class="section-block atuacao-section">
     <div class="site-container">
         <div class="atuacao-header">
-            <h2 class="atuacao-title">Nossa Atuação</h2>
+            <h2 class="atuacao-title font-abramo">Nossa Atuação</h2>
         </div>
         <p class="atuacao-subtitle">Oferecemos uma assessoria completa para tornar seu evento único e inesquecível.</p>
 
@@ -159,7 +159,7 @@
                 <div class="testimonial-slide">
                     <div class="testimonial-item">
                         <i class="bi bi-quote"></i>
-                        <p class="quote">“Como podemos agradecê-la por tanto cuidado e preciosismo? Você foi IRRETOCÁVEL do início ao fim. Cada detalhe foi minuciosamente pensando e executado com perfeição! Sempre sobre da sua competência e profissionalismo, mas viver isso tudo ao seu lado foi muito melhor do que imaginei!”</p>
+                        <p class="quote">“Como podemos agradecê-la por tanto cuidado e preciosismo? Você foi IRRETOCÁVEL do início ao fim. Cada detalhe foi minuciosamente pensado e executado com perfeição! Sempre sobre da sua competência e profissionalismo, mas viver isso tudo ao seu lado foi muito melhor do que imaginei!”</p>
                         <div class="testimonial-sep"></div>
                         <p class="author">Clarissa  &amp; Luís</p>
                     </div>

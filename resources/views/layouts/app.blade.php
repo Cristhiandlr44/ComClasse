@@ -80,35 +80,23 @@
     @stack('scripts')
     
     <script>
-    // Corrigir problema de scroll duplo no carregamento inicial
+    // Evitar barra de rolagem dupla: scroll só no html, main nunca rola
     (function() {
-        function fixDoubleScroll() {
-            // Força o recálculo da altura do documento
-            document.documentElement.style.height = 'auto';
-            document.body.style.height = 'auto';
-            
-            // Remove qualquer overflow-y desnecessário do html
-            if (window.innerHeight >= document.documentElement.scrollHeight) {
-                document.documentElement.style.overflowY = 'hidden';
-            } else {
-                document.documentElement.style.overflowY = '';
-            }
+        document.documentElement.style.overflowY = 'auto';
+        document.body.style.overflow = 'visible';
+        var main = document.querySelector('main.page-shell');
+        if (main) {
+            main.style.setProperty('overflow', 'visible', 'important');
+            main.style.setProperty('overflow-y', 'visible', 'important');
         }
-        
-        // Executa após o carregamento completo
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', function() {
-                setTimeout(fixDoubleScroll, 100);
-            });
-        } else {
-            setTimeout(fixDoubleScroll, 100);
-        }
-        
-        // Também executa após todas as imagens carregarem
-        window.addEventListener('load', function() {
-            setTimeout(fixDoubleScroll, 50);
-        });
     })();
+    window.addEventListener('load', function() {
+        var main = document.querySelector('main.page-shell');
+        if (main) {
+            main.style.setProperty('overflow', 'visible', 'important');
+            main.style.setProperty('overflow-y', 'visible', 'important');
+        }
+    });
     
     // Menu Hambúrguer Mobile
     document.addEventListener('DOMContentLoaded', function() {

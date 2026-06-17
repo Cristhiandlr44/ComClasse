@@ -2,7 +2,6 @@
 
 namespace App\Services;
 
-use App\Support\PublicAssetPublisher;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\File;
 use RuntimeException;
@@ -16,7 +15,7 @@ class HeroCollageService
 
     public function cssOutputPath(): string
     {
-        return public_path('css/hero-collage.generated.css');
+        return storage_path('app/site-layout/hero-collage.generated.css');
     }
 
     public function imageDirectory(): string
@@ -99,7 +98,11 @@ class HeroCollageService
     public function writeCssFile(?array $data = null): void
     {
         $data ??= $this->load();
-        PublicAssetPublisher::publish('css/hero-collage.generated.css', $this->generateCss($data));
+        $css = $this->generateCss($data);
+        $path = $this->cssOutputPath();
+
+        File::ensureDirectoryExists(dirname($path));
+        File::put($path, $css);
     }
 
     public function generateCss(array $data): string

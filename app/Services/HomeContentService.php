@@ -2,7 +2,6 @@
 
 namespace App\Services;
 
-use App\Support\PublicAssetPublisher;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\File;
 use RuntimeException;
@@ -16,7 +15,7 @@ class HomeContentService
 
     public function cssOutputPath(): string
     {
-        return public_path('css/home-content.generated.css');
+        return storage_path('app/site-layout/home-content.generated.css');
     }
 
     public function publicPath(): string
@@ -114,7 +113,11 @@ class HomeContentService
     public function writeCssFile(?array $data = null): void
     {
         $data ??= $this->load();
-        PublicAssetPublisher::publish('css/home-content.generated.css', $this->generateCss($data));
+        $css = $this->generateCss($data);
+        $path = $this->cssOutputPath();
+
+        File::ensureDirectoryExists(dirname($path));
+        File::put($path, $css);
     }
 
     public function generateCss(array $data): string

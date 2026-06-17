@@ -4,32 +4,23 @@ namespace App\Console\Commands;
 
 use App\Services\HeroCollageService;
 use App\Services\HomeContentService;
-use App\Support\PublicAssetPublisher;
 use Illuminate\Console\Command;
 
 class SyncSiteLayoutCommand extends Command
 {
     protected $signature = 'site:sync-layout';
 
-    protected $description = 'Regenera o CSS de colagem e home a partir dos JSONs do editor';
+    protected $description = 'Regenera backup do CSS de colagem e home em storage/app/site-layout';
 
     public function handle(HeroCollageService $collage, HomeContentService $homeContent): int
     {
-        $webRoot = PublicAssetPublisher::resolveWebRoot();
-
-        $this->info('Document root detectado: '.$webRoot);
-
         $collage->writeCssFile();
-        foreach (PublicAssetPublisher::targetPaths('css/hero-collage.generated.css') as $path) {
-            $this->line('Colagem publicada em: '.$path);
-        }
+        $this->line('Colagem: '.$collage->cssOutputPath());
 
         $homeContent->writeCssFile();
-        foreach (PublicAssetPublisher::targetPaths('css/home-content.generated.css') as $path) {
-            $this->line('Home publicada em: '.$path);
-        }
+        $this->line('Home: '.$homeContent->cssOutputPath());
 
-        $this->info('Layout sincronizado com config/hero-collage.json e config/home-content.json.');
+        $this->info('Backup salvo. O site público lê o CSS direto do JSON via Laravel.');
 
         return self::SUCCESS;
     }

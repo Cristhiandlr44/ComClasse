@@ -1,28 +1,27 @@
 #!/bin/bash
-# Rode no servidor SSH após git pull:
-#   bash deploy-layout.sh
-
 set -e
 cd "$(dirname "$0")"
 
-echo "==> Descartando CSS estático antigo (se houver conflito no git)"
-git checkout -- public/css/hero-collage.generated.css public/css/home-content.generated.css 2>/dev/null || true
+echo "==> Restaurando JSON e removendo CSS estático antigo"
+git checkout -- config/hero-collage.json config/home-content.json
+rm -f public/css/hero-collage.generated.css public/css/home-content.generated.css
 
 echo "==> Atualizando código"
 git pull origin main
 
 echo "==> Limpando caches"
-php artisan optimize:clear || true
 php artisan route:clear
 php artisan view:clear
 php artisan config:clear
+php artisan optimize:clear
 
-echo "==> Sincronizando JSON -> CSS (backup em disco)"
+echo "==> Backup do CSS em storage"
 php artisan site:sync-layout
 
-echo "==> Hash do hero-collage.json:"
+echo "==> MD5 do JSON da colagem (deve bater com o local):"
 md5sum config/hero-collage.json
 
 echo ""
-echo "Pronto. Abra o site com Ctrl+F5."
-echo "O CSS agora é gerado pelo Laravel a partir de config/hero-collage.json"
+echo "Teste no navegador: https://comclasse.com.br/css/hero-collage.generated.css"
+echo "A 2ª linha deve conter: config-hash:"
+echo "No DevTools > Network, o header X-Site-Layout deve ser: hero-collage-dynamic"

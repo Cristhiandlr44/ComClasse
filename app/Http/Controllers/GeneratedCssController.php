@@ -16,6 +16,7 @@ class GeneratedCssController extends Controller
             [
                 'Content-Type' => 'text/css; charset=UTF-8',
                 'Cache-Control' => 'public, max-age=300',
+                'X-Site-Layout' => 'hero-collage-dynamic',
             ]
         );
     }
@@ -28,6 +29,7 @@ class GeneratedCssController extends Controller
             [
                 'Content-Type' => 'text/css; charset=UTF-8',
                 'Cache-Control' => 'public, max-age=300',
+                'X-Site-Layout' => 'home-content-dynamic',
             ]
         );
     }

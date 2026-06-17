@@ -8,7 +8,7 @@
     <title>Editor de Colagem — Com Classe</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/custom-prod.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/hero-collage.generated.css') }}">
+    <link rel="stylesheet" href="{{ route('css.hero-collage') }}">
     <link rel="stylesheet" href="{{ asset('css/collage-editor.css') }}">
 </head>
 <body class="collage-editor-body">

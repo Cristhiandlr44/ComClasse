@@ -249,8 +249,10 @@ class HomeContentService
             return $href;
         }
 
-        if (preg_match('#^https?://(?:localhost|127\.0\.0\.1)(?::\d+)?(/[^\s?#]*)#i', $href, $matches)) {
-            return $matches[1] !== '' ? $matches[1] : '/';
+        $host = strtolower((string) parse_url($href, PHP_URL_HOST));
+
+        if (in_array($host, ['localhost', '127.0.0.1'], true)) {
+            return parse_url($href, PHP_URL_PATH) ?: '/';
         }
 
         return $href;

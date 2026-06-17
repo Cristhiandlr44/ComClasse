@@ -19,11 +19,15 @@
 
     
     <link rel="stylesheet" href="<?php echo e(asset('css/custom-prod.css')); ?>">
-    <?php if(file_exists(public_path('css/hero-collage.generated.css'))): ?>
-        <link rel="stylesheet" href="<?php echo e(asset('css/hero-collage.generated.css')); ?>">
+    <?php
+        $heroCollageCss = public_path('css/hero-collage.generated.css');
+        $homeContentCss = public_path('css/home-content.generated.css');
+    ?>
+    <?php if(file_exists($heroCollageCss)): ?>
+        <link rel="stylesheet" href="<?php echo e(asset('css/hero-collage.generated.css')); ?>?v=<?php echo e(filemtime($heroCollageCss)); ?>">
     <?php endif; ?>
-    <?php if(file_exists(public_path('css/home-content.generated.css'))): ?>
-        <link rel="stylesheet" href="<?php echo e(asset('css/home-content.generated.css')); ?>">
+    <?php if(file_exists($homeContentCss)): ?>
+        <link rel="stylesheet" href="<?php echo e(asset('css/home-content.generated.css')); ?>?v=<?php echo e(filemtime($homeContentCss)); ?>">
     <?php endif; ?>
 
     

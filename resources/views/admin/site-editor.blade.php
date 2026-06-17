@@ -10,11 +10,11 @@
     <link rel="stylesheet" href="{{ asset('css/custom-prod.css') }}">
     <link rel="preload" href="{{ asset('fonts/Belights.ttf') }}" as="font" type="font/ttf" crossorigin>
     @php
-        $heroCollageCss = public_path('css/hero-collage.generated.css');
-        $homeContentCss = public_path('css/home-content.generated.css');
+        $heroCollageConfig = config_path('hero-collage.json');
+        $homeContentConfig = config_path('home-content.json');
     @endphp
-    <link rel="stylesheet" href="{{ asset('css/hero-collage.generated.css') }}@if(file_exists($heroCollageCss))?v={{ filemtime($heroCollageCss) }}@endif">
-    <link rel="stylesheet" href="{{ asset('css/home-content.generated.css') }}@if(file_exists($homeContentCss))?v={{ filemtime($homeContentCss) }}@endif">
+    <link rel="stylesheet" href="{{ route('css.hero-collage') }}@if(file_exists($heroCollageConfig))?v={{ filemtime($heroCollageConfig) }}@endif">
+    <link rel="stylesheet" href="{{ route('css.home-content') }}@if(file_exists($homeContentConfig))?v={{ filemtime($homeContentConfig) }}@endif">
     <style id="site-editor-live-styles"></style>
     <link rel="stylesheet" href="{{ asset('css/collage-editor.css') }}">
     <link rel="stylesheet" href="{{ asset('css/site-editor.css') }}">

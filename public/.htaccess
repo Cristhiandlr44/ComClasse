@@ -5,6 +5,10 @@
 
     RewriteEngine On
 
+    # CSS do editor: sempre via Laravel (JSON), nunca arquivo estático antigo
+    RewriteRule ^css/hero-collage\.generated\.css$ index.php [L]
+    RewriteRule ^css/home-content\.generated\.css$ index.php [L]
+
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]

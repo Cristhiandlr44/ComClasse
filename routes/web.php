@@ -1,9 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\GeneratedCssController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\Admin\SiteEditorController;
+
+Route::get('/css/hero-collage.generated.css', [GeneratedCssController::class, 'heroCollage'])->name('css.hero-collage');
+Route::get('/css/home-content.generated.css', [GeneratedCssController::class, 'homeContent'])->name('css.home-content');
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/servicos', [HomeController::class, 'servicos'])->name('servicos');

@@ -7,7 +7,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Editor de Colagem — Com Classe</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/custom-prod.css') }}">
+    @php $customProdCss = public_path('css/custom-prod.css'); @endphp
+    <link rel="stylesheet" href="{{ asset('css/custom-prod.css') }}@if(file_exists($customProdCss))?v={{ filemtime($customProdCss) }}@endif">
     <link rel="stylesheet" href="{{ route('css.hero-collage') }}">
     <link rel="stylesheet" href="{{ asset('css/collage-editor.css') }}">
 </head>

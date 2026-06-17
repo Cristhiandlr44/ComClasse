@@ -78,6 +78,10 @@ class HomeContentService
                     }
                 }
             }
+
+            if (($element['type'] ?? '') === 'link' && isset($element['href'])) {
+                $element['href'] = $this->normalizeStoredHref((string) $element['href']);
+            }
         }
         unset($element);
 
@@ -231,6 +235,21 @@ class HomeContentService
         }
 
         return $normalized;
+    }
+
+    private function normalizeStoredHref(string $href): string
+    {
+        $href = trim($href);
+
+        if ($href === '' || $href === '#') {
+            return $href;
+        }
+
+        if (preg_match('#^https?://(?:localhost|127\.0\.0\.1)(?::\d+)?(/[^\s?#]*)#i', $href, $matches)) {
+            return $matches[1] !== '' ? $matches[1] : '/';
+        }
+
+        return $href;
     }
 
     private function elementSelector(array $element): string
@@ -437,7 +456,7 @@ class HomeContentService
                 $text('atuacao-text-2', 'atuacao', 'Texto 2', "Criação de projetos\nexclusivos", ['font-antic-didone'], 'font-antic-didone'),
                 $image('atuacao-img-3', 'atuacao', 'Execução', 'imagens_3_secao/Resultados Excepcionais.jpg', 'Execução impecável', ['img-pos-bottom'], 'imagens_3_secao'),
                 $text('atuacao-text-3', 'atuacao', 'Texto 3', "Execução impecável\nde tudo que foi sonhado", ['font-antic-didone'], 'font-antic-didone'),
-                $link('atuacao-cta', 'atuacao', 'Botão CTA', 'Quero Saber Mais', route('servicos'), ['atuacao-btn']),
+                $link('atuacao-cta', 'atuacao', 'Botão CTA', 'Quero Saber Mais', '/servicos', ['atuacao-btn']),
             ],
             [
                 $text('mentorias-title', 'mentorias', 'Título', 'Mentorias e Cursos', ['mentorias-title', 'font-abramo'], 'font-abramo'),

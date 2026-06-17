@@ -31,7 +31,26 @@ class HomeElementHelper
 
     public function href(string $id, string $default = '#'): string
     {
-        return (string) ($this->get($id)['href'] ?? $default);
+        $href = (string) ($this->get($id)['href'] ?? $default);
+
+        return $this->normalizeHref($href, $default);
+    }
+
+    private function normalizeHref(string $href, string $fallback): string
+    {
+        if ($href === '' || $href === '#') {
+            return $fallback;
+        }
+
+        if (str_starts_with($href, '/') && ! str_starts_with($href, '//')) {
+            return url($href);
+        }
+
+        if (preg_match('#^https?://(?:localhost|127\.0\.0\.1)(?::\d+)?(/[^\s?#]*)#i', $href, $matches)) {
+            return url($matches[1] !== '' ? $matches[1] : '/');
+        }
+
+        return $href;
     }
 
     public function src(string $id, string $default = ''): string

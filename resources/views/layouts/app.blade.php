@@ -17,12 +17,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600&family=Allura&family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,400;0,600&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
-    {{-- CSS Customizado --}}
-    <link rel="stylesheet" href="{{ asset('css/custom-prod.css') }}">
+    {{-- CSS Customizado (?v= evita cache de 7 dias do LiteSpeed em produção) --}}
     @php
+        $customProdCss = public_path('css/custom-prod.css');
         $heroCollageConfig = config_path('hero-collage.json');
         $homeContentConfig = config_path('home-content.json');
     @endphp
+    <link rel="stylesheet" href="{{ asset('css/custom-prod.css') }}@if(file_exists($customProdCss))?v={{ filemtime($customProdCss) }}@endif">
     @if(file_exists($heroCollageConfig))
         <link rel="stylesheet" href="{{ route('css.hero-collage') }}?v={{ filemtime($heroCollageConfig) }}">
     @endif

@@ -7,12 +7,13 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Editor da Home — Com Classe</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/custom-prod.css') }}">
-    <link rel="preload" href="{{ asset('fonts/Belights.ttf') }}" as="font" type="font/ttf" crossorigin>
     @php
+        $customProdCss = public_path('css/custom-prod.css');
         $heroCollageConfig = config_path('hero-collage.json');
         $homeContentConfig = config_path('home-content.json');
     @endphp
+    <link rel="stylesheet" href="{{ asset('css/custom-prod.css') }}@if(file_exists($customProdCss))?v={{ filemtime($customProdCss) }}@endif">
+    <link rel="preload" href="{{ asset('fonts/Belights.ttf') }}" as="font" type="font/ttf" crossorigin>
     <link rel="stylesheet" href="{{ route('css.hero-collage') }}@if(file_exists($heroCollageConfig))?v={{ filemtime($heroCollageConfig) }}@endif">
     <link rel="stylesheet" href="{{ route('css.home-content') }}@if(file_exists($homeContentConfig))?v={{ filemtime($homeContentConfig) }}@endif">
     <style id="site-editor-live-styles"></style>

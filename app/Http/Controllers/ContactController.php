@@ -14,12 +14,36 @@ class ContactController extends Controller
         return view('contact');
     }
 
+    private function normalizePhone(?string $phone): string
+    {
+        $digits = preg_replace('/\D/', '', $phone ?? '');
+
+        if (str_starts_with($digits, '55')) {
+            $digits = substr($digits, 2);
+        }
+
+        if ($digits !== '' && ! str_starts_with($digits, '38') && strlen($digits) <= 9) {
+            $digits = '38' . $digits;
+        }
+
+        return $digits;
+    }
+
+    private function phoneRules(): array
+    {
+        return ['required', 'string', 'regex:/^38\d{8,9}$/'];
+    }
+
     public function store(Request $request)
     {
+        $request->merge([
+            'phone' => $this->normalizePhone($request->phone),
+        ]);
+
         $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:255',
             'email' => 'required|email|max:255',
-            'phone' => 'required|string|max:20',
+            'phone' => $this->phoneRules(),
             'event_type' => 'nullable|string|max:255',
             'guests' => 'nullable|integer',
             'location' => 'nullable|string|max:255',
@@ -52,10 +76,14 @@ class ContactController extends Controller
 
     public function budget(Request $request)
     {
+        $request->merge([
+            'phone' => $this->normalizePhone($request->phone),
+        ]);
+
         $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:255',
             'email' => 'required|email|max:255',
-            'phone' => 'required|string|max:20',
+            'phone' => $this->phoneRules(),
             'event_type' => 'nullable|string|max:255',
             'guests' => 'nullable|integer',
             'location' => 'nullable|string|max:255',
@@ -91,10 +119,14 @@ class ContactController extends Controller
 
     public function questionnaireStore(Request $request)
     {
+        $request->merge([
+            'phone' => $this->normalizePhone($request->phone),
+        ]);
+
         $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:255',
             'email' => 'required|email|max:255',
-            'phone' => 'required|string|max:20',
+            'phone' => $this->phoneRules(),
             'event_type' => 'nullable|string|max:255',
             'guests' => 'nullable|integer',
             'location' => 'nullable|string|max:255',

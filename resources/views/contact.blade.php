@@ -38,7 +38,17 @@
                 </label>
                 <label class="field">
                     <span>Telefone</span>
-                    <input type="tel" name="phone" required>
+                    <input
+                        type="tel"
+                        class="js-phone-field"
+                        id="phone"
+                        value="{{ old('phone') }}"
+                        placeholder="(38) 99999-9999"
+                        inputmode="numeric"
+                        autocomplete="tel"
+                        title="Clique para copiar o número"
+                        required
+                    >
                 </label>
                 <label class="field">
                     <span>Tipo de evento</span>

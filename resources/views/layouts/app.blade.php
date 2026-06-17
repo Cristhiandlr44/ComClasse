@@ -19,6 +19,12 @@
 
     {{-- CSS Customizado --}}
     <link rel="stylesheet" href="{{ asset('css/custom-prod.css') }}">
+    @if(file_exists(public_path('css/hero-collage.generated.css')))
+        <link rel="stylesheet" href="{{ asset('css/hero-collage.generated.css') }}">
+    @endif
+    @if(file_exists(public_path('css/home-content.generated.css')))
+        <link rel="stylesheet" href="{{ asset('css/home-content.generated.css') }}">
+    @endif
 
     {{-- Preload Belights para fallback de ç, ã no título "Nossa Atuação" (evita diferença em produção) --}}
     <link rel="preload" href="{{ asset('fonts/Belights.ttf') }}" as="font" type="font/ttf" crossorigin>
@@ -39,8 +45,8 @@
             <nav class="header-nav" id="headerNav">
                 <a href="{{ route('home') }}#quem-somos">Quem somos</a>
                 <a href="{{ route('home') }}#atuacao">Atuação</a>
-                <a href="{{ route('home') }}#mentorias-cursos">Mentorias e Cursos</a>
                 <a href="{{ route('home') }}#depoimentos">Depoimentos</a>
+                <a href="{{ route('home') }}#mentorias-cursos">Cursos e mentorias</a>
                 <a href="{{ route('home') }}#contato">Contato</a>
             </nav>
             <a class="header-cta" href="{{ route('login') }}">Acessar Sistema</a>
@@ -64,8 +70,9 @@
             <div class="footer-links">
                 <a href="{{ route('home') }}#inicio">Início</a>
                 <a href="{{ route('home') }}#quem-somos">Quem somos</a>
-                <a href="{{ route('home') }}#atuacao">Nossa atuação</a>
-                <a href="{{ route('home') }}#mentorias-cursos">Mentorias e Cursos</a>
+                <a href="{{ route('home') }}#atuacao">Atuação</a>
+                <a href="{{ route('home') }}#depoimentos">Depoimentos</a>
+                <a href="{{ route('home') }}#mentorias-cursos">Cursos e mentorias</a>
                 <a href="{{ route('home') }}#contato">Contato</a>
                 <a href="{{ route('login') }}" class="login-link"><i class="bi bi-box-arrow-in-right"></i> Acesso</a>
             </div>
@@ -105,12 +112,23 @@
     document.addEventListener('DOMContentLoaded', function() {
         const mobileMenuToggle = document.getElementById('mobileMenuToggle');
         const headerNav = document.getElementById('headerNav');
+        const siteHeader = document.querySelector('.site-header');
+
+        function syncHeaderHeight() {
+            if (!siteHeader) return;
+            document.documentElement.style.setProperty('--header-height', siteHeader.offsetHeight + 'px');
+        }
+
+        syncHeaderHeight();
+        window.addEventListener('resize', syncHeaderHeight);
         
         if (mobileMenuToggle && headerNav) {
-            mobileMenuToggle.addEventListener('click', function() {
-                this.classList.toggle('active');
-                headerNav.classList.toggle('active');
-                document.body.style.overflow = headerNav.classList.contains('active') ? 'hidden' : '';
+            mobileMenuToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const isOpen = headerNav.classList.toggle('active');
+                this.classList.toggle('active', isOpen);
+                document.body.classList.toggle('mobile-menu-open', isOpen);
+                document.body.style.overflow = isOpen ? 'hidden' : '';
             });
             
             // Fechar menu ao clicar em um link
@@ -119,6 +137,7 @@
                 link.addEventListener('click', function() {
                     mobileMenuToggle.classList.remove('active');
                     headerNav.classList.remove('active');
+                    document.body.classList.remove('mobile-menu-open');
                     document.body.style.overflow = '';
                 });
             });
@@ -128,6 +147,7 @@
                 if (!headerNav.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
                     mobileMenuToggle.classList.remove('active');
                     headerNav.classList.remove('active');
+                    document.body.classList.remove('mobile-menu-open');
                     document.body.style.overflow = '';
                 }
             });

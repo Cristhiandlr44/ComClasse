@@ -1,0 +1,234 @@
+.collage-editor-body {
+    margin: 0;
+    min-height: 100vh;
+    background: #171411;
+    color: #f7f3eb;
+    font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+.collage-editor-toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 14px 20px;
+    background: rgba(23, 20, 17, 0.96);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+}
+
+.collage-editor-toolbar__title {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.collage-editor-toolbar__title span {
+    color: #b9afa0;
+    font-size: 0.88rem;
+}
+
+.collage-editor-toolbar__actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.collage-editor-status {
+    font-size: 0.88rem;
+    color: #c8bfb0;
+}
+
+.collage-editor-btn {
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: transparent;
+    color: #f7f3eb;
+    border-radius: 999px;
+    padding: 10px 16px;
+    cursor: pointer;
+}
+
+.collage-editor-btn--primary {
+    background: #9a7c43;
+    border-color: #9a7c43;
+    color: #fff;
+    font-weight: 600;
+}
+
+.collage-editor-layout {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    min-height: calc(100vh - 72px);
+}
+
+.collage-editor-panel {
+    padding: 20px;
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+    background: #211c17;
+    overflow: auto;
+}
+
+.collage-editor-panel h2,
+.collage-editor-panel h3 {
+    margin: 0 0 14px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.collage-editor-list {
+    list-style: none;
+    margin: 0 0 20px;
+    padding: 0;
+    display: grid;
+    gap: 8px;
+}
+
+.collage-editor-list button {
+    width: 100%;
+    text-align: left;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: #1a1612;
+    color: #f7f3eb;
+    cursor: pointer;
+}
+
+.collage-editor-list button.is-active {
+    border-color: #9a7c43;
+    background: rgba(154, 124, 67, 0.18);
+}
+
+.collage-editor-details.is-hidden {
+    display: none;
+}
+
+.collage-editor-field {
+    display: grid;
+    gap: 6px;
+    margin-bottom: 14px;
+    font-size: 0.9rem;
+}
+
+.collage-editor-field input[type="text"],
+.collage-editor-field input[type="number"],
+.collage-editor-field input[type="file"] {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: #1a1612;
+    color: #fff;
+}
+
+.collage-editor-hint {
+    margin: 0;
+    font-size: 0.82rem;
+    color: #b9afa0;
+    line-height: 1.45;
+}
+
+.collage-editor-canvas-wrap {
+    padding: 24px;
+    overflow: auto;
+}
+
+.collage-editor-stage-shell {
+    width: min(100%, 1400px);
+    margin: 0 auto;
+}
+
+.collage-editor-stage {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1920 / 1080;
+    overflow: hidden;
+    background-color: #f7f3eb;
+    background-image: url('../imagens_hero/Colagem/fundo%20hero.png');
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
+
+.collage-editor-moodboard-stage {
+    transform: none !important;
+}
+
+.collage-editor-item {
+    position: absolute;
+    cursor: grab;
+    touch-action: none;
+    user-select: none;
+    box-sizing: border-box;
+}
+
+.collage-editor-item.is-dragging,
+.collage-editor-item.is-resizing {
+    cursor: grabbing;
+    z-index: 999 !important;
+}
+
+.collage-editor-item.is-selected {
+    outline: 2px solid #9a7c43;
+    outline-offset: 2px;
+}
+
+.collage-editor-item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    object-fit: cover;
+}
+
+.collage-editor-item.img-11 img,
+.collage-editor-item.flor-superior img {
+    object-fit: contain;
+}
+
+.collage-editor-item.flor-lateral img {
+    object-fit: fill;
+}
+
+.collage-editor-item.flor-superior img {
+    height: auto;
+}
+
+.collage-editor-item__label {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    background: rgba(0, 0, 0, 0.65);
+    color: #fff;
+    font-size: 11px;
+    line-height: 1.2;
+    pointer-events: none;
+}
+
+.collage-editor-resize-handle {
+    position: absolute;
+    right: -6px;
+    bottom: -6px;
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+    background: #9a7c43;
+    border: 2px solid #fff;
+    cursor: nwse-resize;
+}
+
+@media (max-width: 960px) {
+    .collage-editor-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .collage-editor-panel {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+}

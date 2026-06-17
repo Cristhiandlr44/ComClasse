@@ -1,0 +1,324 @@
+================================================================================
+TUTORIAL: COMO EDITAR A COLAGEM DO HERO (MOODBOARD)
+Site: Com Classe Assessoria e Cerimonial
+================================================================================
+
+MODO ATUAL: placeholders numerados (1–12) para ajuste de posição.
+Mapa número → arquivo final: 📄 MAPA_COLAGEM_HERO.txt
+
+Este guia explica como alterar imagens, posição, tamanho, bordas, rotação,
+sobreposição e fundo da colagem editorial na seção inicial do site.
+
+
+================================================================================
+1. ARQUIVOS ENVOLVIDOS
+================================================================================
+
+HTML (quais imagens aparecem):
+    📄 resources/views/home.blade.php
+    Seção: <section id="inicio" class="section-block header-hero">
+
+CSS (posição, tamanho, bordas, rotação, fundo):
+    📄 public/css/custom-prod.css
+    Procure por: /* HERO */ ou .hero-collage-mural
+
+Imagens da colagem:
+    📁 public/imagens_hero/Colagem/
+
+Arquivos principais:
+    - fundo hero.png          → fundo texturizado (largura total da tela)
+    - 1.jpg a 9.jpg, 7.png    → fotos polaroid
+    - 5.jpg                   → buquê oval
+    - flor.png                → flor superior
+    - flores buque.jpg        → arranjo inferior esquerdo
+
+
+================================================================================
+2. TROCAR UMA IMAGEM
+================================================================================
+
+2.1. Abra: resources/views/home.blade.php
+
+2.2. Localize o bloco da peça que deseja trocar. Cada foto tem uma classe
+     identificadora, por exemplo collage-piece--p1, collage-piece--p6, etc.
+
+     Exemplo (foto p1 – canto superior esquerdo):
+
+     <figure class="collage-piece collage-piece--polaroid collage-piece--p1 collage-piece--tilt-1">
+         <img src="{{ asset('imagens_hero/Colagem/2.jpg') }}" alt="Preparativos do noivo" loading="eager">
+     </figure>
+
+2.3. Altere apenas o caminho dentro de asset():
+
+     {{ asset('imagens_hero/Colagem/SUA_IMAGEM.jpg') }}
+
+2.4. Atualize o texto alt="" para acessibilidade.
+
+2.5. Salve o arquivo e recarregue a página no navegador (Ctrl+F5).
+
+
+================================================================================
+3. MAPA DAS PEÇAS (CLASSE → FUNÇÃO)
+================================================================================
+
+FOTOS POLAROID
+    collage-piece--p1   → canto superior esquerdo       (2.jpg)
+    collage-piece--p2   → centro superior esquerdo        (6.jpg)
+    collage-piece--p3   → centro superior                 (8.jpg)
+    collage-piece--p4   → superior direita (alta)         (3.jpg)
+    collage-piece--p5   → grande inferior esquerda        (4.jpg)
+    collage-piece--p6   → centro (madrinhas)              (1.jpg)
+    collage-piece--p7   → inferior direita                (7.png)
+    collage-piece--p8   → inferior centro-direita         (9.jpg)
+    collage-piece--p9   → inferior esquerda (recorte)     (6.jpg)
+
+DECORATIVOS
+    collage-piece--bouquet      → buquê oval                (5.jpg)
+    collage-piece--peony        → flor superior             (flor.png)
+    collage-piece--floral-left  → flores canto esquerdo     (flores buque.jpg)
+    .collage-palette            → amostra de cores (CSS)
+
+
+================================================================================
+4. ALTERAR POSIÇÃO DE UMA PEÇA
+================================================================================
+
+4.1. Abra: public/css/custom-prod.css
+
+4.2. Procure a classe da peça, por exemplo:
+
+     .collage-piece--p1 {
+         left: 8%;
+         top: 10%;
+         width: 11%;
+         z-index: 3;
+     }
+
+4.3. Propriedades de posição:
+
+     left   → distância da borda ESQUERDA (% da largura do mural)
+     top    → distância do TOPO (% da altura do mural)
+     bottom → use no lugar de top para ancorar pela base (ex.: floral-left)
+     width  → largura da peça (% da largura do mural)
+
+     DICA: use incrementos pequenos (1% ou 2%) e teste no navegador.
+
+4.4. Exemplo – mover p6 mais para a direita e um pouco para baixo:
+
+     .collage-piece--p6 {
+         left: 42%;    /* era 38% */
+         top: 44%;     /* era 40% */
+         width: 17%;
+         z-index: 5;
+     }
+
+
+================================================================================
+5. ALTERAR TAMANHO DE UMA PEÇA
+================================================================================
+
+5.1. Ajuste a propriedade width na classe da peça:
+
+     .collage-piece--p4 {
+         width: 18%;   /* aumentar de 15% para 18% */
+     }
+
+5.2. A altura acompanha a proporção original da imagem automaticamente.
+
+5.3. Para fotos oval (.collage-piece--oval), também é possível alterar:
+
+     aspect-ratio: 3 / 4;   /* mais alta */
+     aspect-ratio: 1 / 1;   /* circular */
+
+5.4. Para recortar o conteúdo interno sem mover a moldura:
+
+     .collage-piece--p9 img {
+         object-position: 55% 20%;
+     }
+
+     object-position: horizontal vertical
+     - 0% 0%   = canto superior esquerdo da foto
+     - 50% 50% = centro
+     - 100% 100% = canto inferior direito
+
+
+================================================================================
+6. ALTERAR BORDAS (MOLDURA POLAROID / OVAL)
+================================================================================
+
+6.1. Moldura estilo Polaroid (todas as fotos com collage-piece--polaroid):
+
+     .collage-piece--polaroid {
+         padding: 10px 10px 34px;
+         background: #fff;
+         box-shadow: 0 14px 32px rgba(0, 0, 0, 0.14);
+     }
+
+     padding: TOP  LADOS  BASE
+              10px 10px  34px
+
+     - Aumente os 10px laterais/superiores → borda branca mais grossa em cima e lados
+     - Aumente o 34px inferior → efeito polaroid mais pronunciado
+
+     Exemplo de borda mais grossa:
+         padding: 14px 14px 48px;
+
+6.2. Moldura oval (buquê):
+
+     .collage-piece--oval {
+         border: 5px solid #fff;
+         border-radius: 50%;
+     }
+
+     - border: 8px solid #fff;  → moldura oval mais grossa
+
+
+================================================================================
+7. ALTERAR ROTAÇÃO (INCLINAÇÃO ARTESANAL)
+================================================================================
+
+7.1. Cada peça tem uma classe collage-piece--tilt-N com rotação fixa:
+
+     .collage-piece--tilt-1 { transform: rotate(-3deg); }
+     .collage-piece--tilt-2 { transform: rotate(2deg); }
+     ...
+
+7.2. Para inclinar mais a foto p3, edite:
+
+     .collage-piece--tilt-3 { transform: rotate(-4deg); }
+
+7.3. Valores positivos inclinam para a direita; negativos para a esquerda.
+
+
+================================================================================
+8. SOBREPOSIÇÃO (QUAL FOTO FICA NA FRENTE)
+================================================================================
+
+8.1. Use z-index na classe da peça:
+
+     z-index: 2;   → mais atrás
+     z-index: 8;   → mais na frente
+
+8.2. Referência atual:
+     - Fotos comuns: 2 a 5
+     - Buquê oval e flores laterais: 7
+     - Flor superior (peony): 8
+     - Paleta de cores: 6
+
+8.3. Se uma foto ficar escondida atrás de outra, aumente o z-index dela.
+
+
+================================================================================
+9. ALTERAR O FUNDO (LARGURA TOTAL DA TELA)
+================================================================================
+
+9.1. A imagem de fundo está em:
+     public/imagens_hero/Colagem/fundo hero.png
+
+9.2. Para trocar, substitua esse arquivo mantendo o mesmo nome OU altere no CSS:
+
+     .hero-collage-mural {
+         background-image: url('../imagens_hero/Colagem/fundo%20hero.png');
+         background-size: cover;
+         background-position: center center;
+     }
+
+     IMPORTANTE: se o nome tiver espaço, use %20 no CSS (fundo%20hero.png).
+
+9.3. A largura total da tela é controlada por:
+
+     .hero-collage-fullbleed {
+         width: 100vw;
+         margin-left: calc(50% - 50vw);
+         margin-right: calc(50% - 50vw);
+     }
+
+9.4. Para mudar a altura do bloco de fundo:
+
+     .hero-collage-mural {
+         aspect-ratio: 4800 / 2995;   /* proporção original do PNG */
+         min-height: clamp(300px, 48vw, 620px);
+     }
+
+     - Aumente min-height para o hero ficar mais alto
+     - Altere aspect-ratio se trocar o fundo por outra proporção
+
+
+================================================================================
+10. PALETA DE CORES (CANTO SUPERIOR DIREITO)
+================================================================================
+
+10.1. Posição e tamanho:
+
+      .collage-palette {
+          left: 90%;
+          top: 18%;
+          width: 3.8%;
+          padding: 8px 7px;
+          transform: rotate(1.5deg);
+      }
+
+10.2. Cores dos retângulos:
+
+      .collage-palette__swatch--ochre  { background: #c8642a; }
+      .collage-palette__swatch--white  { background: #ffffff; }
+      .collage-palette__swatch--olive  { background: #6b7349; }
+
+
+================================================================================
+11. AJUSTES NO CELULAR (TELAS PEQUENAS)
+================================================================================
+
+11.1. No final de public/css/custom-prod.css, dentro de:
+
+      @media (max-width: 767px) { ... }
+
+11.2. Há posições específicas para mobile (p1 a p9, buquê, flor, paleta).
+
+11.3. Se no desktop ficou bom mas no celular sobrepõe demais, ajuste APENAS
+      dentro desse bloco @media, sem alterar o desktop.
+
+     Exemplo:
+     @media (max-width: 767px) {
+         .collage-piece--p6 { left: 10%; top: 45%; width: 32%; }
+     }
+
+
+================================================================================
+12. FLUXO RECOMENDADO PARA TESTAR MUDANÇAS
+================================================================================
+
+1. Faça uma alteração pequena no CSS (ex.: left de uma peça).
+2. Salve o arquivo.
+3. Recarregue a home com Ctrl+F5 (limpa cache do navegador).
+4. Teste em desktop e reduza a janela para ver o mobile.
+5. Repita até a composição ficar equilibrada.
+
+DICA: mantenha anotações das alterações (ex.: "p6 left 40% → 42%") para
+      desfazer facilmente se necessário.
+
+
+================================================================================
+13. PROBLEMAS COMUNS
+================================================================================
+
+IMAGEM NÃO APARECE
+    - Verifique se o arquivo existe em public/imagens_hero/Colagem/
+    - Confira o nome exato (maiúsculas, extensão .jpg ou .png)
+    - Caminho no HTML: asset('imagens_hero/Colagem/arquivo.jpg')
+
+FUNDO NÃO OCUPA A TELA INTEIRA
+    - Confirme que .hero-collage-fullbleed está no HTML envolvendo .hero-collage-mural
+    - background-size deve ser cover
+
+FOTO CORTADA DE FORMA ESTRANHA
+    - Ajuste object-position na img da peça
+    - Ou troque por imagem com proporção mais próxima da moldura
+
+MUDANÇA NO CSS NÃO SURTE EFEITO
+    - Limpe cache: Ctrl+F5
+    - Confirme que editou public/css/custom-prod.css (não resources/css/app.css)
+
+================================================================================
+FIM DO TUTORIAL
+================================================================================

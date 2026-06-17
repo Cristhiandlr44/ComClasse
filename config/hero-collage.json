@@ -1,0 +1,252 @@
+{
+    "version": 1,
+    "stage": {
+        "width": 1920,
+        "height": 1080
+    },
+    "items": [
+        {
+            "id": "img-1",
+            "label": "Imagem 1",
+            "src": "1.png",
+            "alt": "Detalhe das cestas",
+            "classes": [
+                "mood-img"
+            ],
+            "top": 7.993,
+            "left": 7.75,
+            "width": 13.845,
+            "height": 29.532,
+            "z_index": 80,
+            "loading": "eager",
+            "styles": {
+                "border-width": "clamp(2px, 0.729vw, 5px)",
+                "border-bottom-width": "clamp(4px, 3.333vw, 64px)"
+            }
+        },
+        {
+            "id": "img-2",
+            "label": "Imagem 2",
+            "src": "2.jpg",
+            "alt": "Mesa sob a árvore",
+            "classes": [
+                "mood-img"
+            ],
+            "top": 5.556,
+            "left": 23,
+            "width": 16.667,
+            "height": 38.889,
+            "z_index": 90,
+            "loading": "eager",
+            "styles": {
+                "border-width": "clamp(2px, 0.729vw, 8px)",
+                "border-bottom-width": "clamp(4px, 3.333vw, 15px)"
+            }
+        },
+        {
+            "id": "img-3",
+            "label": "Imagem 3",
+            "src": "3.jpg",
+            "alt": "Detalhe da mesa",
+            "classes": [
+                "mood-img"
+            ],
+            "top": 11.11,
+            "left": 41.636,
+            "width": 18.07,
+            "height": 35.744,
+            "z_index": 110,
+            "loading": "eager",
+            "styles": {
+                "border-width": "clamp(2px, 0.729vw, 5px)",
+                "border-bottom-width": "clamp(4px, 3.333vw, 64px)"
+            }
+        },
+        {
+            "id": "img-4",
+            "label": "Imagem 4",
+            "src": "4.jpg",
+            "alt": "Pergaminho da cerimônia",
+            "classes": [
+                "mood-img"
+            ],
+            "top": 7.407,
+            "left": 61.433,
+            "width": 18.319,
+            "height": 41.758,
+            "z_index": 100,
+            "loading": "lazy",
+            "styles": {
+                "border-top-width": "clamp(2px, 0.729vw, 5px)",
+                "border-right-width": "clamp(2px, 0.729vw, 5px)",
+                "border-left-width": "clamp(4px, 1.458vw, 23px)",
+                "border-bottom-width": "clamp(6px, 2.5vw, 15px)"
+            }
+        },
+        {
+            "id": "img-5",
+            "label": "Imagem 5",
+            "src": "5.jpg",
+            "alt": "Recepção noturna",
+            "classes": [
+                "mood-img"
+            ],
+            "top": 40.132,
+            "left": 9.458,
+            "width": 23.883,
+            "height": 25.751,
+            "z_index": 95,
+            "loading": "lazy",
+            "styles": {
+                "border-width": "clamp(2px, 0.729vw, 8px)"
+            }
+        },
+        {
+            "id": "img-6",
+            "label": "Imagem 6",
+            "src": "6.jpg",
+            "alt": "Noiva e madrinhas",
+            "classes": [
+                "mood-img"
+            ],
+            "top": 45.511,
+            "left": 34.645,
+            "width": 20.079,
+            "height": 19.145,
+            "z_index": 60,
+            "loading": "lazy",
+            "styles": []
+        },
+        {
+            "id": "img-7",
+            "label": "Imagem 7",
+            "src": "7.jpg",
+            "alt": "Cerimônia no jardim",
+            "classes": [
+                "mood-img"
+            ],
+            "top": 44.098,
+            "left": 67.864,
+            "width": 16.79,
+            "height": 45.389,
+            "z_index": 40,
+            "loading": "lazy",
+            "styles": []
+        },
+        {
+            "id": "img-8",
+            "label": "Imagem 8",
+            "src": "8.jpg",
+            "alt": "Drapeado claro",
+            "classes": [
+                "mood-img"
+            ],
+            "top": 62.765,
+            "left": 17.485,
+            "width": 12.882,
+            "height": 27.043,
+            "z_index": 96,
+            "loading": "lazy",
+            "styles": []
+        },
+        {
+            "id": "img-9",
+            "label": "Imagem 9",
+            "src": "9.jpg",
+            "alt": "Buquê oval",
+            "classes": [
+                "mood-img"
+            ],
+            "top": 61.131,
+            "left": 32.996,
+            "width": 11.185,
+            "height": 26.873,
+            "z_index": 105,
+            "loading": "lazy",
+            "styles": {
+                "border-width": "clamp(4px, 0.521vw, 10px)",
+                "border-radius": "50%"
+            }
+        },
+        {
+            "id": "img-10",
+            "label": "Imagem 10",
+            "src": "10.jpg",
+            "alt": "Fumaças coloridas",
+            "classes": [
+                "mood-img"
+            ],
+            "top": 50.585,
+            "left": 46.727,
+            "width": 19.483,
+            "height": 33.72,
+            "z_index": 30,
+            "loading": "lazy",
+            "styles": []
+        },
+        {
+            "id": "img-11",
+            "label": "Imagem 11",
+            "src": "11.jpg",
+            "alt": "Paleta de cores",
+            "classes": [
+                "mood-img"
+            ],
+            "top": 21.684,
+            "left": 80.469,
+            "width": 9.884,
+            "height": 32.659,
+            "z_index": 70,
+            "loading": "lazy",
+            "styles": {
+                "object-fit": "contain",
+                "border": "none",
+                "background": "transparent",
+                "box-shadow": "none"
+            }
+        },
+        {
+            "id": "flor-lateral",
+            "label": "Flor lateral",
+            "src": "flores buque.jpg",
+            "alt": null,
+            "classes": [
+                "flor-lateral"
+            ],
+            "top": 51.747,
+            "left": 2.219,
+            "width": 17.827,
+            "height": 43.512,
+            "z_index": 125,
+            "loading": "lazy",
+            "styles": {
+                "object-fit": "fill",
+                "object-position": "center bottom",
+                "border": "none",
+                "background": "transparent",
+                "box-shadow": "none"
+            }
+        },
+        {
+            "id": "flor-superior",
+            "label": "Flor superior",
+            "src": "flor.png",
+            "alt": null,
+            "classes": [
+                "flor-superior"
+            ],
+            "top": 0,
+            "left": 53.024,
+            "width": 14.869,
+            "height": 19.537,
+            "z_index": 130,
+            "loading": "lazy",
+            "styles": {
+                "height": "auto",
+                "border": "none",
+                "background": "transparent",
+                "box-shadow": "none"
+            }
+        }
+    ]
+}

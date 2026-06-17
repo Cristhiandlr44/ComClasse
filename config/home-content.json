@@ -1,0 +1,1657 @@
+{
+    "version": 1,
+    "hero_settings": {
+        "--moodboard-zoom": "1.04",
+        "--hero-moodboard-shift-x": "2.5%"
+    },
+    "elements": [
+        {
+            "id": "hero-logo",
+            "type": "image",
+            "section": "inicio",
+            "label": "Logo hero",
+            "src": "logo.png",
+            "alt": "Com Classe Assessoria e Cerimonial",
+            "classes": [
+                "logo-main",
+                "logo-main--hero"
+            ],
+            "upload_dir": "",
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {
+                "width": "10.608%",
+                "max-width": "none"
+            }
+        },
+        {
+            "id": "quem-img-1",
+            "type": "image",
+            "section": "quem-somos",
+            "label": "Foto fundadora",
+            "src": "biografia/quem-img-1-20260617022544.png",
+            "alt": "Fundadora Com Classe",
+            "classes": [
+                "img-pos-left"
+            ],
+            "upload_dir": "biografia",
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {
+                "width": "97.839%",
+                "height": "100.536%"
+            }
+        },
+        {
+            "id": "quem-eyebrow",
+            "type": "text",
+            "section": "quem-somos",
+            "label": "Eyebrow",
+            "content": "Quem somos",
+            "classes": [
+                "eyebrow",
+                "font-abramo"
+            ],
+            "font_family": "font-abramo",
+            "font_size": null,
+            "line_height": null,
+            "color": null,
+            "text_align": null,
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {},
+            "upload_dir": ""
+        },
+        {
+            "id": "quem-title-1",
+            "type": "text",
+            "section": "quem-somos",
+            "label": "Título",
+            "content": "A base de tudo",
+            "classes": [
+                "font-antic-didone"
+            ],
+            "font_family": "font-antic-didone",
+            "font_size": null,
+            "line_height": null,
+            "color": null,
+            "text_align": null,
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {},
+            "upload_dir": ""
+        },
+        {
+            "id": "quem-p-1",
+            "type": "text",
+            "section": "quem-somos",
+            "label": "Parágrafo 1",
+            "content": "ANA COM CLASSE é mente idealizadora da Com Classe desde 2016, mas foi em 2008 que iniciou sua carreira no universo de eventos norte-mineiro.",
+            "classes": [],
+            "font_family": null,
+            "font_size": null,
+            "line_height": null,
+            "color": null,
+            "text_align": null,
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {},
+            "upload_dir": ""
+        },
+        {
+            "id": "quem-p-2",
+            "type": "text",
+            "section": "quem-somos",
+            "label": "Parágrafo 2",
+            "content": "Especialista em planejamento e gestão de eventos, construiu sua carreira combinando organização no processo, sensibilidade com as pessoas e um olhar apurado para os detalhes.",
+            "classes": [],
+            "font_family": null,
+            "font_size": null,
+            "line_height": null,
+            "color": null,
+            "text_align": null,
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {},
+            "upload_dir": ""
+        },
+        {
+            "id": "quem-p-3",
+            "type": "text",
+            "section": "quem-somos",
+            "label": "Parágrafo 3",
+            "content": "Atuo há mais de 16 anos no mercado de casamentos, conduzindo eventos com método, sensibilidade e verdade.",
+            "classes": [],
+            "font_family": null,
+            "font_size": "1.02rem",
+            "line_height": null,
+            "color": null,
+            "text_align": null,
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {},
+            "upload_dir": ""
+        },
+        {
+            "id": "quem-p-4",
+            "type": "text",
+            "section": "quem-somos",
+            "label": "Parágrafo 4",
+            "content": "É criteriosa, enérgica e profundamente apaixonada pela vida. Daquelas que acreditam que a cultura de excelência transforma o simples em extraordinário. Cristã, bem-casada, mãe e empresária. Ama celebrar pessoas e suas histórias. Encontra alegria em transformar momentos importantes em memórias leves, elegantes e inesquecíveis.",
+            "classes": [],
+            "font_family": null,
+            "font_size": null,
+            "line_height": null,
+            "color": null,
+            "text_align": null,
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {},
+            "upload_dir": ""
+        },
+        {
+            "id": "quem-img-2",
+            "type": "image",
+            "section": "quem-somos",
+            "label": "Foto equipe",
+            "src": "imagens_hero/7.png",
+            "alt": "Equipe Com Classe",
+            "classes": [],
+            "upload_dir": "imagens_hero",
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {}
+        },
+        {
+            "id": "quem-title-2",
+            "type": "text",
+            "section": "quem-somos",
+            "label": "O que fazemos — título",
+            "content": "O que fazemos",
+            "classes": [
+                "font-antic-didone"
+            ],
+            "font_family": "font-antic-didone",
+            "font_size": null,
+            "line_height": null,
+            "color": null,
+            "text_align": null,
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {},
+            "upload_dir": ""
+        },
+        {
+            "id": "quem-p-5",
+            "type": "text",
+            "section": "quem-somos",
+            "label": "O que fazemos — texto",
+            "content": "Organizamos eventos que comunicam a identidade dos anfitriões com rigor técnico e um apreço enorme pelo belo. Nós transformamos sonhos em experiências verdadeiramente autênticas e memoráveis.",
+            "classes": [],
+            "font_family": null,
+            "font_size": null,
+            "line_height": null,
+            "color": null,
+            "text_align": null,
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {},
+            "upload_dir": ""
+        },
+        {
+            "id": "valores-title",
+            "type": "text",
+            "section": "quem-somos",
+            "label": "Nossos valores — título",
+            "content": "Nossos valores",
+            "classes": [
+                "values-title",
+                "font-abramo"
+            ],
+            "font_family": "font-abramo",
+            "font_size": null,
+            "line_height": null,
+            "color": null,
+            "text_align": null,
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {},
+            "upload_dir": ""
+        },
+        {
+            "id": "valor-1-title",
+            "type": "text",
+            "section": "quem-somos",
+            "label": "Valor 1 — título",
+            "content": "Sensibilidade",
+            "classes": [
+                "titulo-valor"
+            ],
+            "font_family": null,
+            "font_size": null,
+            "line_height": null,
+            "color": null,
+            "text_align": null,
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {},
+            "upload_dir": ""
+        },
+        {
+            "id": "valor-1-text",
+            "type": "text",
+            "section": "quem-somos",
+            "label": "Valor 1 — texto",
+            "content": "Cuidamos de pessoas, não apenas de eventos. Nosso trabalho começa pela escuta.",
+            "classes": [],
+            "font_family": null,
+            "font_size": null,
+            "line_height": null,
+            "color": null,
+            "text_align": null,
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {},
+            "upload_dir": ""
+        },
+        {
+            "id": "valor-2-title",
+            "type": "text",
+            "section": "quem-somos",
+            "label": "Valor 2 — título",
+            "content": "Elegância",
+            "classes": [
+                "titulo-valor"
+            ],
+            "font_family": null,
+            "font_size": null,
+            "line_height": null,
+            "color": null,
+            "text_align": null,
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {},
+            "upload_dir": ""
+        },
+        {
+            "id": "valor-2-text",
+            "type": "text",
+            "section": "quem-somos",
+            "label": "Valor 2 — texto",
+            "content": "A elegância está em nosso DNA. Harmonia, bom gosto e sensatez em tudo que criamos.",
+            "classes": [],
+            "font_family": null,
+            "font_size": null,
+            "line_height": null,
+            "color": null,
+            "text_align": null,
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {},
+            "upload_dir": ""
+        },
+        {
+            "id": "valor-3-title",
+            "type": "text",
+            "section": "quem-somos",
+            "label": "Valor 3 — título",
+            "content": "Ética",
+            "classes": [
+                "titulo-valor"
+            ],
+            "font_family": null,
+            "font_size": null,
+            "line_height": null,
+            "color": null,
+            "text_align": null,
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {},
+            "upload_dir": ""
+        },
+        {
+            "id": "valor-3-text",
+            "type": "text",
+            "section": "quem-somos",
+            "label": "Valor 3 — texto",
+            "content": "Agimos com verdade, respeito, prudência e responsabilidade em todas as relações.",
+            "classes": [],
+            "font_family": null,
+            "font_size": null,
+            "line_height": null,
+            "color": null,
+            "text_align": null,
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {},
+            "upload_dir": ""
+        },
+        {
+            "id": "quem-impact",
+            "type": "image",
+            "section": "quem-somos",
+            "label": "Imagem impacto",
+            "src": "imagens_hero/1.jpg",
+            "alt": "Celebração com classe",
+            "classes": [],
+            "upload_dir": "imagens_hero",
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {}
+        },
+        {
+            "id": "atuacao-title",
+            "type": "text",
+            "section": "atuacao",
+            "label": "Título",
+            "content": "Nossa Atua<span class=\"font-belights\">ção</span>",
+            "classes": [
+                "atuacao-title",
+                "font-abramo"
+            ],
+            "font_family": "font-abramo",
+            "font_size": null,
+            "line_height": null,
+            "color": null,
+            "text_align": null,
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {},
+            "upload_dir": ""
+        },
+        {
+            "id": "atuacao-subtitle",
+            "type": "text",
+            "section": "atuacao",
+            "label": "Subtítulo",
+            "content": "Oferecemos uma assessoria profissional com abordagem individualizada para que nossos casais se sintam seguros e tranquilos do início ao fim do processo.",
+            "classes": [
+                "atuacao-subtitle"
+            ],
+            "font_family": null,
+            "font_size": null,
+            "line_height": null,
+            "color": null,
+            "text_align": null,
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {},
+            "upload_dir": ""
+        },
+        {
+            "id": "atuacao-img-1",
+            "type": "image",
+            "section": "atuacao",
+            "label": "Assessoria",
+            "src": "imagens_3_secao/Planejamento Detalhado.png",
+            "alt": "Assessoria completa",
+            "classes": [],
+            "upload_dir": "imagens_3_secao",
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {}
+        },
+        {
+            "id": "atuacao-text-1",
+            "type": "text",
+            "section": "atuacao",
+            "label": "Texto 1",
+            "content": "Assessoria completa e\npersonalizada",
+            "classes": [
+                "font-antic-didone"
+            ],
+            "font_family": "font-antic-didone",
+            "font_size": null,
+            "line_height": null,
+            "color": null,
+            "text_align": null,
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {},
+            "upload_dir": ""
+        },
+        {
+            "id": "atuacao-img-2",
+            "type": "image",
+            "section": "atuacao",
+            "label": "Projetos",
+            "src": "imagens_3_secao/Execução Perfeita.png",
+            "alt": "Projetos exclusivos",
+            "classes": [],
+            "upload_dir": "imagens_3_secao",
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {}
+        },
+        {
+            "id": "atuacao-text-2",
+            "type": "text",
+            "section": "atuacao",
+            "label": "Texto 2",
+            "content": "Criação de projetos\nexclusivos",
+            "classes": [
+                "font-antic-didone"
+            ],
+            "font_family": "font-antic-didone",
+            "font_size": null,
+            "line_height": null,
+            "color": null,
+            "text_align": null,
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {},
+            "upload_dir": ""
+        },
+        {
+            "id": "atuacao-img-3",
+            "type": "image",
+            "section": "atuacao",
+            "label": "Execução",
+            "src": "imagens_3_secao/Resultados Excepcionais.jpg",
+            "alt": "Execução impecável",
+            "classes": [
+                "img-pos-bottom"
+            ],
+            "upload_dir": "imagens_3_secao",
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {}
+        },
+        {
+            "id": "atuacao-text-3",
+            "type": "text",
+            "section": "atuacao",
+            "label": "Texto 3",
+            "content": "Execução impecável\nde tudo que foi sonhado",
+            "classes": [
+                "font-antic-didone"
+            ],
+            "font_family": "font-antic-didone",
+            "font_size": null,
+            "line_height": null,
+            "color": null,
+            "text_align": null,
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {},
+            "upload_dir": ""
+        },
+        {
+            "id": "atuacao-cta",
+            "type": "link",
+            "section": "atuacao",
+            "label": "Botão CTA",
+            "content": "Quero Saber Mais",
+            "href": "http://localhost/servicos",
+            "classes": [
+                "atuacao-btn"
+            ],
+            "font_family": null,
+            "font_size": null,
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {},
+            "upload_dir": ""
+        },
+        {
+            "id": "mentorias-title",
+            "type": "text",
+            "section": "mentorias",
+            "label": "Título",
+            "content": "Mentorias e Cursos",
+            "classes": [
+                "mentorias-title",
+                "font-abramo"
+            ],
+            "font_family": "font-abramo",
+            "font_size": null,
+            "line_height": null,
+            "color": null,
+            "text_align": null,
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {},
+            "upload_dir": ""
+        },
+        {
+            "id": "mentorias-subtitle",
+            "type": "text",
+            "section": "mentorias",
+            "label": "Subtítulo",
+            "content": "Formação e acompanhamento para cerimonialistas e profissionais de eventos.",
+            "classes": [
+                "mentorias-subtitle",
+                "font-antic-didone"
+            ],
+            "font_family": "font-antic-didone",
+            "font_size": null,
+            "line_height": null,
+            "color": null,
+            "text_align": null,
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {},
+            "upload_dir": ""
+        },
+        {
+            "id": "mentorias-cta",
+            "type": "link",
+            "section": "mentorias",
+            "label": "WhatsApp",
+            "content": "Falar no WhatsApp",
+            "href": "https://wa.me/message/WBFMLONCMS3PH1",
+            "classes": [
+                "btn-primary",
+                "btn-wide"
+            ],
+            "font_family": null,
+            "font_size": null,
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {},
+            "upload_dir": ""
+        },
+        {
+            "id": "depoimentos-title",
+            "type": "text",
+            "section": "depoimentos",
+            "label": "Título",
+            "content": "Depoimentos",
+            "classes": [
+                "testimonials-title",
+                "font-abramo"
+            ],
+            "font_family": "font-abramo",
+            "font_size": null,
+            "line_height": null,
+            "color": null,
+            "text_align": null,
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {},
+            "upload_dir": ""
+        },
+        {
+            "id": "depoimento-1-quote",
+            "type": "text",
+            "section": "depoimentos",
+            "label": "Depoimento 1",
+            "content": "“Quero agradecer, de coração, todo empenho, carinho e bom gosto com a organização do nosso casamento. Eu só ouvi elogios de todos os convidados sobre o bom gosto dos detalhes, tanto da cerimônia quanto da recepção. Sem vocês não teríamos tempo de organizar tudo como desejávamos e o trabalho de vocês permitiu isso. Obrigada por serem tão profissionais e organizadas, tanto com os fornecedores quanto conosco e nossa família. Não é fácil lidar com determinadas situações que surgem, mas vocês conseguiram apesar de tudo, serem leves e elegantes!\r\n\r\nObs: eu amei o aplicativo do casamento! Organizou nossa vida e nos deu tranquilidade e paz! Eu amo processos bem executados!\r\n\r\nJamais esquecerei esse tempo que passamos juntas e quero revê-las ainda! ❤️🌷”",
+            "classes": [
+                "quote"
+            ],
+            "font_family": null,
+            "font_size": null,
+            "line_height": null,
+            "color": null,
+            "text_align": null,
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {},
+            "upload_dir": ""
+        },
+        {
+            "id": "depoimento-1-author",
+            "type": "text",
+            "section": "depoimentos",
+            "label": "Autor 1",
+            "content": "Luísa & João",
+            "classes": [
+                "author"
+            ],
+            "font_family": null,
+            "font_size": null,
+            "line_height": null,
+            "color": null,
+            "text_align": null,
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {},
+            "upload_dir": ""
+        },
+        {
+            "id": "depoimento-2-quote",
+            "type": "text",
+            "section": "depoimentos",
+            "label": "Depoimento 2",
+            "content": "“Existem profissionais que entregam um serviço. E existem pessoas que entregam parte do coração em tudo o que fazem.\r\n\r\nTer vocês ao nosso lado durante o planejamento do nosso casamento foi um dos maiores presentes dessa jornada. Desde o primeiro momento, percebemos que não se tratava apenas de cumprir um contrato. Vocês foram muito além disso; cuidaram do nosso sonho como se fosse de vocês também.\r\n\r\nA dedicação, a criatividade, o olhar atento para cada detalhe e o amor que vocês colocam em cada casamento são impossíveis de não perceber. Tudo foi pensado com tanto carinho e intenção que nos sentimos seguros o tempo todo, sabendo que estávamos nas melhores mãos.\r\n\r\nO dia do nosso casamento foi, sem dúvida, o dia mais feliz e especial das nossas vidas. E grande parte disso só foi possível porque vocês transformaram sonhos, ideias e sentimentos em uma experiência que superou absolutamente todas as nossas expectativas. Dos detalhes mais delicados, como a escolha de uma fonte que representasse nossa história, à decoração, montagem, organização e execução impecável do grande dia, tudo carregou a marca do cuidado e da excelência de vocês.\r\n\r\nHoje, quando olhamos para trás, temos a certeza de que fizemos a escolha certa. Mais do que uma equipe extraordinária, encontramos pessoas incríveis que fizeram parte de um dos capítulos mais importantes da nossa história.\r\n\r\nNossa gratidão será para sempre maior do que qualquer depoimento poderia expressar.”",
+            "classes": [
+                "quote"
+            ],
+            "font_family": null,
+            "font_size": null,
+            "line_height": null,
+            "color": null,
+            "text_align": null,
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {},
+            "upload_dir": ""
+        },
+        {
+            "id": "depoimento-2-author",
+            "type": "text",
+            "section": "depoimentos",
+            "label": "Autor 2",
+            "content": "Lailla & Cristhian",
+            "classes": [
+                "author"
+            ],
+            "font_family": null,
+            "font_size": null,
+            "line_height": null,
+            "color": null,
+            "text_align": null,
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {},
+            "upload_dir": ""
+        },
+        {
+            "id": "depoimento-3-quote",
+            "type": "text",
+            "section": "depoimentos",
+            "label": "Depoimento 3",
+            "content": "“Dentre os elogios que recebemos, estava a escolha da Com Classe para nos assessorar — e não poderíamos concordar mais! Foi nítido para nós e para todos os convidados o cuidado, a dedicação e o profissionalismo de vocês. Eu disse e repito: estive calma, não tive uma preocupação sequer, porque eu sabia que a Com Classe seria impecável, e assim foi… Parece clichê, mas pra quem fala muito, não ter o que dizer já diz bastante. Muito obrigada por tornarem tudo incrível! Levarei vocês em meu coração, repleto de encanto e gratidão por terem transformado em realidade um sonho que tínhamos.\r\n\r\nConfiança é, para mim, um dos sentimentos mais lindos que cultivamos — ela requer cuidado, responsabilidade e integridade. E vocês conduziram tudo com tanta maestria desde o início que, em nenhum momento, tive dúvidas sobre como seria o nosso dia. Isso é mágico, é ímpar. A Com Classe é sentimento materializado: em cada passo, há segurança e comprometimento. Fico imensamente feliz em saber que fizemos parte da história uns dos outros.”",
+            "classes": [
+                "quote"
+            ],
+            "font_family": null,
+            "font_size": null,
+            "line_height": null,
+            "color": null,
+            "text_align": null,
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {},
+            "upload_dir": ""
+        },
+        {
+            "id": "depoimento-3-author",
+            "type": "text",
+            "section": "depoimentos",
+            "label": "Autor 3",
+            "content": "Maria Carolina & Luiz",
+            "classes": [
+                "author"
+            ],
+            "font_family": null,
+            "font_size": null,
+            "line_height": null,
+            "color": null,
+            "text_align": null,
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {},
+            "upload_dir": ""
+        },
+        {
+            "id": "depoimento-4-quote",
+            "type": "text",
+            "section": "depoimentos",
+            "label": "Depoimento 4",
+            "content": "“Vocês foram incríveis do começo ao fim. Sempre muito atenciosos, simpáticos, carismáticos, educados e cuidadosos com cada detalhe. Em todos os momentos sentimos que podíamos contar com vocês, e isso fez toda a diferença para que a gente pudesse aproveitar o nosso dia com tranquilidade. Tudo saiu exatamente como eu tinha imaginado e sonhado. Cada detalhe estava no lugar, tudo aconteceu da forma que eu sempre quis, e isso só foi possível porque vocês cuidaram de tudo com tanto carinho e dedicação. E falando da Ana, ela foi muito mais que uma cerimonialista. Desde o primeiro contato, ela nos deixou super à vontade, como se já nos conhecêssemos há anos. Sempre tão leve, acolhedora, simpática e carismática, fazendo com que tudo ficasse mais fácil e mais tranquilo.”",
+            "classes": [
+                "quote"
+            ],
+            "font_family": null,
+            "font_size": null,
+            "line_height": null,
+            "color": null,
+            "text_align": null,
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {},
+            "upload_dir": ""
+        },
+        {
+            "id": "depoimento-4-author",
+            "type": "text",
+            "section": "depoimentos",
+            "label": "Autor 4",
+            "content": "Clara & Pedro",
+            "classes": [
+                "author"
+            ],
+            "font_family": null,
+            "font_size": null,
+            "line_height": null,
+            "color": null,
+            "text_align": null,
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {},
+            "upload_dir": ""
+        },
+        {
+            "id": "depoimento-5-quote",
+            "type": "text",
+            "section": "depoimentos",
+            "label": "Depoimento 5",
+            "content": "“Eu aprendi a amar a Ana. A chamei de amiga, porque é assim que a vejo depois de mais de um ano caminhando juntas. Fiquei extremamente despreocupada em relação ao casamento, porque sabia que ela cuidaria de cada detalhe com o seu toque que é só seu. Quando cheguei no sítio e vi tudo daquela forma, me assustei, mas logo lembrei de quem ela foi ao longo de todo o processo. Foi calmaria, foi paz, foi solução em cada etapa. É lindo ver como ela não perde a classe, independentemente da situação. Eu agradeço por me entender em todos os momentos, por não estranhar quando eu reclamava e por lidar com tudo com tanta excelência. Eu nunca vou esquecer quem ela foi em minha vida.”",
+            "classes": [
+                "quote"
+            ],
+            "font_family": null,
+            "font_size": null,
+            "line_height": null,
+            "color": null,
+            "text_align": null,
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {},
+            "upload_dir": ""
+        },
+        {
+            "id": "depoimento-5-author",
+            "type": "text",
+            "section": "depoimentos",
+            "label": "Autor 5",
+            "content": "Kathielle e Rogério",
+            "classes": [
+                "author"
+            ],
+            "font_family": null,
+            "font_size": null,
+            "line_height": null,
+            "color": null,
+            "text_align": null,
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {},
+            "upload_dir": ""
+        },
+        {
+            "id": "depoimento-6-quote",
+            "type": "text",
+            "section": "depoimentos",
+            "label": "Depoimento 6",
+            "content": "“Como podemos agradecê-la por tanto cuidado e preciosismo? Você foi IRRETOCÁVEL do início ao fim. Cada detalhe foi minuciosamente pensado e executado com perfeição! Sempre sobre da sua competência e profissionalismo, mas viver isso tudo ao seu lado foi muito melhor do que imaginei!”",
+            "classes": [
+                "quote"
+            ],
+            "font_family": null,
+            "font_size": null,
+            "line_height": null,
+            "color": null,
+            "text_align": null,
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {},
+            "upload_dir": ""
+        },
+        {
+            "id": "depoimento-6-author",
+            "type": "text",
+            "section": "depoimentos",
+            "label": "Autor 6",
+            "content": "Clarissa & Luís",
+            "classes": [
+                "author"
+            ],
+            "font_family": null,
+            "font_size": null,
+            "line_height": null,
+            "color": null,
+            "text_align": null,
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {},
+            "upload_dir": ""
+        },
+        {
+            "id": "insta-cta",
+            "type": "text",
+            "section": "instagram",
+            "label": "CTA Instagram",
+            "content": "siga no instagram",
+            "classes": [
+                "footer-cta",
+                "font-antic-didone"
+            ],
+            "font_family": "font-antic-didone",
+            "font_size": null,
+            "line_height": null,
+            "color": null,
+            "text_align": null,
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {},
+            "upload_dir": ""
+        },
+        {
+            "id": "insta-handle",
+            "type": "link",
+            "section": "instagram",
+            "label": "Handle",
+            "content": "@comclassecasamentos",
+            "href": "https://www.instagram.com/comclassecasamentos/",
+            "classes": [
+                "footer-handle",
+                "font-antic-didone"
+            ],
+            "font_family": null,
+            "font_size": null,
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {},
+            "upload_dir": ""
+        },
+        {
+            "id": "insta-img-1",
+            "type": "image",
+            "section": "instagram",
+            "label": "Instagram 1",
+            "src": "imagens_instagram/1.jpg",
+            "alt": "Instagram 1",
+            "classes": [],
+            "upload_dir": "imagens_instagram",
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {}
+        },
+        {
+            "id": "insta-link-1",
+            "type": "link",
+            "section": "instagram",
+            "label": "Link Instagram 1",
+            "content": null,
+            "href": "https://www.instagram.com/p/DZdvTVXiW5x/?img_index=1",
+            "classes": [
+                "insta-item"
+            ],
+            "font_family": null,
+            "font_size": null,
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {},
+            "upload_dir": ""
+        },
+        {
+            "id": "insta-img-2",
+            "type": "image",
+            "section": "instagram",
+            "label": "Instagram 2",
+            "src": "imagens_instagram/2.jpg",
+            "alt": "Instagram 2",
+            "classes": [],
+            "upload_dir": "imagens_instagram",
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {}
+        },
+        {
+            "id": "insta-link-2",
+            "type": "link",
+            "section": "instagram",
+            "label": "Link Instagram 2",
+            "content": null,
+            "href": "https://www.instagram.com/p/DZiGGOfDkRG/?img_index=1",
+            "classes": [
+                "insta-item"
+            ],
+            "font_family": null,
+            "font_size": null,
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {},
+            "upload_dir": ""
+        },
+        {
+            "id": "insta-img-3",
+            "type": "image",
+            "section": "instagram",
+            "label": "Instagram 3",
+            "src": "imagens_instagram/3.jpg",
+            "alt": "Instagram 3",
+            "classes": [],
+            "upload_dir": "imagens_instagram",
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {}
+        },
+        {
+            "id": "insta-link-3",
+            "type": "link",
+            "section": "instagram",
+            "label": "Link Instagram 3",
+            "content": null,
+            "href": "https://www.instagram.com/p/DSNUjJdjpZN/?img_index=1",
+            "classes": [
+                "insta-item"
+            ],
+            "font_family": null,
+            "font_size": null,
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {},
+            "upload_dir": ""
+        },
+        {
+            "id": "insta-img-4",
+            "type": "image",
+            "section": "instagram",
+            "label": "Instagram 4",
+            "src": "imagens_instagram/4.jpg",
+            "alt": "Instagram 4",
+            "classes": [],
+            "upload_dir": "imagens_instagram",
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {}
+        },
+        {
+            "id": "insta-link-4",
+            "type": "link",
+            "section": "instagram",
+            "label": "Link Instagram 4",
+            "content": null,
+            "href": "https://www.instagram.com/p/DOcAOVXD_lr/",
+            "classes": [
+                "insta-item"
+            ],
+            "font_family": null,
+            "font_size": null,
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {},
+            "upload_dir": ""
+        },
+        {
+            "id": "insta-img-5",
+            "type": "image",
+            "section": "instagram",
+            "label": "Instagram 5",
+            "src": "imagens_instagram/5.jpg",
+            "alt": "Instagram 5",
+            "classes": [],
+            "upload_dir": "imagens_instagram",
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {}
+        },
+        {
+            "id": "insta-link-5",
+            "type": "link",
+            "section": "instagram",
+            "label": "Link Instagram 5",
+            "content": null,
+            "href": "https://www.instagram.com/p/DMAjqCSur8Y/?img_index=1",
+            "classes": [
+                "insta-item"
+            ],
+            "font_family": null,
+            "font_size": null,
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {},
+            "upload_dir": ""
+        },
+        {
+            "id": "insta-img-6",
+            "type": "image",
+            "section": "instagram",
+            "label": "Instagram 6",
+            "src": "imagens_instagram/6.jpg",
+            "alt": "Instagram 6",
+            "classes": [],
+            "upload_dir": "imagens_instagram",
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {}
+        },
+        {
+            "id": "insta-link-6",
+            "type": "link",
+            "section": "instagram",
+            "label": "Link Instagram 6",
+            "content": null,
+            "href": "https://www.instagram.com/p/DLkqHR5uuer/?img_index=1",
+            "classes": [
+                "insta-item"
+            ],
+            "font_family": null,
+            "font_size": null,
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {},
+            "upload_dir": ""
+        },
+        {
+            "id": "insta-img-7",
+            "type": "image",
+            "section": "instagram",
+            "label": "Instagram 7",
+            "src": "imagens_instagram/7.jpg",
+            "alt": "Instagram 7",
+            "classes": [],
+            "upload_dir": "imagens_instagram",
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {}
+        },
+        {
+            "id": "insta-link-7",
+            "type": "link",
+            "section": "instagram",
+            "label": "Link Instagram 7",
+            "content": null,
+            "href": "https://www.instagram.com/p/DHNLRHkOj0f/?img_index=1",
+            "classes": [
+                "insta-item"
+            ],
+            "font_family": null,
+            "font_size": null,
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {},
+            "upload_dir": ""
+        },
+        {
+            "id": "insta-img-8",
+            "type": "image",
+            "section": "instagram",
+            "label": "Instagram 8",
+            "src": "imagens_instagram/8.jpg",
+            "alt": "Instagram 8",
+            "classes": [],
+            "upload_dir": "imagens_instagram",
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {}
+        },
+        {
+            "id": "insta-link-8",
+            "type": "link",
+            "section": "instagram",
+            "label": "Link Instagram 8",
+            "content": null,
+            "href": "https://www.instagram.com/p/DAJYIchOR_0/?img_index=1",
+            "classes": [
+                "insta-item"
+            ],
+            "font_family": null,
+            "font_size": null,
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {},
+            "upload_dir": ""
+        },
+        {
+            "id": "insta-img-9",
+            "type": "image",
+            "section": "instagram",
+            "label": "Instagram 9",
+            "src": "imagens_instagram/9.jpg",
+            "alt": "Instagram 9",
+            "classes": [],
+            "upload_dir": "imagens_instagram",
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {}
+        },
+        {
+            "id": "insta-link-9",
+            "type": "link",
+            "section": "instagram",
+            "label": "Link Instagram 9",
+            "content": null,
+            "href": "https://www.instagram.com/p/C8izL0SOqDp/?img_index=1",
+            "classes": [
+                "insta-item"
+            ],
+            "font_family": null,
+            "font_size": null,
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {},
+            "upload_dir": ""
+        },
+        {
+            "id": "insta-img-10",
+            "type": "image",
+            "section": "instagram",
+            "label": "Instagram 10",
+            "src": "imagens_instagram/10.jpg",
+            "alt": "Instagram 10",
+            "classes": [],
+            "upload_dir": "imagens_instagram",
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {}
+        },
+        {
+            "id": "insta-link-10",
+            "type": "link",
+            "section": "instagram",
+            "label": "Link Instagram 10",
+            "content": null,
+            "href": "https://www.instagram.com/p/C4bW_0NObJc/?img_index=1",
+            "classes": [
+                "insta-item"
+            ],
+            "font_family": null,
+            "font_size": null,
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {},
+            "upload_dir": ""
+        },
+        {
+            "id": "insta-img-11",
+            "type": "image",
+            "section": "instagram",
+            "label": "Instagram 11",
+            "src": "imagens_instagram/11.jpg",
+            "alt": "Instagram 11",
+            "classes": [],
+            "upload_dir": "imagens_instagram",
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {}
+        },
+        {
+            "id": "insta-link-11",
+            "type": "link",
+            "section": "instagram",
+            "label": "Link Instagram 11",
+            "content": null,
+            "href": "https://www.instagram.com/p/C4Bt-YoOLka/?img_index=1",
+            "classes": [
+                "insta-item"
+            ],
+            "font_family": null,
+            "font_size": null,
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {},
+            "upload_dir": ""
+        },
+        {
+            "id": "contato-lead",
+            "type": "text",
+            "section": "contato",
+            "label": "Lead",
+            "content": "Sonha com um casamento exclusivo?",
+            "classes": [
+                "subtitle",
+                "lead-highlight",
+                "contact-lead",
+                "font-antic-didone"
+            ],
+            "font_family": "font-antic-didone",
+            "font_size": null,
+            "line_height": null,
+            "color": null,
+            "text_align": null,
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {},
+            "upload_dir": ""
+        },
+        {
+            "id": "contato-title",
+            "type": "text",
+            "section": "contato",
+            "label": "Título",
+            "content": "Entre em Contato!",
+            "classes": [
+                "contact-title",
+                "font-abramo"
+            ],
+            "font_family": "font-abramo",
+            "font_size": null,
+            "line_height": null,
+            "color": null,
+            "text_align": null,
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {},
+            "upload_dir": ""
+        },
+        {
+            "id": "contato-cta",
+            "type": "link",
+            "section": "contato",
+            "label": "Botão",
+            "content": "Quero falar com a Com Classe",
+            "href": "https://assessoriavip.com.br/funnelFormLead/63dada70-1556-11eb-ac90-0d7b933d6c56",
+            "classes": [
+                "btn-primary",
+                "btn-wide"
+            ],
+            "font_family": null,
+            "font_size": null,
+            "position": {
+                "enabled": false,
+                "top": null,
+                "left": null,
+                "width": null,
+                "height": null,
+                "z_index": 1
+            },
+            "styles": {},
+            "upload_dir": ""
+        }
+    ]
+}

@@ -5,30 +5,79 @@
 @section('content')
 <section id="servicos" class="section-block servicos-section">
     <div class="site-container">
-        <div class="servicos-header">
-            <p class="eyebrow font-abramo">Nossos Serviços</p>
-            <h1 class="font-antic-didone">Serviços Completos para o Seu Casamento</h1>
-        </div>
-
-        <div class="servicos-intro">
-            <p class="font-antic-didone">Oferecemos uma assessoria completa e personalizada para tornar seu evento único e inesquecível.</p>
-        </div>
+        
 
         <div class="servicos-grid">
             <div class="servico-card">
+                    <div class="servico-icon">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+                    <h3 class="font-antic-didone">Ética e Profissionalismo</h3>
+                    <p>Somos guiados pela transparência e trabalhamos para que clientes e parceiros tenham a Com Classe como primeira opção de assessoria e cerimonial em Minas Gerais.</p>
+                    <ul class="servico-lista">
+                        <li>Não cobramos e não concordamos com a prática da bonificação por venda (BV)</li>
+                        <li>Não temos exclusividade com fornecedores
+                        </li>
+                        <li>Consideramos válidas sugestões de novos profissionais 
+                        </li>
+                    </ul>
+                </div>
+
+
+            <div class="servico-card">
                 <div class="servico-icon">
-                    <i class="bi bi-calendar-check"></i>
+                    <i class="bi bi-clipboard2-check"></i>
                 </div>
                 <h3 class="font-antic-didone">Planejamento Detalhado</h3>
                 <p>Desenvolvemos um planejamento completo e personalizado, considerando cada detalhe do seu sonho. Desde a escolha do local até a seleção de fornecedores, cuidamos de tudo para que você possa aproveitar cada momento.</p>
                 <ul class="servico-lista">
-                    <li>Definição de tema e estilo</li>
-                    <li>Seleção e negociação com fornecedores</li>
-                    <li>Cronograma detalhado do evento</li>
+                    <li>Curadoria de fornecedores</li>
+                    <li>Cronograma detalhado de tarefas e fechamentos</li>
+                    <li>Gestão financeira</li>
                     <li>Acompanhamento de prazos e entregas</li>
                     <li>Reuniões de alinhamento</li>
                 </ul>
             </div>
+
+
+            <div class="servico-card">
+                <div class="servico-icon">
+                    <i class="bi bi-person-hearts"></i>
+                </div>
+                <h3 class="font-antic-didone">Assessoria Personalizada
+                </h3>
+                <p>Oferecemos um atendimento exclusivo, cuidando de pessoas, não apenas dos processos. Nosso trabalho começa pela escuta de suas necessidades, seus gostos e expectativas.</p>
+                <ul class="servico-lista">
+                    <li>Atendimento individualizado
+                    </li>
+                    <li>Acompanhamento durante todo o processo
+                    </li>
+                    <li>Consultoria em todas as etapas</li>
+                    <li>Suporte emocional e logístico</li>
+                    <li>Experiência de 18 anos 
+                    </li>
+                </ul>
+            </div>
+
+            <div class="servico-card">
+                <div class="servico-icon">
+                    <i class="bi bi-diagram-3"></i>
+                </div>
+                <h3 class="font-antic-didone">Gestão de Fornecedores
+                </h3>
+                <p>Selecionamos e coordenamos uma rede exclusiva de fornecedores alinhados com nossos valores de excelência, responsabilidade e bom gosto. Garantimos qualidade e compromisso em cada escolha.</p>
+                <ul class="servico-lista">
+                    <li>Análise criteriosa a cada recomendação
+                    </li>
+                    <li>Negociações inteligentes
+                    </li>   
+                    <li>Alinhamento de expectativas
+                    </li>
+                    <li>Coordenação de entregas
+                    </li>
+                </ul>
+            </div>
+
 
             <div class="servico-card">
                 <div class="servico-icon">
@@ -37,73 +86,39 @@
                 <h3 class="font-antic-didone">Design e Decoração</h3>
                 <p>Criamos projetos exclusivos que traduzem a essência do casal. Nossa arquiteta integra o processo criativo desde o início, elevando o olhar técnico e o refinamento de cada detalhe.</p>
                 <ul class="servico-lista">
-                    <li>Projeto de decoração personalizado</li>
-                    <li>Seleção de cores e materiais</li>
-                    <li>Design de convites e papelaria</li>
-                    <li>Montagem e desmontagem</li>
-                    <li>Coordenação de equipes</li>
+                    <li>Criação do conceito e identidade visual 
+                    </li>
+                    <li>Seleção de cores, texturas e materiais
+                    </li>
+                    <li>Design de convites e papelaria
+                    </li>
+                    <li>Acompanhamento estratégico
+                    </li>
                 </ul>
             </div>
 
             <div class="servico-card">
                 <div class="servico-icon">
-                    <i class="bi bi-star"></i>
+                    <i class="bi bi-stars"></i>
                 </div>
-                <h3 class="font-antic-didone">Execução Perfeita</h3>
+                <h3 class="font-antic-didone">Execução Impecável 
+                </h3>
                 <p>No grande dia, nossa equipe está presente para garantir que tudo aconteça conforme planejado. Executamos cada detalhe com precisão, permitindo que vocês desfrutem plenamente do momento.</p>
                 <ul class="servico-lista">
-                    <li>Coordenação no dia do evento</li>
-                    <li>Supervisão de montagem</li>
-                    <li>Gestão de timeline</li>
-                    <li>Resolução de imprevistos</li>
-                    <li>Suporte completo à família</li>
+                    <li>Supervisão de montagem
+                    </li>
+                    <li>Gestão de timeline
+                    </li>
+                    <li>Resolução de imprevistos
+                    </li>
+                    <li>Suporte completo às famílias
+                    </li>
+                    <li>Coordenação geral
+                    </li>
                 </ul>
             </div>
 
-            <div class="servico-card">
-                <div class="servico-icon">
-                    <i class="bi bi-heart"></i>
-                </div>
-                <h3 class="font-antic-didone">Assessoria Personalizada</h3>
-                <p>Oferecemos um atendimento exclusivo e dedicado, cuidando de pessoas, não apenas de eventos. Nosso trabalho começa pela escuta, entendendo seus desejos e transformando-os em realidade.</p>
-                <ul class="servico-lista">
-                    <li>Atendimento personalizado</li>
-                    <li>Acompanhamento durante todo o processo</li>
-                    <li>Consultoria em todas as etapas</li>
-                    <li>Suporte emocional e logístico</li>
-                    <li>Experiência de 16+ anos no mercado</li>
-                </ul>
-            </div>
-
-            <div class="servico-card">
-                <div class="servico-icon">
-                    <i class="bi bi-people"></i>
-                </div>
-                <h3 class="font-antic-didone">Gestão de Fornecedores</h3>
-                <p>Selecionamos e coordenamos uma rede exclusiva de fornecedores alinhados com nossos valores de excelência, sensibilidade e elegância. Garantimos qualidade e compromisso em cada escolha.</p>
-                <ul class="servico-lista">
-                    <li>Curadoria de fornecedores</li>
-                    <li>Negociação de contratos</li>
-                    <li>Alinhamento de expectativas</li>
-                    <li>Coordenação de entregas</li>
-                    <li>Garantia de qualidade</li>
-                </ul>
-            </div>
-
-            <div class="servico-card">
-                <div class="servico-icon">
-                    <i class="bi bi-check-circle"></i>
-                </div>
-                <h3 class="font-antic-didone">Resultados Excepcionais</h3>
-                <p>Transformamos sonhos em experiências verdadeiramente memoráveis. Cada evento é único e reflete a personalidade do casal, criando momentos que serão lembrados para sempre.</p>
-                <ul class="servico-lista">
-                    <li>Eventos únicos e personalizados</li>
-                    <li>Experiências memoráveis</li>
-                    <li>Excelência em cada detalhe</li>
-                    <li>Compromisso com a perfeição</li>
-                    <li>Satisfação garantida</li>
-                </ul>
-            </div>
+           
         </div>
 
         <div class="servicos-valores">

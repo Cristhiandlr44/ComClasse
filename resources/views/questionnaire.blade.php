@@ -53,7 +53,17 @@
 
                                 <div class="col-md-6">
                                     <label for="phone" class="form-label">Telefone <span class="text-danger">*</span></label>
-                                    <input type="tel" class="form-control" id="phone" name="phone" value="{{ old('phone') }}" placeholder="(11) 99999-9999" required>
+                                    <input
+                                        type="tel"
+                                        class="form-control js-phone-field"
+                                        id="phone"
+                                        value="{{ old('phone') }}"
+                                        placeholder="(38) 99999-9999"
+                                        inputmode="numeric"
+                                        autocomplete="tel"
+                                        title="Clique para copiar o número"
+                                        required
+                                    >
                                 </div>
 
                                 <div class="col-md-6">
@@ -119,20 +129,3 @@
     </div>
 </section>
 @endsection
-
-@push('scripts')
-<script>
-    // Máscara para telefone
-    document.getElementById('phone').addEventListener('input', function(e) {
-        let value = e.target.value.replace(/\D/g, '');
-        if (value.length <= 11) {
-            value = value.replace(/^(\d{2})(\d{5})(\d{4}).*/, '($1) $2-$3');
-            if (value.length < 14) {
-                value = value.replace(/^(\d{2})(\d{4})(\d{0,4}).*/, '($1) $2-$3');
-            }
-        }
-        e.target.value = value;
-    });
-</script>
-@endpush
-

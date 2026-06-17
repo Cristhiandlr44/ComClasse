@@ -1,0 +1,30 @@
+EDITOR SECRETO — PÁGINA INICIAL COMPLETA
+=========================================
+
+1) No .env:
+
+ADMIN_COLLAGE_PATH=gestao-colagem-comclasse
+ADMIN_COLLAGE_PASSWORD=sua-senha-forte
+
+2) Acesse:
+
+http://seu-dominio/{ADMIN_COLLAGE_PATH}/editor
+
+3) O editor permite alterar:
+
+- Colagem hero (arrastar, redimensionar, trocar fotos)
+- Todas as seções da home: Quem somos, Atuação, Mentorias, Depoimentos, Instagram, Contato
+- Textos: conteúdo, fonte, tamanho, alinhamento
+- Imagens: troca local + posição livre (ative no painel)
+- Links: texto e URL
+
+4) Salvar grava:
+
+- config/hero-collage.json + public/css/hero-collage.generated.css
+- config/home-content.json + public/css/home-content.generated.css
+- novas imagens em public/ (pastas originais de cada seção)
+
+5) Colagem no notebook
+
+A seção hero usa altura máxima baseada na tela (100svh) para aparecer inteira sem rolar.
+Ajuste fino em config/home-content.json → hero_settings (--moodboard-zoom, etc.).

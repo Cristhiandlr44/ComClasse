@@ -1,0 +1,159 @@
+================================================================================
+MAPA DA COLAGEM HERO – NÚMEROS × CSS × ARQUIVOS FINAIS
+Site: Com Classe Assessoria e Cerimonial
+================================================================================
+
+MODO ATUAL: placeholders numerados (1 a 12 + PAL)
+Use este mapa para posicionar no CSS e, depois, renomeie/coloque as imagens
+na pasta com os nomes sugeridos abaixo.
+
+
+================================================================================
+PASTA DAS IMAGENS
+================================================================================
+
+    📁 public/imagens_hero/Colagem/
+
+Fundo (já em uso, não numerado):
+    fundo hero.png
+
+
+================================================================================
+TABELA PRINCIPAL – NÚMERO → CSS → ARQUIVO FINAL
+================================================================================
+
+Nº   Classe CSS              Posição no moodboard              Arquivo final sugerido
+---  ----------------------  --------------------------------  ---------------------------
+ 1   collage-piece--p1       Canto superior esquerdo           p1.jpg
+ 2   collage-piece--p2       Centro superior esquerdo (maior)  p2.jpg
+ 3   collage-piece--p3       Centro superior                   p3.jpg
+ 4   collage-piece--p4       Superior direita (alta)           p4.jpg
+ 5   collage-piece--p5       Grande inferior esquerda          p5.jpg
+ 6   collage-piece--p6       Centro (madrinhas / transição)    p6.jpg
+ 7   collage-piece--p7       Inferior direita (âncora direita) p7.png
+ 8   collage-piece--p8       Inferior centro-direita           p8.jpg
+ 9   collage-piece--p9       Inferior esquerda (sobreposta)    p9.jpg
+10   collage-piece--bouquet  Buquê oval inferior central       p10.jpg
+11   collage-piece--peony    Flor branca superior (PNG fundo)  p11.png
+12   collage-piece--floral-left  Flores canto inferior esquerdo  p12.png
+PAL  .collage-palette        Amostra de cores (só CSS)         (sem arquivo)
+
+
+================================================================================
+REFERÊNCIA: ARQUIVOS ATUAIS NA PASTA → SLOT SUGERIDO
+================================================================================
+
+Use esta tabela ao renomear os arquivos que já existem hoje:
+
+Arquivo atual              →  Renomear para    →  Slot (Nº)
+-------------------------     ---------------     -----------
+2.jpg                      →  p1.jpg           →  1
+6.jpg                      →  p2.jpg           →  2
+8.jpg                      →  p3.jpg           →  3
+3.jpg                      →  p4.jpg           →  4
+4.jpg                      →  p5.jpg           →  5
+1.jpg                      →  p6.jpg           →  6
+7.png                      →  p7.png           →  7
+9.jpg                      →  p8.jpg           →  8
+(nova foto ou recorte)     →  p9.jpg           →  9
+5.jpg                      →  p10.jpg          →  10
+flor.png                   →  p11.png          →  11
+flores buque.jpg           →  p12.png          →  12
+
+Obs.: p9 era um recorte diferente de 6.jpg. Ao final, use uma foto própria
+      ou exporte o recorte desejado como p9.jpg.
+
+
+================================================================================
+ONDE AJUSTAR POSIÇÃO DE CADA NÚMERO (CSS)
+================================================================================
+
+Arquivo: public/css/custom-prod.css
+
+Nº 1  →  .collage-piece--p1       { left; top; width; z-index; }
+Nº 2  →  .collage-piece--p2
+Nº 3  →  .collage-piece--p3
+Nº 4  →  .collage-piece--p4
+Nº 5  →  .collage-piece--p5
+Nº 6  →  .collage-piece--p6
+Nº 7  →  .collage-piece--p7
+Nº 8  →  .collage-piece--p8
+Nº 9  →  .collage-piece--p9
+Nº 10 →  .collage-piece--bouquet
+Nº 11 →  .collage-piece--peony
+Nº 12 →  .collage-piece--floral-left
+PAL   →  .collage-palette
+
+Inclinação (quando reativar):
+Nº 1–9  →  .collage-piece--tilt-1 … --tilt-9
+Nº 10   →  .collage-piece--tilt-10
+
+Mobile (telas ≤ 767px): mesmas classes, bloco @media no final do CSS.
+
+
+================================================================================
+PASSO A PASSO QUANDO AS POSIÇÕES ESTIVEREM PRONTAS
+================================================================================
+
+1. Renomeie/copie as imagens para public/imagens_hero/Colagem/ usando os
+   nomes p1.jpg … p12.png conforme a tabela acima.
+
+2. Abra resources/views/home.blade.php
+
+3. Remova a classe hero-collage-mural--placeholders do div principal.
+
+4. Substitua cada placeholder pelo img correspondente:
+
+   ANTES (placeholder):
+   <figure class="collage-piece collage-piece--polaroid collage-piece--p1 ...">
+       <span class="collage-slot">1</span>
+   </figure>
+
+   DEPOIS (imagem final):
+   <figure class="collage-piece collage-piece--polaroid collage-piece--p1 ...">
+       <img src="{{ asset('imagens_hero/Colagem/p1.jpg') }}" alt="Descrição" loading="eager">
+   </figure>
+
+5. Modelo completo por slot:
+
+   Nº 1–9 (polaroid):
+   <img src="{{ asset('imagens_hero/Colagem/pN.jpg') }}" alt="..." loading="lazy">
+
+   Nº 7 e Nº 11–12 (PNG):
+   <img src="{{ asset('imagens_hero/Colagem/p7.png') }}" alt="..." loading="lazy">
+   <img src="{{ asset('imagens_hero/Colagem/p11.png') }}" alt="" loading="lazy">
+   <img src="{{ asset('imagens_hero/Colagem/p12.png') }}" alt="" loading="lazy">
+
+   Nº 10 (oval):
+   <figure class="collage-piece collage-piece--oval collage-piece--bouquet ...">
+       <img src="{{ asset('imagens_hero/Colagem/p10.jpg') }}" alt="..." loading="lazy">
+   </figure>
+
+6. Remova o rótulo PAL de .collage-palette (opcional).
+
+7. Recarregue com Ctrl+F5.
+
+
+================================================================================
+CHECKLIST RÁPIDO
+================================================================================
+
+[ ] Posições desktop ajustadas (p1–p9, bouquet, peony, floral-left, palette)
+[ ] Posições mobile ajustadas (@media max-width 767px)
+[ ] Inclinações (tilt) reativadas se desejar
+[ ] Imagens renomeadas para p1 … p12 na pasta Colagem
+[ ] Placeholders trocados por <img> no home.blade.php
+[ ] Classe hero-collage-mural--placeholders removida
+[ ] Teste final desktop + celular
+
+
+================================================================================
+MAIS DETALHES
+================================================================================
+
+Tutorial completo de edição CSS:
+    📄 COMO_EDITAR_HERO_COLAGEM.txt
+
+================================================================================
+FIM DO MAPA
+================================================================================

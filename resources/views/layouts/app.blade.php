@@ -19,11 +19,15 @@
 
     {{-- CSS Customizado --}}
     <link rel="stylesheet" href="{{ asset('css/custom-prod.css') }}">
-    @if(file_exists(public_path('css/hero-collage.generated.css')))
-        <link rel="stylesheet" href="{{ asset('css/hero-collage.generated.css') }}">
+    @php
+        $heroCollageCss = public_path('css/hero-collage.generated.css');
+        $homeContentCss = public_path('css/home-content.generated.css');
+    @endphp
+    @if(file_exists($heroCollageCss))
+        <link rel="stylesheet" href="{{ asset('css/hero-collage.generated.css') }}?v={{ filemtime($heroCollageCss) }}">
     @endif
-    @if(file_exists(public_path('css/home-content.generated.css')))
-        <link rel="stylesheet" href="{{ asset('css/home-content.generated.css') }}">
+    @if(file_exists($homeContentCss))
+        <link rel="stylesheet" href="{{ asset('css/home-content.generated.css') }}?v={{ filemtime($homeContentCss) }}">
     @endif
 
     {{-- Preload Belights para fallback de ç, ã no título "Nossa Atuação" (evita diferença em produção) --}}

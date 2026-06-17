@@ -73,9 +73,26 @@ class HeroCollageService
 
     public function ensureGeneratedCss(): void
     {
-        if (! File::exists($this->cssOutputPath())) {
-            $this->writeCssFile($this->load());
+        if (! File::exists($this->configPath())) {
+            return;
         }
+
+        if ($this->cssMatchesConfigHash(md5_file($this->configPath()))) {
+            return;
+        }
+
+        $this->writeCssFile();
+    }
+
+    private function cssMatchesConfigHash(string $configHash): bool
+    {
+        $cssPath = $this->cssOutputPath();
+
+        if (! File::exists($cssPath)) {
+            return false;
+        }
+
+        return (bool) preg_match('/config-hash:\s*'.preg_quote($configHash, '/').'/', File::get($cssPath));
     }
 
     public function writeCssFile(?array $data = null): void
@@ -86,8 +103,13 @@ class HeroCollageService
 
     public function generateCss(array $data): string
     {
+        $configHash = File::exists($this->configPath())
+            ? md5_file($this->configPath())
+            : md5(json_encode($data, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));
+
         $lines = [
             '/* Gerado automaticamente pelo editor de colagem — não editar manualmente */',
+            '/* config-hash: '.$configHash.' */',
             '/* Salvo em: '.now()->toDateTimeString().' */',
             '',
         ];

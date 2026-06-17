@@ -9,8 +9,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/custom-prod.css') }}">
     <link rel="preload" href="{{ asset('fonts/Belights.ttf') }}" as="font" type="font/ttf" crossorigin>
-    <link rel="stylesheet" href="{{ asset('css/hero-collage.generated.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/home-content.generated.css') }}">
+    @php
+        $heroCollageCss = public_path('css/hero-collage.generated.css');
+        $homeContentCss = public_path('css/home-content.generated.css');
+    @endphp
+    <link rel="stylesheet" href="{{ asset('css/hero-collage.generated.css') }}@if(file_exists($heroCollageCss))?v={{ filemtime($heroCollageCss) }}@endif">
+    <link rel="stylesheet" href="{{ asset('css/home-content.generated.css') }}@if(file_exists($homeContentCss))?v={{ filemtime($homeContentCss) }}@endif">
     <style id="site-editor-live-styles"></style>
     <link rel="stylesheet" href="{{ asset('css/collage-editor.css') }}">
     <link rel="stylesheet" href="{{ asset('css/site-editor.css') }}">

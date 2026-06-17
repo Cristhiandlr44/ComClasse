@@ -116,12 +116,16 @@ class HomeContentService
 
     public function writeCssFile(?array $data = null): void
     {
-        $data ??= $this->load();
-        $css = $this->generateCss($data);
-        $path = $this->cssOutputPath();
+        try {
+            $data ??= $this->load();
+            $css = $this->generateCss($data);
+            $path = $this->cssOutputPath();
 
-        File::ensureDirectoryExists(dirname($path));
-        File::put($path, $css);
+            File::ensureDirectoryExists(dirname($path));
+            File::put($path, $css);
+        } catch (\Throwable $e) {
+            report($e);
+        }
     }
 
     public function generateCss(array $data): string

@@ -7,10 +7,15 @@
     <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
     <title>Editor da Home — Com Classe</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="<?php echo e(asset('css/custom-prod.css')); ?>">
+    <?php
+        $customProdCss = public_path('css/custom-prod.css');
+        $heroCollageConfig = config_path('hero-collage.json');
+        $homeContentConfig = config_path('home-content.json');
+    ?>
+    <link rel="stylesheet" href="<?php echo e(asset('css/custom-prod.css')); ?><?php if(file_exists($customProdCss)): ?>?v=<?php echo e(filemtime($customProdCss)); ?><?php endif; ?>">
     <link rel="preload" href="<?php echo e(asset('fonts/Belights.ttf')); ?>" as="font" type="font/ttf" crossorigin>
-    <link rel="stylesheet" href="<?php echo e(asset('css/hero-collage.generated.css')); ?>">
-    <link rel="stylesheet" href="<?php echo e(asset('css/home-content.generated.css')); ?>">
+    <link rel="stylesheet" href="<?php echo e(route('css.hero-collage')); ?><?php if(file_exists($heroCollageConfig)): ?>?v=<?php echo e(filemtime($heroCollageConfig)); ?><?php endif; ?>">
+    <link rel="stylesheet" href="<?php echo e(route('css.home-content')); ?><?php if(file_exists($homeContentConfig)): ?>?v=<?php echo e(filemtime($homeContentConfig)); ?><?php endif; ?>">
     <style id="site-editor-live-styles"></style>
     <link rel="stylesheet" href="<?php echo e(asset('css/collage-editor.css')); ?>">
     <link rel="stylesheet" href="<?php echo e(asset('css/site-editor.css')); ?>">
@@ -145,4 +150,4 @@
     <?php endif; ?>
 </body>
 </html>
-<?php /**PATH C:\xampp\htdocs\ComClasse\resources\views/admin/site-editor.blade.php ENDPATH**/ ?>
+<?php /**PATH C:\xampp\htdocs\ComClasse\resources\views\admin\site-editor.blade.php ENDPATH**/ ?>

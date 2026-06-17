@@ -11,9 +11,6 @@ class HomeController extends Controller
 {
     public function index(HeroCollageService $collage, HomeContentService $homeContent)
     {
-        $collage->ensureGeneratedCss();
-        $homeContent->ensureGeneratedCss();
-
         return view('home', [
             'collageItems' => $collage->load()['items'],
             'collageImageBase' => asset($collage->imageUrlBase()),

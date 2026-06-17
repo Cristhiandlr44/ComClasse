@@ -7,8 +7,9 @@
     <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
     <title>Editor de Colagem — Com Classe</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="<?php echo e(asset('css/custom-prod.css')); ?>">
-    <link rel="stylesheet" href="<?php echo e(asset('css/hero-collage.generated.css')); ?>">
+    <?php $customProdCss = public_path('css/custom-prod.css'); ?>
+    <link rel="stylesheet" href="<?php echo e(asset('css/custom-prod.css')); ?><?php if(file_exists($customProdCss)): ?>?v=<?php echo e(filemtime($customProdCss)); ?><?php endif; ?>">
+    <link rel="stylesheet" href="<?php echo e(route('css.hero-collage')); ?>">
     <link rel="stylesheet" href="<?php echo e(asset('css/collage-editor.css')); ?>">
 </head>
 <body class="collage-editor-body">
@@ -99,4 +100,4 @@
     <script src="<?php echo e(asset('js/collage-editor.js')); ?>"></script>
 </body>
 </html>
-<?php /**PATH C:\xampp\htdocs\ComClasse\resources\views/admin/collage-editor.blade.php ENDPATH**/ ?>
+<?php /**PATH C:\xampp\htdocs\ComClasse\resources\views\admin\collage-editor.blade.php ENDPATH**/ ?>

@@ -71,7 +71,7 @@
             <div class="error"><?php echo e($errors->first()); ?></div>
         <?php endif; ?>
 
-        <form method="POST" action="<?php echo e(route('admin.collage.login')); ?>">
+        <form method="POST" action="<?php echo e(route('admin.site.login')); ?>">
             <?php echo csrf_field(); ?>
             <label for="password">Senha</label>
             <input type="password" id="password" name="password" required autofocus>
@@ -80,4 +80,4 @@
     </div>
 </body>
 </html>
-<?php /**PATH C:\xampp\htdocs\ComClasse\resources\views/admin/collage-login.blade.php ENDPATH**/ ?>
+<?php /**PATH C:\xampp\htdocs\ComClasse\resources\views\admin\collage-login.blade.php ENDPATH**/ ?>

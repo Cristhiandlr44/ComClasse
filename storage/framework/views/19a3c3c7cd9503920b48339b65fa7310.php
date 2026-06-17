@@ -254,4 +254,4 @@
         </div>
     </div>
 </section>
-<?php /**PATH C:\xampp\htdocs\ComClasse\resources\views/partials/home-body.blade.php ENDPATH**/ ?>
+<?php /**PATH C:\xampp\htdocs\ComClasse\resources\views\partials\home-body.blade.php ENDPATH**/ ?>

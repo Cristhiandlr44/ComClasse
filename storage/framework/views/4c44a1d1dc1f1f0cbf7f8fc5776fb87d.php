@@ -18,16 +18,17 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
     
-    <link rel="stylesheet" href="<?php echo e(asset('css/custom-prod.css')); ?>">
     <?php
-        $heroCollageCss = public_path('css/hero-collage.generated.css');
-        $homeContentCss = public_path('css/home-content.generated.css');
+        $customProdCss = public_path('css/custom-prod.css');
+        $heroCollageConfig = config_path('hero-collage.json');
+        $homeContentConfig = config_path('home-content.json');
     ?>
-    <?php if(file_exists($heroCollageCss)): ?>
-        <link rel="stylesheet" href="<?php echo e(asset('css/hero-collage.generated.css')); ?>?v=<?php echo e(filemtime($heroCollageCss)); ?>">
+    <link rel="stylesheet" href="<?php echo e(asset('css/custom-prod.css')); ?><?php if(file_exists($customProdCss)): ?>?v=<?php echo e(filemtime($customProdCss)); ?><?php endif; ?>">
+    <?php if(file_exists($heroCollageConfig)): ?>
+        <link rel="stylesheet" href="<?php echo e(route('css.hero-collage')); ?>?v=<?php echo e(filemtime($heroCollageConfig)); ?>">
     <?php endif; ?>
-    <?php if(file_exists($homeContentCss)): ?>
-        <link rel="stylesheet" href="<?php echo e(asset('css/home-content.generated.css')); ?>?v=<?php echo e(filemtime($homeContentCss)); ?>">
+    <?php if(file_exists($homeContentConfig)): ?>
+        <link rel="stylesheet" href="<?php echo e(route('css.home-content')); ?>?v=<?php echo e(filemtime($homeContentConfig)); ?>">
     <?php endif; ?>
 
     
@@ -161,4 +162,4 @@
 </body>
 </html>
 
-<?php /**PATH C:\xampp\htdocs\ComClasse\resources\views/layouts/app.blade.php ENDPATH**/ ?>
+<?php /**PATH C:\xampp\htdocs\ComClasse\resources\views\layouts\app.blade.php ENDPATH**/ ?>

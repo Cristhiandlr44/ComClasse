@@ -62,6 +62,8 @@
         @yield('content')
     </main>
 
+    @stack('modals')
+
     <footer class="site-footer">
         <div class="site-container footer-base">
             <div class="footer-brand">
@@ -89,7 +91,7 @@
 
     {{-- JS Customizado - sempre carrega se existir --}}
     @if(file_exists(public_path('js/custom.js')))
-        <script src="{{ asset('js/custom.js') }}"></script>
+        <script src="{{ asset('js/custom.js') }}?v={{ filemtime(public_path('js/custom.js')) }}"></script>
     @endif
 
     @stack('scripts')

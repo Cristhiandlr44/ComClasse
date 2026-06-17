@@ -53,13 +53,14 @@
     }
 })();
 
-// Carrossel de depoimentos - nova abordagem baseada no container
+// Carrossel de depoimentos
 (function () {
     const carousel = document.getElementById('testimonialsCarousel');
     if (!carousel) {
         return;
     }
 
+    const viewport = carousel.querySelector('.testimonials-viewport');
     const inner = carousel.querySelector('.testimonials-track');
     if (!inner) {
         return;
@@ -74,30 +75,38 @@
 
     let currentIndex = 0;
     let autoTimer;
+    let touchStartX = 0;
 
     const getPerView = () => {
         const width = window.innerWidth;
         return width < 768 ? 1 : width < 992 ? 2 : 3;
     };
 
+    const getSlideStep = () => {
+        if (items.length < 2) {
+            return items[0]?.getBoundingClientRect().width || 0;
+        }
+
+        return items[1].offsetLeft - items[0].offsetLeft;
+    };
+
     const updateCarousel = (animate = true) => {
         const perView = getPerView();
         const maxIndex = Math.max(0, items.length - perView);
         
-        // Limita o índice
         if (currentIndex > maxIndex) currentIndex = maxIndex;
         if (currentIndex < 0) currentIndex = 0;
 
-        // Deslocamento real: usa offsetLeft que considera gap, largura real e qualquer responsividade
-        const target = items[currentIndex];
-        if (!target) {
-            return;
-        }
-        
-        const translateX = target.offsetLeft;
+        const step = getSlideStep();
+        const translateX = currentIndex * step;
         
         inner.style.transition = animate ? 'transform 0.45s ease' : 'none';
         inner.style.transform = `translateX(-${translateX}px)`;
+
+        prevBtn.style.visibility = currentIndex <= 0 ? 'hidden' : 'visible';
+        prevBtn.style.pointerEvents = currentIndex <= 0 ? 'none' : 'auto';
+        nextBtn.style.visibility = currentIndex >= maxIndex ? 'hidden' : 'visible';
+        nextBtn.style.pointerEvents = currentIndex >= maxIndex ? 'none' : 'auto';
     };
 
     const nextSlide = () => {
@@ -133,6 +142,25 @@
         startAutoPlay();
     });
 
+    const swipeTarget = viewport || carousel;
+    swipeTarget.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    swipeTarget.addEventListener('touchend', (e) => {
+        const diff = touchStartX - e.changedTouches[0].screenX;
+        if (Math.abs(diff) < 48) {
+            return;
+        }
+
+        if (diff > 0) {
+            nextSlide();
+        } else {
+            prevSlide();
+        }
+        startAutoPlay();
+    }, { passive: true });
+
     let resizeTimeout;
     window.addEventListener('resize', () => {
         clearTimeout(resizeTimeout);
@@ -143,7 +171,6 @@
         }, 100);
     });
 
-    // Inicialização
     const init = () => {
         updateCarousel(false);
         startAutoPlay();
@@ -262,17 +289,16 @@
 (function () {
     const wrapper = document.getElementById('instaCarousel');
     if (!wrapper) return;
+    const viewport = wrapper.querySelector('.insta-viewport');
     const track = wrapper.querySelector('.insta-track');
-    if (!track) return;
+    if (!track || !viewport) return;
     const items = Array.from(track.querySelectorAll('.insta-item'));
     const prev = wrapper.querySelector('.insta-prev');
     const next = wrapper.querySelector('.insta-next');
     if (!items.length || !prev || !next) return;
 
-    const TOTAL_ITEMS = 11;
     let idx = 0;
-    let perView = 5;
-    let itemSpan = 0;
+    let touchStartX = 0;
 
     const calcPerView = () => {
         const w = window.innerWidth;
@@ -282,41 +308,69 @@
         return 5;
     };
 
-    const measure = () => {
-        perView = Math.min(calcPerView(), items.length, TOTAL_ITEMS);
-        wrapper.style.setProperty('--insta-visible', String(perView));
-        const gap = parseFloat(getComputedStyle(track).gap || 0);
-        const viewport = wrapper.clientWidth;
-        const itemWidth = (viewport - (perView - 1) * gap) / perView;
-        wrapper.style.setProperty('--insta-item-width', `${itemWidth}px`);
-        itemSpan = itemWidth + gap;
+    const getSlideStep = () => {
+        if (items.length < 2) {
+            return items[0]?.getBoundingClientRect().width || 0;
+        }
+
+        return items[1].offsetLeft - items[0].offsetLeft;
     };
 
     const update = (animate = true) => {
-        measure();
+        const perView = calcPerView();
         const maxIndex = Math.max(0, items.length - perView);
         if (idx > maxIndex) idx = maxIndex;
         if (idx < 0) idx = 0;
+
+        const step = getSlideStep();
         track.style.transition = animate ? 'transform 0.35s ease' : 'none';
-        track.style.transform = `translateX(-${itemSpan * idx}px)`;
+        track.style.transform = `translateX(-${step * idx}px)`;
+
+        prev.style.visibility = idx === 0 ? 'hidden' : 'visible';
+        prev.style.pointerEvents = idx === 0 ? 'none' : 'auto';
+        next.style.visibility = idx >= maxIndex ? 'hidden' : 'visible';
+        next.style.pointerEvents = idx >= maxIndex ? 'none' : 'auto';
         prev.disabled = idx === 0;
         next.disabled = idx >= maxIndex;
-        prev.style.opacity = idx === 0 ? '0.45' : '1';
-        next.style.opacity = idx >= maxIndex ? '0.45' : '1';
     };
 
-    next.addEventListener('click', () => {
+    next.addEventListener('click', (e) => {
+        e.preventDefault();
         idx += 1;
         update();
     });
 
-    prev.addEventListener('click', () => {
+    prev.addEventListener('click', (e) => {
+        e.preventDefault();
         idx -= 1;
         update();
     });
 
+    viewport.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    viewport.addEventListener('touchend', (e) => {
+        const diff = touchStartX - e.changedTouches[0].screenX;
+        if (Math.abs(diff) < 48) return;
+        idx += diff > 0 ? 1 : -1;
+        update();
+    }, { passive: true });
+
     window.addEventListener('resize', () => update(false));
-    update(false);
+
+    if (typeof ResizeObserver !== 'undefined') {
+        const ro = new ResizeObserver(() => update(false));
+        ro.observe(viewport);
+    }
+
+    const init = () => requestAnimationFrame(() => update(false));
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
+    window.addEventListener('load', () => update(false));
 })();
 
 // Scroll reveal animation para seções
@@ -396,6 +450,10 @@
     const stage = document.querySelector('.moodboard-stage');
     const modal = document.getElementById('heroImageModal');
     if (!stage || !modal) return;
+
+    if (modal.parentElement !== document.body) {
+        document.body.appendChild(modal);
+    }
 
     const modalImg = modal.querySelector('.hero-image-modal__img');
     const closeEls = modal.querySelectorAll('[data-hero-image-close]');

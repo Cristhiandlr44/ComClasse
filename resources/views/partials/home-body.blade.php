@@ -42,7 +42,9 @@
             </div>
         </div>
     </div>
+</section>
 
+@push('modals')
     <div id="heroImageModal" class="hero-image-modal" aria-hidden="true">
         <div class="hero-image-modal__backdrop" data-hero-image-close></div>
         <div class="hero-image-modal__dialog" role="dialog" aria-modal="true" aria-label="Imagem ampliada">
@@ -54,7 +56,7 @@
             </figure>
         </div>
     </div>
-</section>
+@endpush
 
 <section id="quem-somos" class="section-block who-values-section" data-he-section="quem-somos">
     <div class="site-container who-block">
@@ -171,6 +173,10 @@
     <div class="site-container">
         <h2 class="{{ $he->classes('depoimentos-title', 'testimonials-title font-abramo') }}" {!! $he->attrs('depoimentos-title', 'text') !!}>{{ $he->content('depoimentos-title') }}</h2>
         <div id="testimonialsCarousel" class="testimonials-carousel" aria-label="Depoimentos">
+            <button class="testimonials-arrow testimonials-arrow-prev" type="button" aria-label="Anterior">
+                <i class="bi bi-chevron-left"></i>
+            </button>
+            <div class="testimonials-viewport">
             <div class="testimonials-track">
                 @for($n = 1; $n <= 6; $n++)
                     <div class="testimonial-slide">
@@ -186,9 +192,7 @@
                     </div>
                 @endfor
             </div>
-            <button class="testimonials-arrow testimonials-arrow-prev" type="button" aria-label="Anterior">
-                <i class="bi bi-chevron-left"></i>
-            </button>
+            </div>
             <button class="testimonials-arrow testimonials-arrow-next" type="button" aria-label="Próximo">
                 <i class="bi bi-chevron-right"></i>
             </button>
@@ -219,6 +223,7 @@
             <button class="insta-arrow insta-prev" type="button" aria-label="Anterior">
                 <i class="bi bi-chevron-left"></i>
             </button>
+            <div class="insta-viewport">
             <div class="insta-track">
                 @for($n = 1; $n <= 11; $n++)
                     <a class="insta-item" href="{{ $he->href('insta-link-'.$n) }}" target="_blank" rel="noopener" {!! $he->attrs('insta-link-'.$n, 'link') !!}>
@@ -231,6 +236,7 @@
                         >
                     </a>
                 @endfor
+            </div>
             </div>
             <button class="insta-arrow insta-next" type="button" aria-label="Próximo">
                 <i class="bi bi-chevron-right"></i>

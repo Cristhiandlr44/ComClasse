@@ -19,12 +19,14 @@
     <style id="site-editor-live-styles"></style>
     <link rel="stylesheet" href="{{ asset('css/collage-editor.css') }}">
     <link rel="stylesheet" href="{{ asset('css/site-editor.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/admin-tools.css') }}?v={{ filemtime(public_path('css/admin-tools.css')) }}">
 </head>
 <body class="site-editor-body">
     <header class="site-editor-toolbar">
         <div class="site-editor-toolbar__title">
             <strong><i class="bi bi-pencil-square" aria-hidden="true"></i> Editor da página inicial</strong>
             <span><i class="bi bi-hand-index" aria-hidden="true"></i> Clique no elemento para editar · canto dourado para redimensionar imagens</span>
+            @include('partials.admin-tools-nav')
         </div>
         <div class="site-editor-toolbar__actions">
             <select id="siteEditorSectionFilter" class="site-editor-select" aria-label="Filtrar seção">

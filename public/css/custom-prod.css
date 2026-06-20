@@ -565,7 +565,7 @@ body.hero-image-modal-open {
     }
 
     .logo-main--hero {
-        width: clamp(72px, 26vw, 100px);
+        width: clamp(96px, 34vw, 132px);
     }
 
     .hero-logo-band {
@@ -908,10 +908,15 @@ body.hero-image-modal-open {
     .value-card h3,
     .value-card h3.titulo-valor,
     .value-card p {
-        text-align: left;
+        text-align: left !important;
     }
     .titulo-valor {
-        text-align: left;
+        text-align: left !important;
+    }
+    .values-grid .value-card {
+        width: 100%;
+        max-width: none;
+        justify-self: stretch;
     }
 }
 
@@ -2453,7 +2458,16 @@ body {
     .values-grid {
         grid-template-columns: minmax(0, 1fr);
         justify-content: start;
-        justify-items: start;
+        justify-items: stretch;
+        text-align: left !important;
+        width: 100%;
+    }
+
+    .values-grid .value-card,
+    .values-grid .value-card h3,
+    .values-grid .value-card h3.titulo-valor,
+    .values-grid .value-card p {
+        text-align: left !important;
     }
 
     .cards-grid,

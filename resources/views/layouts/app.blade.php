@@ -40,7 +40,7 @@
     <header class="site-header">
         <div class="site-container header-inner">
             <a href="{{ route('home') }}#inicio" class="header-brand">
-                <img src="{{ asset('logo.png') }}" alt="Com Classe" class="header-logo">
+                <img src="{{ asset('logo com classe preto.png') }}" alt="Com Classe" class="header-logo">
             </a>
             <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu">
                 <span></span>

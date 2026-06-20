@@ -25,7 +25,19 @@
 .site-editor-toolbar__title {
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    gap: 8px;
+}
+
+.site-editor-toolbar .admin-tools-nav__link {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.12);
+    color: #f7f3eb;
+}
+
+.site-editor-toolbar .admin-tools-nav__link.is-active {
+    background: rgba(154, 124, 67, 0.22);
+    border-color: rgba(154, 124, 67, 0.45);
+    color: #f7f3eb;
 }
 
 .site-editor-toolbar__title span {

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>@yield('title', 'Com Classe Assessoria e Cerimonial')</title>
+    <title>@yield('title', 'Com Classe, Assessoria e Design de Eventos')</title>
     <meta name="description" content="@yield('description', 'Comemore seus Sonhos, Celebre Com Classe! Assessoria e Cerimonial de casamentos elegantes e inesquecíveis.')">
     <link rel="icon" type="image/x-icon" href="{{ asset('favico.ico') }}">
 
@@ -51,7 +51,6 @@
                 <a href="{{ route('home') }}#quem-somos">Quem somos</a>
                 <a href="{{ route('home') }}#atuacao">Atuação</a>
                 <a href="{{ route('home') }}#depoimentos">Depoimentos</a>
-                <a href="{{ route('home') }}#mentorias-cursos">Cursos e mentorias</a>
                 <a href="{{ route('home') }}#contato">Contato</a>
             </nav>
             <a class="header-cta" href="{{ route('login') }}">Acessar Sistema</a>
@@ -68,7 +67,8 @@
         <div class="site-container footer-base">
             <div class="footer-brand">
                 <img src="{{ asset('logo.png') }}" alt="Com Classe" class="footer-logo">
-                <p>Com Classe Assessoria e Cerimonial</p>
+                <p>Com Classe, Assessoria e Design de Eventos</p>
+                <p class="footer-location"><i class="bi bi-geo-alt"></i> Atuação: Montes Claros, MG e região</p>
             </div>
             <div class="footer-text">
                 <p class="footer-cta">siga no instagram</p>

@@ -8,7 +8,7 @@
         {
             "id": "img-1",
             "label": "Imagem 1",
-            "src": "1.png",
+            "src": "1.webp",
             "alt": "Detalhe das cestas",
             "classes": [
                 "mood-img"
@@ -46,7 +46,7 @@
         {
             "id": "img-3",
             "label": "Imagem 3",
-            "src": "3.jpg",
+            "src": "3.webp",
             "alt": "Detalhe da mesa",
             "classes": [
                 "mood-img"
@@ -65,7 +65,7 @@
         {
             "id": "img-4",
             "label": "Imagem 4",
-            "src": "4.jpg",
+            "src": "4.webp",
             "alt": "Pergaminho da cerimônia",
             "classes": [
                 "mood-img"
@@ -120,7 +120,7 @@
         {
             "id": "img-7",
             "label": "Imagem 7",
-            "src": "7.jpg",
+            "src": "7.webp",
             "alt": "Cerimônia no jardim",
             "classes": [
                 "mood-img"
@@ -208,7 +208,7 @@
         {
             "id": "flor-lateral",
             "label": "Flor lateral",
-            "src": "flores buque.jpg",
+            "src": "flores buque.webp",
             "alt": null,
             "classes": [
                 "flor-lateral"
@@ -230,7 +230,7 @@
         {
             "id": "flor-superior",
             "label": "Flor superior",
-            "src": "flor.png",
+            "src": "flor.webp",
             "alt": null,
             "classes": [
                 "flor-superior"

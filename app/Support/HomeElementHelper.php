@@ -29,6 +29,14 @@ class HomeElementHelper
         return (string) ($element['content'] ?? $default);
     }
 
+    /** Texto escapado com **trechos** em negrito. */
+    public function richContent(string $id, string $default = ''): string
+    {
+        $html = e($this->content($id, $default));
+
+        return preg_replace('/\*\*(.+?)\*\*/su', '<strong>$1</strong>', $html);
+    }
+
     public function href(string $id, string $default = '#'): string
     {
         $href = (string) ($this->get($id)['href'] ?? $default);

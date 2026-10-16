@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Solicite um Orçamento - Com Classe Assessoria e Cerimonial')
+@section('title', 'Solicite um Orçamento - Com Classe, Assessoria e Design de Eventos')
 
 @section('content')
 <section class="py-5" style="padding-top: 120px; background: linear-gradient(180deg, #ffffff 0%, #f8f8f8 100%); min-height: 100vh;">

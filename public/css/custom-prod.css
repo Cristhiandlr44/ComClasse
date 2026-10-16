@@ -340,7 +340,7 @@ p {
         var(--hero-moodboard-inset-x)
         clamp(10px, 1.4vw, 16px);
     background-color: #f7f3eb;
-    background-image: url('../imagens_hero/Colagem/fundo%20hero.png');
+    background-image: url('../imagens_hero/Colagem/fundo%20hero.webp');
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1181,7 +1181,6 @@ body.hero-image-modal-open {
     background: var(--surface);
     padding-top: 80px;
     padding-bottom: 32px;
-    --testimonial-lines: 5;
 }
 
 .testimonials-section .site-container {
@@ -1278,10 +1277,11 @@ body.hero-image-modal-open {
     margin: 0 0 10px;
     font-size: var(--home-copy-size);
     line-height: var(--home-copy-line);
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: var(--testimonial-lines);
-    overflow: hidden;
+    white-space: pre-line;
+}
+
+.testimonial-item .quote strong {
+    font-weight: 700;
 }
 
 .testimonial-item.is-truncated .quote-wrap::after {
@@ -1468,7 +1468,6 @@ body.testimonial-modal-open {
 
 @media (max-width: 767px) {
     .testimonials-section {
-        --testimonial-lines: 4;
     }
 }
 

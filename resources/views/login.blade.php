@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Acesso ao Sistema - Com Classe')
+@section('title', 'Acesso ao Sistema - Com Classe, Assessoria e Design de Eventos')
 
 @section('content')
 <div class="login-page-container">

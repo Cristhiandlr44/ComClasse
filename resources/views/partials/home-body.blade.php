@@ -183,9 +183,8 @@
                         <div class="testimonial-item">
                             <i class="bi bi-quote"></i>
                             <div class="quote-wrap">
-                                <p class="{{ $he->classes('depoimento-'.$n.'-quote', 'quote') }}" {!! $he->attrs('depoimento-'.$n.'-quote', 'text') !!}>{{ $he->content('depoimento-'.$n.'-quote') }}</p>
+                                <p class="{{ $he->classes('depoimento-'.$n.'-quote', 'quote') }}" {!! $he->attrs('depoimento-'.$n.'-quote', 'text') !!}>{!! $he->richContent('depoimento-'.$n.'-quote') !!}</p>
                             </div>
-                            <span class="testimonial-read-hint">Clique para ler completo</span>
                             <div class="testimonial-sep"></div>
                             <p class="{{ $he->classes('depoimento-'.$n.'-author', 'author') }}" {!! $he->attrs('depoimento-'.$n.'-author', 'text') !!}>{{ $he->content('depoimento-'.$n.'-author') }}</p>
                         </div>

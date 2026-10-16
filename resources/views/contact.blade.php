@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Contato - Com Classe Assessoria e Cerimonial')
+@section('title', 'Contato - Com Classe, Assessoria e Design de Eventos')
 
 @section('content')
     <section class="section-block contact-section">
